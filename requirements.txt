@@ -1,0 +1,20 @@
+# Direct dependencies only. Versions are the ones the committed results were
+# produced with (Python 3.14, macOS arm64). torch is left as a lower bound so
+# GPU machines (e.g. Colab) keep their preinstalled CUDA build.
+
+# Crawling and parsing
+requests==2.34.2
+beautifulsoup4==4.15.0
+
+# Retrieval
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+rank-bm25==0.2.2
+faiss-cpu==1.15.1
+sentence-transformers==6.2.0
+
+# Generation
+torch>=2.4
+transformers==5.20.2
+accelerate==1.15.0
