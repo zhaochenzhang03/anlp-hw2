@@ -4,9 +4,11 @@ __pycache__/
 .DS_Store
 
 data/raw/
-outputs/
+outputs/*
+!outputs/retrieval_eval/
 models/
 *.pt
 *.bin
 *.safetensors
 *.faiss
+data/index/
