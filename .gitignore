@@ -6,6 +6,10 @@ __pycache__/
 data/raw/
 outputs/*
 !outputs/retrieval_eval/
+!outputs/rag/
+!outputs/results/
+!outputs/error_analysis/
+*.log
 models/
 *.pt
 *.bin

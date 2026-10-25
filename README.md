@@ -1,8 +1,9 @@
 # 11-711 HW2: RAG over Pittsburgh and CMU
 
 Retrieval-augmented question answering about Pittsburgh and Carnegie Mellon.
-This repository currently covers data collection, chunking, and retrieval
-(sparse, dense, hybrid). Answer generation is not implemented yet.
+Pipeline: data collection → chunking → retrieval (sparse, dense, hybrid) →
+answer generation with an open instruct model → evaluation and submission
+export.
 
 ## Setup
 
@@ -24,7 +25,20 @@ python scripts/crawl.py --sources scripts/sources.json
 
 # Carnegie Museum of Art paintings from the museum's CC0 2015 collection data
 python scripts/build_cmoa_docs.py
+
+# Targeted patch round (CMU, restaurants/food, taxes/budget, events): sources
+# in scripts/sources_patch.json. Pages that block crawlers (City of Pittsburgh,
+# Allegheny County) are fetched from Wayback Machine copies given as
+# "archived_url"; the document keeps the official "url" plus "archived_url".
+python scripts/crawl.py --sources scripts/sources_patch.json --failures outputs/crawl_failures_patch.json
+
+# Pittsburgh Pirates 40-man roster (one record per player) from MLB's Stats API
+python scripts/build_pirates_roster_docs.py
 ```
+
+The crawler parses PDFs with `pypdf`, falls back to the whole page body when
+`<main>`/`<article>` is nearly empty, and prepends a page's meta description
+when it is not already in the text (useful for JavaScript-rendered sites).
 
 ## 2. Chunks
 
@@ -101,6 +115,86 @@ Results go to `outputs/retrieval_eval/`:
   and soft hit, the top 20 chunk IDs with scores, and how many chunks contain
   the answer (answers found in hundreds of chunks, like "Gift", can produce
   hits from unrelated chunks).
+
+## 5. Answer generation
+
+Reader: `Qwen/Qwen3-4B-Instruct-2507` (open weights, released 2025-08, 4.0B
+parameters, pinned revision in `configs/generation_config.json`), greedy
+decoding, at most 32 new tokens. The prompt (`generation/prompts.py`, version
+recorded in every prediction) asks for a bare short answer copied exactly
+from the numbered context passages, or "I don't know". Default retrieval:
+weighted fusion, alpha 0.75, top-5 (`configs/retrieval_config.json`,
+`frozen` section).
+
+```bash
+# One run over the public dev set; predictions are appended to
+# outputs/rag/<run-name>/predictions.jsonl as they are generated and the run
+# is scored at the end (outputs/rag/<run-name>/metrics.json).
+python -m scripts.run_rag_eval --method weighted --alpha 0.75 --top-k 5
+python -m scripts.run_rag_eval --method rrf --top-k 5
+python -m scripts.run_rag_eval --method closed_book
+python -m scripts.run_rag_eval --model Qwen/Qwen2.5-1.5B-Instruct
+
+# Subsets: --start/--end (indices) or --ids 1,2,3. Re-running the same command
+# resumes (completed IDs are skipped); --overwrite starts over.
+python -m scripts.run_rag_eval --method rrf --start 0 --end 40
+
+# All core ablations (closed-book, BM25, dense, RRF, weighted; top-10; small reader)
+bash scripts/run_ablations.sh
+
+# Score, analyze failures, build the results tables
+python -m scripts.score_rag outputs/rag/*/predictions.jsonl
+python -m scripts.error_analysis outputs/rag/weighted0.75_k5__Qwen3-4B-Instruct-2507/predictions.jsonl
+python -m scripts.make_results_tables
+```
+
+Answer metrics (`evaluation/metrics.py`), each the maximum over a question's
+reference answers, after SQuAD normalization (lowercase, no punctuation or
+articles): exact match, token F1, answer recall (share of reference tokens in
+the answer) and ROUGE-L F1. The course's LLM-as-judge score is not
+reproduced locally.
+
+### Running on Colab (GPU)
+
+```bash
+!git clone https://github.com/zhaochenzhang03/anlp-hw2.git
+%cd anlp-hw2
+!pip install -q rank-bm25==0.2.2 faiss-cpu "sentence-transformers>=3" "transformers>=4.51" accelerate pypdf
+# Persist outputs on Drive so a disconnect loses nothing:
+from google.colab import drive; drive.mount('/content/drive')
+!mkdir -p /content/drive/MyDrive/anlp-hw2-outputs
+!python -m scripts.run_rag_eval --method weighted --alpha 0.75 --top-k 5 --batch-size 8 \
+    --output-dir /content/drive/MyDrive/anlp-hw2-outputs
+# After a disconnect, run the same command again: it resumes.
+!EXTRA="--batch-size 8 --output-dir /content/drive/MyDrive/anlp-hw2-outputs" bash scripts/run_ablations.sh
+```
+
+On Colab, install packages individually as above rather than
+`pip install -r requirements.txt`, which pins numpy/scipy versions built for
+Python 3.14 and would replace Colab's preinstalled builds.
+
+## 6. Submission files
+
+```bash
+# Unseen test set: {"1": "...", ...}
+python -m scripts.run_rag_eval --questions data/eval/<test_queries>.json --run-name test_system1
+python -m scripts.export_system_output --predictions outputs/rag/test_system1/predictions.jsonl \
+    --questions data/eval/<test_queries>.json --output system_outputs/system_output_1.json
+
+# Leaderboard: {"andrewid": "...", "1": "...", ...}
+python -m scripts.run_rag_eval --questions data/eval/leaderboard_queries.json --run-name leaderboard_system1
+python -m scripts.export_system_output --predictions outputs/rag/leaderboard_system1/predictions.jsonl \
+    --questions data/eval/leaderboard_queries.json --andrewid <ANDREWID> --output outputs/leaderboard/system1.json
+```
+
+The exporter refuses to write a file with missing, empty or multi-line
+answers, prompt text, or IDs out of order.
+
+## Tests
+
+```bash
+python -m unittest discover tests
+```
 
 ## Notes
 
