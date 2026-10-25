@@ -1,0 +1,1107 @@
+{
+  "n_questions": 157,
+  "n_chunks": 2529,
+  "config": {
+    "chunks_path": "data/processed/chunks.jsonl",
+    "top_k": 5,
+    "text_normalization": {
+      "unicode": "NFKD, accents stripped",
+      "lowercase": true,
+      "token_pattern": "[a-z0-9]+"
+    },
+    "bm25": {
+      "implementation": "rank_bm25.BM25Okapi",
+      "k1": 1.5,
+      "b": 0.75,
+      "epsilon": 0.25,
+      "remove_stopwords": true,
+      "stopwords": "sklearn ENGLISH_STOP_WORDS",
+      "short_months": true
+    },
+    "dense": {
+      "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+      "max_seq_length": 256,
+      "batch_size": 64,
+      "device": "cpu",
+      "normalize_embeddings": true,
+      "similarity": "inner product of L2-normalized embeddings (cosine)",
+      "index_type": "faiss.IndexFlatIP",
+      "index_dir": "data/index/dense"
+    },
+    "hybrid": {
+      "rrf_k": 60,
+      "rrf_window": 100,
+      "alphas": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "default_alpha": 0.5,
+      "score_normalization": "min-max over all chunks, per query and per retriever",
+      "weighted_formula": "alpha * dense + (1 - alpha) * sparse"
+    },
+    "evaluation": {
+      "eval_path": "data/eval/public_evaluation_data.json",
+      "output_dir": "outputs/retrieval_eval",
+      "k_values": [
+        1,
+        3,
+        5,
+        10,
+        20
+      ],
+      "primary_metric": "exact: normalized reference answer is a whole-token substring of a retrieved chunk",
+      "answer_normalization": "NFKD, accents stripped, lowercase, non-alphanumerics to spaces, whitespace collapsed",
+      "soft_metric": "token recall: share of the answer's non-stopword tokens found in one retrieved chunk",
+      "soft_threshold": 0.8,
+      "significance_test": "exact McNemar test on per-question hit@5 (exact)"
+    }
+  },
+  "results": {
+    "bm25": {
+      "All": {
+        "n": 157,
+        "exact": {
+          "hit@1": 0.3949,
+          "hit@3": 0.4713,
+          "hit@5": 0.5096,
+          "hit@10": 0.5287,
+          "hit@20": 0.5796
+        },
+        "soft": {
+          "hit@1": 0.4459,
+          "hit@3": 0.5478,
+          "hit@5": 0.5987,
+          "hit@10": 0.6242,
+          "hit@20": 0.6624
+        }
+      },
+      "Carnegie Museum of Art": {
+        "n": 59,
+        "exact": {
+          "hit@1": 0.7627,
+          "hit@3": 0.7797,
+          "hit@5": 0.7797,
+          "hit@10": 0.7966,
+          "hit@20": 0.8136
+        },
+        "soft": {
+          "hit@1": 0.7627,
+          "hit@3": 0.7966,
+          "hit@5": 0.7966,
+          "hit@10": 0.8136,
+          "hit@20": 0.8305
+        }
+      },
+      "CMU": {
+        "n": 8,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.25,
+          "hit@5": 0.25,
+          "hit@10": 0.25,
+          "hit@20": 0.25
+        }
+      },
+      "Pittsburgh local/history": {
+        "n": 14,
+        "exact": {
+          "hit@1": 0.0714,
+          "hit@3": 0.1429,
+          "hit@5": 0.2143,
+          "hit@10": 0.2143,
+          "hit@20": 0.2857
+        },
+        "soft": {
+          "hit@1": 0.1429,
+          "hit@3": 0.3571,
+          "hit@5": 0.4286,
+          "hit@10": 0.4286,
+          "hit@20": 0.5
+        }
+      },
+      "Events/music/comedy": {
+        "n": 20,
+        "exact": {
+          "hit@1": 0.2,
+          "hit@3": 0.25,
+          "hit@5": 0.35,
+          "hit@10": 0.35,
+          "hit@20": 0.4
+        },
+        "soft": {
+          "hit@1": 0.3,
+          "hit@3": 0.4,
+          "hit@5": 0.55,
+          "hit@10": 0.55,
+          "hit@20": 0.55
+        }
+      },
+      "Sports": {
+        "n": 33,
+        "exact": {
+          "hit@1": 0.3333,
+          "hit@3": 0.5455,
+          "hit@5": 0.6061,
+          "hit@10": 0.6667,
+          "hit@20": 0.8182
+        },
+        "soft": {
+          "hit@1": 0.3636,
+          "hit@3": 0.6061,
+          "hit@5": 0.6667,
+          "hit@10": 0.7273,
+          "hit@20": 0.8485
+        }
+      },
+      "Taxes/budget": {
+        "n": 12,
+        "exact": {
+          "hit@1": 0.0833,
+          "hit@3": 0.25,
+          "hit@5": 0.3333,
+          "hit@10": 0.3333,
+          "hit@20": 0.3333
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.3333,
+          "hit@5": 0.5,
+          "hit@10": 0.5833,
+          "hit@20": 0.5833
+        }
+      },
+      "Restaurants/food": {
+        "n": 11,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        }
+      },
+      "Specific answers (in 1-10 chunks)": {
+        "n": 56,
+        "exact": {
+          "hit@1": 0.6786,
+          "hit@3": 0.7679,
+          "hit@5": 0.8036,
+          "hit@10": 0.8393,
+          "hit@20": 0.8929
+        },
+        "soft": {
+          "hit@1": 0.7143,
+          "hit@3": 0.7857,
+          "hit@5": 0.8214,
+          "hit@10": 0.8571,
+          "hit@20": 0.9107
+        }
+      }
+    },
+    "dense": {
+      "All": {
+        "n": 157,
+        "exact": {
+          "hit@1": 0.3885,
+          "hit@3": 0.5096,
+          "hit@5": 0.535,
+          "hit@10": 0.5669,
+          "hit@20": 0.5796
+        },
+        "soft": {
+          "hit@1": 0.4459,
+          "hit@3": 0.5669,
+          "hit@5": 0.5987,
+          "hit@10": 0.6306,
+          "hit@20": 0.6497
+        }
+      },
+      "Carnegie Museum of Art": {
+        "n": 59,
+        "exact": {
+          "hit@1": 0.6949,
+          "hit@3": 0.7627,
+          "hit@5": 0.7797,
+          "hit@10": 0.7797,
+          "hit@20": 0.7966
+        },
+        "soft": {
+          "hit@1": 0.6949,
+          "hit@3": 0.7627,
+          "hit@5": 0.7966,
+          "hit@10": 0.7966,
+          "hit@20": 0.8136
+        }
+      },
+      "CMU": {
+        "n": 8,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.25,
+          "hit@5": 0.25,
+          "hit@10": 0.25,
+          "hit@20": 0.25
+        }
+      },
+      "Pittsburgh local/history": {
+        "n": 14,
+        "exact": {
+          "hit@1": 0.0714,
+          "hit@3": 0.2143,
+          "hit@5": 0.2857,
+          "hit@10": 0.2857,
+          "hit@20": 0.2857
+        },
+        "soft": {
+          "hit@1": 0.2143,
+          "hit@3": 0.3571,
+          "hit@5": 0.4286,
+          "hit@10": 0.5,
+          "hit@20": 0.5
+        }
+      },
+      "Events/music/comedy": {
+        "n": 20,
+        "exact": {
+          "hit@1": 0.2,
+          "hit@3": 0.2,
+          "hit@5": 0.2,
+          "hit@10": 0.3,
+          "hit@20": 0.35
+        },
+        "soft": {
+          "hit@1": 0.3,
+          "hit@3": 0.3,
+          "hit@5": 0.3,
+          "hit@10": 0.4,
+          "hit@20": 0.45
+        }
+      },
+      "Sports": {
+        "n": 33,
+        "exact": {
+          "hit@1": 0.3939,
+          "hit@3": 0.7576,
+          "hit@5": 0.7576,
+          "hit@10": 0.8485,
+          "hit@20": 0.8485
+        },
+        "soft": {
+          "hit@1": 0.4242,
+          "hit@3": 0.7879,
+          "hit@5": 0.8182,
+          "hit@10": 0.8788,
+          "hit@20": 0.8788
+        }
+      },
+      "Taxes/budget": {
+        "n": 12,
+        "exact": {
+          "hit@1": 0.1667,
+          "hit@3": 0.25,
+          "hit@5": 0.4167,
+          "hit@10": 0.4167,
+          "hit@20": 0.4167
+        },
+        "soft": {
+          "hit@1": 0.3333,
+          "hit@3": 0.4167,
+          "hit@5": 0.5,
+          "hit@10": 0.5,
+          "hit@20": 0.5833
+        }
+      },
+      "Restaurants/food": {
+        "n": 11,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        }
+      },
+      "Specific answers (in 1-10 chunks)": {
+        "n": 56,
+        "exact": {
+          "hit@1": 0.6429,
+          "hit@3": 0.8214,
+          "hit@5": 0.8214,
+          "hit@10": 0.8571,
+          "hit@20": 0.8929
+        },
+        "soft": {
+          "hit@1": 0.6786,
+          "hit@3": 0.8393,
+          "hit@5": 0.8393,
+          "hit@10": 0.875,
+          "hit@20": 0.9107
+        }
+      }
+    },
+    "rrf": {
+      "All": {
+        "n": 157,
+        "exact": {
+          "hit@1": 0.4204,
+          "hit@3": 0.5159,
+          "hit@5": 0.5541,
+          "hit@10": 0.5732,
+          "hit@20": 0.5924
+        },
+        "soft": {
+          "hit@1": 0.465,
+          "hit@3": 0.5796,
+          "hit@5": 0.6115,
+          "hit@10": 0.6497,
+          "hit@20": 0.6752
+        }
+      },
+      "Carnegie Museum of Art": {
+        "n": 59,
+        "exact": {
+          "hit@1": 0.7458,
+          "hit@3": 0.7627,
+          "hit@5": 0.7797,
+          "hit@10": 0.8305,
+          "hit@20": 0.8305
+        },
+        "soft": {
+          "hit@1": 0.7458,
+          "hit@3": 0.7797,
+          "hit@5": 0.7966,
+          "hit@10": 0.8475,
+          "hit@20": 0.8475
+        }
+      },
+      "CMU": {
+        "n": 8,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.25,
+          "hit@5": 0.25,
+          "hit@10": 0.25,
+          "hit@20": 0.25
+        }
+      },
+      "Pittsburgh local/history": {
+        "n": 14,
+        "exact": {
+          "hit@1": 0.0714,
+          "hit@3": 0.2857,
+          "hit@5": 0.2857,
+          "hit@10": 0.2857,
+          "hit@20": 0.3571
+        },
+        "soft": {
+          "hit@1": 0.1429,
+          "hit@3": 0.5,
+          "hit@5": 0.5,
+          "hit@10": 0.5,
+          "hit@20": 0.5714
+        }
+      },
+      "Events/music/comedy": {
+        "n": 20,
+        "exact": {
+          "hit@1": 0.15,
+          "hit@3": 0.2,
+          "hit@5": 0.35,
+          "hit@10": 0.35,
+          "hit@20": 0.35
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.3,
+          "hit@5": 0.45,
+          "hit@10": 0.5,
+          "hit@20": 0.5
+        }
+      },
+      "Sports": {
+        "n": 33,
+        "exact": {
+          "hit@1": 0.4848,
+          "hit@3": 0.7273,
+          "hit@5": 0.7879,
+          "hit@10": 0.7879,
+          "hit@20": 0.8182
+        },
+        "soft": {
+          "hit@1": 0.5152,
+          "hit@3": 0.7576,
+          "hit@5": 0.7879,
+          "hit@10": 0.8182,
+          "hit@20": 0.8485
+        }
+      },
+      "Taxes/budget": {
+        "n": 12,
+        "exact": {
+          "hit@1": 0.1667,
+          "hit@3": 0.3333,
+          "hit@5": 0.3333,
+          "hit@10": 0.3333,
+          "hit@20": 0.4167
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.4167,
+          "hit@5": 0.4167,
+          "hit@10": 0.5,
+          "hit@20": 0.6667
+        }
+      },
+      "Restaurants/food": {
+        "n": 11,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        }
+      },
+      "Specific answers (in 1-10 chunks)": {
+        "n": 56,
+        "exact": {
+          "hit@1": 0.6786,
+          "hit@3": 0.8214,
+          "hit@5": 0.8571,
+          "hit@10": 0.8929,
+          "hit@20": 0.8929
+        },
+        "soft": {
+          "hit@1": 0.6964,
+          "hit@3": 0.8393,
+          "hit@5": 0.875,
+          "hit@10": 0.9107,
+          "hit@20": 0.9107
+        }
+      }
+    },
+    "weighted_a0.25": {
+      "All": {
+        "n": 157,
+        "exact": {
+          "hit@1": 0.4076,
+          "hit@3": 0.465,
+          "hit@5": 0.5223,
+          "hit@10": 0.5414,
+          "hit@20": 0.5924
+        },
+        "soft": {
+          "hit@1": 0.4586,
+          "hit@3": 0.5478,
+          "hit@5": 0.6115,
+          "hit@10": 0.6306,
+          "hit@20": 0.6815
+        }
+      },
+      "Carnegie Museum of Art": {
+        "n": 59,
+        "exact": {
+          "hit@1": 0.7797,
+          "hit@3": 0.7797,
+          "hit@5": 0.7797,
+          "hit@10": 0.7966,
+          "hit@20": 0.8136
+        },
+        "soft": {
+          "hit@1": 0.7797,
+          "hit@3": 0.7966,
+          "hit@5": 0.7966,
+          "hit@10": 0.8136,
+          "hit@20": 0.8305
+        }
+      },
+      "CMU": {
+        "n": 8,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.25,
+          "hit@5": 0.25,
+          "hit@10": 0.25,
+          "hit@20": 0.25
+        }
+      },
+      "Pittsburgh local/history": {
+        "n": 14,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.1429,
+          "hit@5": 0.2143,
+          "hit@10": 0.2143,
+          "hit@20": 0.3571
+        },
+        "soft": {
+          "hit@1": 0.0714,
+          "hit@3": 0.3571,
+          "hit@5": 0.4286,
+          "hit@10": 0.4286,
+          "hit@20": 0.5714
+        }
+      },
+      "Events/music/comedy": {
+        "n": 20,
+        "exact": {
+          "hit@1": 0.2,
+          "hit@3": 0.2,
+          "hit@5": 0.3,
+          "hit@10": 0.35,
+          "hit@20": 0.4
+        },
+        "soft": {
+          "hit@1": 0.3,
+          "hit@3": 0.35,
+          "hit@5": 0.5,
+          "hit@10": 0.5,
+          "hit@20": 0.6
+        }
+      },
+      "Sports": {
+        "n": 33,
+        "exact": {
+          "hit@1": 0.3636,
+          "hit@3": 0.5455,
+          "hit@5": 0.697,
+          "hit@10": 0.7273,
+          "hit@20": 0.8182
+        },
+        "soft": {
+          "hit@1": 0.3939,
+          "hit@3": 0.6061,
+          "hit@5": 0.7576,
+          "hit@10": 0.7879,
+          "hit@20": 0.8485
+        }
+      },
+      "Taxes/budget": {
+        "n": 12,
+        "exact": {
+          "hit@1": 0.1667,
+          "hit@3": 0.25,
+          "hit@5": 0.3333,
+          "hit@10": 0.3333,
+          "hit@20": 0.4167
+        },
+        "soft": {
+          "hit@1": 0.3333,
+          "hit@3": 0.4167,
+          "hit@5": 0.5,
+          "hit@10": 0.5833,
+          "hit@20": 0.6667
+        }
+      },
+      "Restaurants/food": {
+        "n": 11,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        }
+      },
+      "Specific answers (in 1-10 chunks)": {
+        "n": 56,
+        "exact": {
+          "hit@1": 0.6786,
+          "hit@3": 0.7679,
+          "hit@5": 0.8393,
+          "hit@10": 0.8571,
+          "hit@20": 0.8929
+        },
+        "soft": {
+          "hit@1": 0.7143,
+          "hit@3": 0.7857,
+          "hit@5": 0.8571,
+          "hit@10": 0.875,
+          "hit@20": 0.9107
+        }
+      }
+    },
+    "weighted_a0.5": {
+      "All": {
+        "n": 157,
+        "exact": {
+          "hit@1": 0.4268,
+          "hit@3": 0.4968,
+          "hit@5": 0.535,
+          "hit@10": 0.5605,
+          "hit@20": 0.5924
+        },
+        "soft": {
+          "hit@1": 0.4777,
+          "hit@3": 0.5796,
+          "hit@5": 0.6178,
+          "hit@10": 0.6433,
+          "hit@20": 0.6879
+        }
+      },
+      "Carnegie Museum of Art": {
+        "n": 59,
+        "exact": {
+          "hit@1": 0.7797,
+          "hit@3": 0.7797,
+          "hit@5": 0.7797,
+          "hit@10": 0.8136,
+          "hit@20": 0.8305
+        },
+        "soft": {
+          "hit@1": 0.7797,
+          "hit@3": 0.7966,
+          "hit@5": 0.7966,
+          "hit@10": 0.8305,
+          "hit@20": 0.8475
+        }
+      },
+      "CMU": {
+        "n": 8,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.25,
+          "hit@5": 0.25,
+          "hit@10": 0.25,
+          "hit@20": 0.25
+        }
+      },
+      "Pittsburgh local/history": {
+        "n": 14,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.1429,
+          "hit@5": 0.2143,
+          "hit@10": 0.2143,
+          "hit@20": 0.3571
+        },
+        "soft": {
+          "hit@1": 0.0714,
+          "hit@3": 0.3571,
+          "hit@5": 0.4286,
+          "hit@10": 0.4286,
+          "hit@20": 0.5714
+        }
+      },
+      "Events/music/comedy": {
+        "n": 20,
+        "exact": {
+          "hit@1": 0.2,
+          "hit@3": 0.2,
+          "hit@5": 0.35,
+          "hit@10": 0.35,
+          "hit@20": 0.35
+        },
+        "soft": {
+          "hit@1": 0.3,
+          "hit@3": 0.35,
+          "hit@5": 0.5,
+          "hit@10": 0.5,
+          "hit@20": 0.55
+        }
+      },
+      "Sports": {
+        "n": 33,
+        "exact": {
+          "hit@1": 0.4545,
+          "hit@3": 0.697,
+          "hit@5": 0.7273,
+          "hit@10": 0.7576,
+          "hit@20": 0.8182
+        },
+        "soft": {
+          "hit@1": 0.4848,
+          "hit@3": 0.7576,
+          "hit@5": 0.7879,
+          "hit@10": 0.8182,
+          "hit@20": 0.8788
+        }
+      },
+      "Taxes/budget": {
+        "n": 12,
+        "exact": {
+          "hit@1": 0.1667,
+          "hit@3": 0.25,
+          "hit@5": 0.3333,
+          "hit@10": 0.4167,
+          "hit@20": 0.4167
+        },
+        "soft": {
+          "hit@1": 0.3333,
+          "hit@3": 0.4167,
+          "hit@5": 0.5,
+          "hit@10": 0.5833,
+          "hit@20": 0.6667
+        }
+      },
+      "Restaurants/food": {
+        "n": 11,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        }
+      },
+      "Specific answers (in 1-10 chunks)": {
+        "n": 56,
+        "exact": {
+          "hit@1": 0.7143,
+          "hit@3": 0.8571,
+          "hit@5": 0.8571,
+          "hit@10": 0.875,
+          "hit@20": 0.8929
+        },
+        "soft": {
+          "hit@1": 0.75,
+          "hit@3": 0.875,
+          "hit@5": 0.875,
+          "hit@10": 0.8929,
+          "hit@20": 0.9107
+        }
+      }
+    },
+    "weighted_a0.75": {
+      "All": {
+        "n": 157,
+        "exact": {
+          "hit@1": 0.4586,
+          "hit@3": 0.535,
+          "hit@5": 0.5605,
+          "hit@10": 0.5796,
+          "hit@20": 0.586
+        },
+        "soft": {
+          "hit@1": 0.5032,
+          "hit@3": 0.5987,
+          "hit@5": 0.6306,
+          "hit@10": 0.6561,
+          "hit@20": 0.6688
+        }
+      },
+      "Carnegie Museum of Art": {
+        "n": 59,
+        "exact": {
+          "hit@1": 0.7797,
+          "hit@3": 0.7966,
+          "hit@5": 0.7966,
+          "hit@10": 0.8305,
+          "hit@20": 0.8305
+        },
+        "soft": {
+          "hit@1": 0.7797,
+          "hit@3": 0.8136,
+          "hit@5": 0.8136,
+          "hit@10": 0.8475,
+          "hit@20": 0.8475
+        }
+      },
+      "CMU": {
+        "n": 8,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.25,
+          "hit@5": 0.25,
+          "hit@10": 0.25,
+          "hit@20": 0.25
+        }
+      },
+      "Pittsburgh local/history": {
+        "n": 14,
+        "exact": {
+          "hit@1": 0.0714,
+          "hit@3": 0.2143,
+          "hit@5": 0.2143,
+          "hit@10": 0.2143,
+          "hit@20": 0.2857
+        },
+        "soft": {
+          "hit@1": 0.1429,
+          "hit@3": 0.4286,
+          "hit@5": 0.4286,
+          "hit@10": 0.4286,
+          "hit@20": 0.5
+        }
+      },
+      "Events/music/comedy": {
+        "n": 20,
+        "exact": {
+          "hit@1": 0.15,
+          "hit@3": 0.3,
+          "hit@5": 0.35,
+          "hit@10": 0.35,
+          "hit@20": 0.35
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.4,
+          "hit@5": 0.45,
+          "hit@10": 0.5,
+          "hit@20": 0.55
+        }
+      },
+      "Sports": {
+        "n": 33,
+        "exact": {
+          "hit@1": 0.6061,
+          "hit@3": 0.7273,
+          "hit@5": 0.7879,
+          "hit@10": 0.8182,
+          "hit@20": 0.8182
+        },
+        "soft": {
+          "hit@1": 0.6364,
+          "hit@3": 0.7576,
+          "hit@5": 0.8182,
+          "hit@10": 0.8485,
+          "hit@20": 0.8485
+        }
+      },
+      "Taxes/budget": {
+        "n": 12,
+        "exact": {
+          "hit@1": 0.1667,
+          "hit@3": 0.3333,
+          "hit@5": 0.4167,
+          "hit@10": 0.4167,
+          "hit@20": 0.4167
+        },
+        "soft": {
+          "hit@1": 0.25,
+          "hit@3": 0.4167,
+          "hit@5": 0.5833,
+          "hit@10": 0.5833,
+          "hit@20": 0.5833
+        }
+      },
+      "Restaurants/food": {
+        "n": 11,
+        "exact": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        },
+        "soft": {
+          "hit@1": 0.0,
+          "hit@3": 0.0,
+          "hit@5": 0.0,
+          "hit@10": 0.0,
+          "hit@20": 0.0
+        }
+      },
+      "Specific answers (in 1-10 chunks)": {
+        "n": 56,
+        "exact": {
+          "hit@1": 0.75,
+          "hit@3": 0.875,
+          "hit@5": 0.8929,
+          "hit@10": 0.8929,
+          "hit@20": 0.8929
+        },
+        "soft": {
+          "hit@1": 0.7679,
+          "hit@3": 0.8929,
+          "hit@5": 0.9107,
+          "hit@10": 0.9107,
+          "hit@20": 0.9107
+        }
+      }
+    }
+  },
+  "answer_in_corpus": {
+    "All": {
+      "n": 157,
+      "in_corpus": 100
+    },
+    "Carnegie Museum of Art": {
+      "n": 59,
+      "in_corpus": 50
+    },
+    "CMU": {
+      "n": 8,
+      "in_corpus": 0
+    },
+    "Pittsburgh local/history": {
+      "n": 14,
+      "in_corpus": 6
+    },
+    "Events/music/comedy": {
+      "n": 20,
+      "in_corpus": 8
+    },
+    "Sports": {
+      "n": 33,
+      "in_corpus": 30
+    },
+    "Taxes/budget": {
+      "n": 12,
+      "in_corpus": 6
+    },
+    "Restaurants/food": {
+      "n": 11,
+      "in_corpus": 0
+    },
+    "Specific answers (in 1-10 chunks)": {
+      "n": 56,
+      "in_corpus": 56
+    }
+  },
+  "mcnemar_exact_hit@5": {
+    "bm25 vs dense": {
+      "only_first": 6,
+      "only_second": 10,
+      "p_value": 0.454498
+    },
+    "bm25 vs rrf": {
+      "only_first": 2,
+      "only_second": 9,
+      "p_value": 0.06543
+    },
+    "bm25 vs weighted_a0.25": {
+      "only_first": 1,
+      "only_second": 3,
+      "p_value": 0.625
+    },
+    "bm25 vs weighted_a0.5": {
+      "only_first": 1,
+      "only_second": 5,
+      "p_value": 0.21875
+    },
+    "bm25 vs weighted_a0.75": {
+      "only_first": 1,
+      "only_second": 9,
+      "p_value": 0.021484
+    },
+    "dense vs rrf": {
+      "only_first": 4,
+      "only_second": 7,
+      "p_value": 0.548828
+    },
+    "dense vs weighted_a0.25": {
+      "only_first": 7,
+      "only_second": 5,
+      "p_value": 0.774414
+    },
+    "dense vs weighted_a0.5": {
+      "only_first": 7,
+      "only_second": 7,
+      "p_value": 1.0
+    },
+    "dense vs weighted_a0.75": {
+      "only_first": 3,
+      "only_second": 7,
+      "p_value": 0.34375
+    },
+    "rrf vs weighted_a0.25": {
+      "only_first": 6,
+      "only_second": 1,
+      "p_value": 0.125
+    },
+    "rrf vs weighted_a0.5": {
+      "only_first": 4,
+      "only_second": 1,
+      "p_value": 0.375
+    },
+    "rrf vs weighted_a0.75": {
+      "only_first": 2,
+      "only_second": 3,
+      "p_value": 1.0
+    },
+    "weighted_a0.25 vs weighted_a0.5": {
+      "only_first": 0,
+      "only_second": 2,
+      "p_value": 0.5
+    },
+    "weighted_a0.25 vs weighted_a0.75": {
+      "only_first": 0,
+      "only_second": 6,
+      "p_value": 0.03125
+    },
+    "weighted_a0.5 vs weighted_a0.75": {
+      "only_first": 0,
+      "only_second": 4,
+      "p_value": 0.125
+    }
+  }
+}

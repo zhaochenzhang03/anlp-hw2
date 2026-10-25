@@ -3,10 +3,12 @@ import json
 import re
 import time
 from datetime import datetime, timezone
+from io import BytesIO
 from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup, NavigableString
+from pypdf import PdfReader
 
 
 HEADERS = {
@@ -16,6 +18,10 @@ HEADERS = {
         "Chrome/120.0 Safari/537.36"
     )
 }
+
+
+# Below this many characters, the main-content element is treated as empty.
+MIN_MAIN_CHARS = 300
 
 
 def fetch_html(url: str) -> str:
@@ -196,40 +202,76 @@ def extract_page(html: str) -> tuple[str, str]:
     if wiki_body is not None:
         return title, extract_wikipedia_text(wiki_body)
 
-    # Prefer the main content of the webpage when available.
-    main = soup.find("main")
+    description = soup.find("meta", attrs={"name": "description"}) or soup.find(
+        "meta", attrs={"property": "og:description"}
+    )
+    description = (description.get("content") or "").strip() if description else ""
 
-    if main is None:
-        main = soup.find("article")
+    # Prefer the main content of the webpage when available; fall back to
+    # the whole body when <main>/<article> is (nearly) empty, as on some
+    # JavaScript-heavy sites.
+    text = ""
+    for main in (soup.find("main"), soup.find("article"), soup.body, soup):
+        if main is None:
+            continue
 
-    if main is None:
-        main = soup.body
+        # Keep some paragraph structure instead of joining everything together.
+        text = clean_text(main.get_text(separator="\n", strip=True))
 
-    if main is None:
-        main = soup
+        if len(text) >= MIN_MAIN_CHARS:
+            break
 
-    # Keep some paragraph structure instead of joining everything together.
-    text = main.get_text(separator="\n", strip=True)
-    text = clean_text(text)
+    # The meta description often states what the page is about in one line,
+    # and is all that JavaScript-rendered pages offer without a browser.
+    if description and description not in text:
+        text = f"{description}\n\n{text}".strip()
 
     return title, text
 
 
-def crawl_page(url: str, category: str) -> dict:
+def extract_pdf(content: bytes) -> tuple[str, str]:
     """
-    Download and parse one webpage into a structured document.
+    Extract the title (from metadata, if any) and text of a PDF, one
+    paragraph-separated block per page.
     """
-    html = fetch_html(url)
+    reader = PdfReader(BytesIO(content))
 
-    title, text = extract_page(html)
+    title = ""
+    if reader.metadata and reader.metadata.title:
+        title = str(reader.metadata.title).strip()
+
+    pages = [page.extract_text() or "" for page in reader.pages]
+
+    return title, clean_text("\n\n".join(pages))
+
+
+def crawl_page(url: str, category: str, fetch_url: str | None = None, title: str | None = None) -> dict:
+    """
+    Download and parse one webpage or PDF into a structured document.
+
+    fetch_url, if given, is where the content is actually downloaded from
+    (e.g. a Wayback Machine copy of an official page that blocks crawlers);
+    the document still records the official url, plus archived_url.
+    """
+    response = requests.get(fetch_url or url, headers=HEADERS, timeout=60)
+    response.raise_for_status()
+
+    is_pdf = "pdf" in response.headers.get("content-type", "") or response.content[:5] == b"%PDF-"
+    if is_pdf:
+        page_title, text = extract_pdf(response.content)
+    else:
+        page_title, text = extract_page(response.text)
 
     document = {
         "url": url,
-        "title": title,
+        "title": title or page_title,
         "category": category,
         "text": text,
         "retrieved_at": datetime.now(timezone.utc).isoformat(),
     }
+
+    if fetch_url:
+        document["archived_url"] = fetch_url
 
     return document
 
@@ -333,6 +375,8 @@ def batch_crawl(
             document = crawl_page(
                 url=url,
                 category=source.get("category", "general"),
+                fetch_url=source.get("archived_url"),
+                title=source.get("title"),
             )
         except Exception as e:
             print(f"  FAILED: {e}")

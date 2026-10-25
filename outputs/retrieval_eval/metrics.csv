@@ -1,24 +1,24 @@
 method,topic,metric,k,hits,n,rate
-bm25,All,exact,1,62,157,0.3949
-bm25,All,exact,3,74,157,0.4713
-bm25,All,exact,5,80,157,0.5096
-bm25,All,exact,10,83,157,0.5287
-bm25,All,exact,20,91,157,0.5796
-bm25,All,soft,1,70,157,0.4459
-bm25,All,soft,3,86,157,0.5478
-bm25,All,soft,5,94,157,0.5987
-bm25,All,soft,10,98,157,0.6242
-bm25,All,soft,20,104,157,0.6624
+bm25,All,exact,1,71,157,0.4522
+bm25,All,exact,3,85,157,0.5414
+bm25,All,exact,5,89,157,0.5669
+bm25,All,exact,10,96,157,0.6115
+bm25,All,exact,20,99,157,0.6306
+bm25,All,soft,1,81,157,0.5159
+bm25,All,soft,3,99,157,0.6306
+bm25,All,soft,5,104,157,0.6624
+bm25,All,soft,10,112,157,0.7134
+bm25,All,soft,20,115,157,0.7325
 bm25,Carnegie Museum of Art,exact,1,45,59,0.7627
 bm25,Carnegie Museum of Art,exact,3,46,59,0.7797
 bm25,Carnegie Museum of Art,exact,5,46,59,0.7797
-bm25,Carnegie Museum of Art,exact,10,47,59,0.7966
+bm25,Carnegie Museum of Art,exact,10,48,59,0.8136
 bm25,Carnegie Museum of Art,exact,20,48,59,0.8136
 bm25,Carnegie Museum of Art,soft,1,45,59,0.7627
 bm25,Carnegie Museum of Art,soft,3,47,59,0.7966
 bm25,Carnegie Museum of Art,soft,5,47,59,0.7966
-bm25,Carnegie Museum of Art,soft,10,48,59,0.8136
-bm25,Carnegie Museum of Art,soft,20,49,59,0.8305
+bm25,Carnegie Museum of Art,soft,10,49,59,0.8305
+bm25,Carnegie Museum of Art,soft,20,50,59,0.8475
 bm25,CMU,exact,1,0,8,0.0
 bm25,CMU,exact,3,0,8,0.0
 bm25,CMU,exact,5,0,8,0.0
@@ -30,45 +30,45 @@ bm25,CMU,soft,5,2,8,0.25
 bm25,CMU,soft,10,2,8,0.25
 bm25,CMU,soft,20,2,8,0.25
 bm25,Pittsburgh local/history,exact,1,1,14,0.0714
-bm25,Pittsburgh local/history,exact,3,2,14,0.1429
-bm25,Pittsburgh local/history,exact,5,3,14,0.2143
-bm25,Pittsburgh local/history,exact,10,3,14,0.2143
-bm25,Pittsburgh local/history,exact,20,4,14,0.2857
-bm25,Pittsburgh local/history,soft,1,2,14,0.1429
-bm25,Pittsburgh local/history,soft,3,5,14,0.3571
-bm25,Pittsburgh local/history,soft,5,6,14,0.4286
-bm25,Pittsburgh local/history,soft,10,6,14,0.4286
-bm25,Pittsburgh local/history,soft,20,7,14,0.5
-bm25,Events/music/comedy,exact,1,4,20,0.2
-bm25,Events/music/comedy,exact,3,5,20,0.25
-bm25,Events/music/comedy,exact,5,7,20,0.35
-bm25,Events/music/comedy,exact,10,7,20,0.35
-bm25,Events/music/comedy,exact,20,8,20,0.4
-bm25,Events/music/comedy,soft,1,6,20,0.3
-bm25,Events/music/comedy,soft,3,8,20,0.4
-bm25,Events/music/comedy,soft,5,11,20,0.55
-bm25,Events/music/comedy,soft,10,11,20,0.55
-bm25,Events/music/comedy,soft,20,11,20,0.55
-bm25,Sports,exact,1,11,33,0.3333
-bm25,Sports,exact,3,18,33,0.5455
-bm25,Sports,exact,5,20,33,0.6061
-bm25,Sports,exact,10,22,33,0.6667
-bm25,Sports,exact,20,27,33,0.8182
-bm25,Sports,soft,1,12,33,0.3636
-bm25,Sports,soft,3,20,33,0.6061
-bm25,Sports,soft,5,22,33,0.6667
-bm25,Sports,soft,10,24,33,0.7273
-bm25,Sports,soft,20,28,33,0.8485
-bm25,Taxes/budget,exact,1,1,12,0.0833
-bm25,Taxes/budget,exact,3,3,12,0.25
-bm25,Taxes/budget,exact,5,4,12,0.3333
-bm25,Taxes/budget,exact,10,4,12,0.3333
-bm25,Taxes/budget,exact,20,4,12,0.3333
-bm25,Taxes/budget,soft,1,3,12,0.25
-bm25,Taxes/budget,soft,3,4,12,0.3333
-bm25,Taxes/budget,soft,5,6,12,0.5
-bm25,Taxes/budget,soft,10,7,12,0.5833
-bm25,Taxes/budget,soft,20,7,12,0.5833
+bm25,Pittsburgh local/history,exact,3,4,14,0.2857
+bm25,Pittsburgh local/history,exact,5,5,14,0.3571
+bm25,Pittsburgh local/history,exact,10,5,14,0.3571
+bm25,Pittsburgh local/history,exact,20,5,14,0.3571
+bm25,Pittsburgh local/history,soft,1,3,14,0.2143
+bm25,Pittsburgh local/history,soft,3,8,14,0.5714
+bm25,Pittsburgh local/history,soft,5,9,14,0.6429
+bm25,Pittsburgh local/history,soft,10,9,14,0.6429
+bm25,Pittsburgh local/history,soft,20,9,14,0.6429
+bm25,Events/music/comedy,exact,1,5,20,0.25
+bm25,Events/music/comedy,exact,3,6,20,0.3
+bm25,Events/music/comedy,exact,5,8,20,0.4
+bm25,Events/music/comedy,exact,10,8,20,0.4
+bm25,Events/music/comedy,exact,20,9,20,0.45
+bm25,Events/music/comedy,soft,1,8,20,0.4
+bm25,Events/music/comedy,soft,3,10,20,0.5
+bm25,Events/music/comedy,soft,5,13,20,0.65
+bm25,Events/music/comedy,soft,10,13,20,0.65
+bm25,Events/music/comedy,soft,20,14,20,0.7
+bm25,Sports,exact,1,16,33,0.4848
+bm25,Sports,exact,3,21,33,0.6364
+bm25,Sports,exact,5,22,33,0.6667
+bm25,Sports,exact,10,27,33,0.8182
+bm25,Sports,exact,20,29,33,0.8788
+bm25,Sports,soft,1,17,33,0.5152
+bm25,Sports,soft,3,23,33,0.697
+bm25,Sports,soft,5,24,33,0.7273
+bm25,Sports,soft,10,29,33,0.8788
+bm25,Sports,soft,20,30,33,0.9091
+bm25,Taxes/budget,exact,1,4,12,0.3333
+bm25,Taxes/budget,exact,3,8,12,0.6667
+bm25,Taxes/budget,exact,5,8,12,0.6667
+bm25,Taxes/budget,exact,10,8,12,0.6667
+bm25,Taxes/budget,exact,20,8,12,0.6667
+bm25,Taxes/budget,soft,1,6,12,0.5
+bm25,Taxes/budget,soft,3,9,12,0.75
+bm25,Taxes/budget,soft,5,9,12,0.75
+bm25,Taxes/budget,soft,10,10,12,0.8333
+bm25,Taxes/budget,soft,20,10,12,0.8333
 bm25,Restaurants/food,exact,1,0,11,0.0
 bm25,Restaurants/food,exact,3,0,11,0.0
 bm25,Restaurants/food,exact,5,0,11,0.0
@@ -79,26 +79,26 @@ bm25,Restaurants/food,soft,3,0,11,0.0
 bm25,Restaurants/food,soft,5,0,11,0.0
 bm25,Restaurants/food,soft,10,0,11,0.0
 bm25,Restaurants/food,soft,20,0,11,0.0
-bm25,Specific answers (in 1-10 chunks),exact,1,38,56,0.6786
-bm25,Specific answers (in 1-10 chunks),exact,3,43,56,0.7679
-bm25,Specific answers (in 1-10 chunks),exact,5,45,56,0.8036
-bm25,Specific answers (in 1-10 chunks),exact,10,47,56,0.8393
-bm25,Specific answers (in 1-10 chunks),exact,20,50,56,0.8929
-bm25,Specific answers (in 1-10 chunks),soft,1,40,56,0.7143
-bm25,Specific answers (in 1-10 chunks),soft,3,44,56,0.7857
-bm25,Specific answers (in 1-10 chunks),soft,5,46,56,0.8214
-bm25,Specific answers (in 1-10 chunks),soft,10,48,56,0.8571
-bm25,Specific answers (in 1-10 chunks),soft,20,51,56,0.9107
-dense,All,exact,1,61,157,0.3885
-dense,All,exact,3,80,157,0.5096
-dense,All,exact,5,84,157,0.535
-dense,All,exact,10,89,157,0.5669
-dense,All,exact,20,91,157,0.5796
-dense,All,soft,1,70,157,0.4459
-dense,All,soft,3,89,157,0.5669
-dense,All,soft,5,94,157,0.5987
-dense,All,soft,10,99,157,0.6306
-dense,All,soft,20,102,157,0.6497
+bm25,Specific answers (in 1-10 chunks),exact,1,43,60,0.7167
+bm25,Specific answers (in 1-10 chunks),exact,3,50,60,0.8333
+bm25,Specific answers (in 1-10 chunks),exact,5,51,60,0.85
+bm25,Specific answers (in 1-10 chunks),exact,10,55,60,0.9167
+bm25,Specific answers (in 1-10 chunks),exact,20,56,60,0.9333
+bm25,Specific answers (in 1-10 chunks),soft,1,45,60,0.75
+bm25,Specific answers (in 1-10 chunks),soft,3,50,60,0.8333
+bm25,Specific answers (in 1-10 chunks),soft,5,51,60,0.85
+bm25,Specific answers (in 1-10 chunks),soft,10,55,60,0.9167
+bm25,Specific answers (in 1-10 chunks),soft,20,56,60,0.9333
+dense,All,exact,1,70,157,0.4459
+dense,All,exact,3,89,157,0.5669
+dense,All,exact,5,92,157,0.586
+dense,All,exact,10,97,157,0.6178
+dense,All,exact,20,100,157,0.6369
+dense,All,soft,1,80,157,0.5096
+dense,All,soft,3,99,157,0.6306
+dense,All,soft,5,103,157,0.6561
+dense,All,soft,10,108,157,0.6879
+dense,All,soft,20,111,157,0.707
 dense,Carnegie Museum of Art,exact,1,41,59,0.6949
 dense,Carnegie Museum of Art,exact,3,45,59,0.7627
 dense,Carnegie Museum of Art,exact,5,46,59,0.7797
@@ -119,46 +119,46 @@ dense,CMU,soft,3,2,8,0.25
 dense,CMU,soft,5,2,8,0.25
 dense,CMU,soft,10,2,8,0.25
 dense,CMU,soft,20,2,8,0.25
-dense,Pittsburgh local/history,exact,1,1,14,0.0714
-dense,Pittsburgh local/history,exact,3,3,14,0.2143
-dense,Pittsburgh local/history,exact,5,4,14,0.2857
-dense,Pittsburgh local/history,exact,10,4,14,0.2857
-dense,Pittsburgh local/history,exact,20,4,14,0.2857
-dense,Pittsburgh local/history,soft,1,3,14,0.2143
-dense,Pittsburgh local/history,soft,3,5,14,0.3571
-dense,Pittsburgh local/history,soft,5,6,14,0.4286
-dense,Pittsburgh local/history,soft,10,7,14,0.5
-dense,Pittsburgh local/history,soft,20,7,14,0.5
-dense,Events/music/comedy,exact,1,4,20,0.2
-dense,Events/music/comedy,exact,3,4,20,0.2
-dense,Events/music/comedy,exact,5,4,20,0.2
-dense,Events/music/comedy,exact,10,6,20,0.3
-dense,Events/music/comedy,exact,20,7,20,0.35
-dense,Events/music/comedy,soft,1,6,20,0.3
-dense,Events/music/comedy,soft,3,6,20,0.3
-dense,Events/music/comedy,soft,5,6,20,0.3
-dense,Events/music/comedy,soft,10,8,20,0.4
-dense,Events/music/comedy,soft,20,9,20,0.45
-dense,Sports,exact,1,13,33,0.3939
-dense,Sports,exact,3,25,33,0.7576
-dense,Sports,exact,5,25,33,0.7576
-dense,Sports,exact,10,28,33,0.8485
-dense,Sports,exact,20,28,33,0.8485
-dense,Sports,soft,1,14,33,0.4242
-dense,Sports,soft,3,26,33,0.7879
-dense,Sports,soft,5,27,33,0.8182
-dense,Sports,soft,10,29,33,0.8788
-dense,Sports,soft,20,29,33,0.8788
-dense,Taxes/budget,exact,1,2,12,0.1667
-dense,Taxes/budget,exact,3,3,12,0.25
-dense,Taxes/budget,exact,5,5,12,0.4167
-dense,Taxes/budget,exact,10,5,12,0.4167
-dense,Taxes/budget,exact,20,5,12,0.4167
-dense,Taxes/budget,soft,1,4,12,0.3333
-dense,Taxes/budget,soft,3,5,12,0.4167
-dense,Taxes/budget,soft,5,6,12,0.5
-dense,Taxes/budget,soft,10,6,12,0.5
-dense,Taxes/budget,soft,20,7,12,0.5833
+dense,Pittsburgh local/history,exact,1,2,14,0.1429
+dense,Pittsburgh local/history,exact,3,4,14,0.2857
+dense,Pittsburgh local/history,exact,5,5,14,0.3571
+dense,Pittsburgh local/history,exact,10,5,14,0.3571
+dense,Pittsburgh local/history,exact,20,5,14,0.3571
+dense,Pittsburgh local/history,soft,1,4,14,0.2857
+dense,Pittsburgh local/history,soft,3,7,14,0.5
+dense,Pittsburgh local/history,soft,5,8,14,0.5714
+dense,Pittsburgh local/history,soft,10,9,14,0.6429
+dense,Pittsburgh local/history,soft,20,9,14,0.6429
+dense,Events/music/comedy,exact,1,5,20,0.25
+dense,Events/music/comedy,exact,3,5,20,0.25
+dense,Events/music/comedy,exact,5,5,20,0.25
+dense,Events/music/comedy,exact,10,7,20,0.35
+dense,Events/music/comedy,exact,20,9,20,0.45
+dense,Events/music/comedy,soft,1,8,20,0.4
+dense,Events/music/comedy,soft,3,8,20,0.4
+dense,Events/music/comedy,soft,5,8,20,0.4
+dense,Events/music/comedy,soft,10,10,20,0.5
+dense,Events/music/comedy,soft,20,12,20,0.6
+dense,Sports,exact,1,16,33,0.4848
+dense,Sports,exact,3,28,33,0.8485
+dense,Sports,exact,5,28,33,0.8485
+dense,Sports,exact,10,31,33,0.9394
+dense,Sports,exact,20,31,33,0.9394
+dense,Sports,soft,1,17,33,0.5152
+dense,Sports,soft,3,29,33,0.8788
+dense,Sports,soft,5,30,33,0.9091
+dense,Sports,soft,10,32,33,0.9697
+dense,Sports,soft,20,32,33,0.9697
+dense,Taxes/budget,exact,1,6,12,0.5
+dense,Taxes/budget,exact,3,7,12,0.5833
+dense,Taxes/budget,exact,5,8,12,0.6667
+dense,Taxes/budget,exact,10,8,12,0.6667
+dense,Taxes/budget,exact,20,8,12,0.6667
+dense,Taxes/budget,soft,1,8,12,0.6667
+dense,Taxes/budget,soft,3,8,12,0.6667
+dense,Taxes/budget,soft,5,8,12,0.6667
+dense,Taxes/budget,soft,10,8,12,0.6667
+dense,Taxes/budget,soft,20,8,12,0.6667
 dense,Restaurants/food,exact,1,0,11,0.0
 dense,Restaurants/food,exact,3,0,11,0.0
 dense,Restaurants/food,exact,5,0,11,0.0
@@ -169,26 +169,26 @@ dense,Restaurants/food,soft,3,0,11,0.0
 dense,Restaurants/food,soft,5,0,11,0.0
 dense,Restaurants/food,soft,10,0,11,0.0
 dense,Restaurants/food,soft,20,0,11,0.0
-dense,Specific answers (in 1-10 chunks),exact,1,36,56,0.6429
-dense,Specific answers (in 1-10 chunks),exact,3,46,56,0.8214
-dense,Specific answers (in 1-10 chunks),exact,5,46,56,0.8214
-dense,Specific answers (in 1-10 chunks),exact,10,48,56,0.8571
-dense,Specific answers (in 1-10 chunks),exact,20,50,56,0.8929
-dense,Specific answers (in 1-10 chunks),soft,1,38,56,0.6786
-dense,Specific answers (in 1-10 chunks),soft,3,47,56,0.8393
-dense,Specific answers (in 1-10 chunks),soft,5,47,56,0.8393
-dense,Specific answers (in 1-10 chunks),soft,10,49,56,0.875
-dense,Specific answers (in 1-10 chunks),soft,20,51,56,0.9107
-rrf,All,exact,1,66,157,0.4204
-rrf,All,exact,3,81,157,0.5159
-rrf,All,exact,5,87,157,0.5541
-rrf,All,exact,10,90,157,0.5732
-rrf,All,exact,20,93,157,0.5924
-rrf,All,soft,1,73,157,0.465
-rrf,All,soft,3,91,157,0.5796
-rrf,All,soft,5,96,157,0.6115
-rrf,All,soft,10,102,157,0.6497
-rrf,All,soft,20,106,157,0.6752
+dense,Specific answers (in 1-10 chunks),exact,1,42,60,0.7
+dense,Specific answers (in 1-10 chunks),exact,3,52,60,0.8667
+dense,Specific answers (in 1-10 chunks),exact,5,52,60,0.8667
+dense,Specific answers (in 1-10 chunks),exact,10,55,60,0.9167
+dense,Specific answers (in 1-10 chunks),exact,20,57,60,0.95
+dense,Specific answers (in 1-10 chunks),soft,1,44,60,0.7333
+dense,Specific answers (in 1-10 chunks),soft,3,52,60,0.8667
+dense,Specific answers (in 1-10 chunks),soft,5,52,60,0.8667
+dense,Specific answers (in 1-10 chunks),soft,10,55,60,0.9167
+dense,Specific answers (in 1-10 chunks),soft,20,57,60,0.95
+rrf,All,exact,1,75,157,0.4777
+rrf,All,exact,3,87,157,0.5541
+rrf,All,exact,5,94,157,0.5987
+rrf,All,exact,10,99,157,0.6306
+rrf,All,exact,20,100,157,0.6369
+rrf,All,soft,1,84,157,0.535
+rrf,All,soft,3,99,157,0.6306
+rrf,All,soft,5,105,157,0.6688
+rrf,All,soft,10,112,157,0.7134
+rrf,All,soft,20,113,157,0.7197
 rrf,Carnegie Museum of Art,exact,1,44,59,0.7458
 rrf,Carnegie Museum of Art,exact,3,45,59,0.7627
 rrf,Carnegie Museum of Art,exact,5,46,59,0.7797
@@ -209,46 +209,46 @@ rrf,CMU,soft,3,2,8,0.25
 rrf,CMU,soft,5,2,8,0.25
 rrf,CMU,soft,10,2,8,0.25
 rrf,CMU,soft,20,2,8,0.25
-rrf,Pittsburgh local/history,exact,1,1,14,0.0714
+rrf,Pittsburgh local/history,exact,1,2,14,0.1429
 rrf,Pittsburgh local/history,exact,3,4,14,0.2857
 rrf,Pittsburgh local/history,exact,5,4,14,0.2857
-rrf,Pittsburgh local/history,exact,10,4,14,0.2857
+rrf,Pittsburgh local/history,exact,10,5,14,0.3571
 rrf,Pittsburgh local/history,exact,20,5,14,0.3571
-rrf,Pittsburgh local/history,soft,1,2,14,0.1429
-rrf,Pittsburgh local/history,soft,3,7,14,0.5
-rrf,Pittsburgh local/history,soft,5,7,14,0.5
-rrf,Pittsburgh local/history,soft,10,7,14,0.5
-rrf,Pittsburgh local/history,soft,20,8,14,0.5714
-rrf,Events/music/comedy,exact,1,3,20,0.15
-rrf,Events/music/comedy,exact,3,4,20,0.2
-rrf,Events/music/comedy,exact,5,7,20,0.35
-rrf,Events/music/comedy,exact,10,7,20,0.35
-rrf,Events/music/comedy,exact,20,7,20,0.35
-rrf,Events/music/comedy,soft,1,5,20,0.25
-rrf,Events/music/comedy,soft,3,6,20,0.3
-rrf,Events/music/comedy,soft,5,9,20,0.45
-rrf,Events/music/comedy,soft,10,10,20,0.5
-rrf,Events/music/comedy,soft,20,10,20,0.5
-rrf,Sports,exact,1,16,33,0.4848
-rrf,Sports,exact,3,24,33,0.7273
-rrf,Sports,exact,5,26,33,0.7879
-rrf,Sports,exact,10,26,33,0.7879
-rrf,Sports,exact,20,27,33,0.8182
-rrf,Sports,soft,1,17,33,0.5152
-rrf,Sports,soft,3,25,33,0.7576
-rrf,Sports,soft,5,26,33,0.7879
-rrf,Sports,soft,10,27,33,0.8182
-rrf,Sports,soft,20,28,33,0.8485
-rrf,Taxes/budget,exact,1,2,12,0.1667
-rrf,Taxes/budget,exact,3,4,12,0.3333
-rrf,Taxes/budget,exact,5,4,12,0.3333
-rrf,Taxes/budget,exact,10,4,12,0.3333
-rrf,Taxes/budget,exact,20,5,12,0.4167
-rrf,Taxes/budget,soft,1,3,12,0.25
-rrf,Taxes/budget,soft,3,5,12,0.4167
-rrf,Taxes/budget,soft,5,5,12,0.4167
-rrf,Taxes/budget,soft,10,6,12,0.5
-rrf,Taxes/budget,soft,20,8,12,0.6667
+rrf,Pittsburgh local/history,soft,1,3,14,0.2143
+rrf,Pittsburgh local/history,soft,3,8,14,0.5714
+rrf,Pittsburgh local/history,soft,5,8,14,0.5714
+rrf,Pittsburgh local/history,soft,10,9,14,0.6429
+rrf,Pittsburgh local/history,soft,20,9,14,0.6429
+rrf,Events/music/comedy,exact,1,4,20,0.2
+rrf,Events/music/comedy,exact,3,5,20,0.25
+rrf,Events/music/comedy,exact,5,8,20,0.4
+rrf,Events/music/comedy,exact,10,8,20,0.4
+rrf,Events/music/comedy,exact,20,9,20,0.45
+rrf,Events/music/comedy,soft,1,7,20,0.35
+rrf,Events/music/comedy,soft,3,8,20,0.4
+rrf,Events/music/comedy,soft,5,11,20,0.55
+rrf,Events/music/comedy,soft,10,12,20,0.6
+rrf,Events/music/comedy,soft,20,13,20,0.65
+rrf,Sports,exact,1,19,33,0.5758
+rrf,Sports,exact,3,26,33,0.7879
+rrf,Sports,exact,5,29,33,0.8788
+rrf,Sports,exact,10,29,33,0.8788
+rrf,Sports,exact,20,29,33,0.8788
+rrf,Sports,soft,1,20,33,0.6061
+rrf,Sports,soft,3,27,33,0.8182
+rrf,Sports,soft,5,29,33,0.8788
+rrf,Sports,soft,10,30,33,0.9091
+rrf,Sports,soft,20,30,33,0.9091
+rrf,Taxes/budget,exact,1,6,12,0.5
+rrf,Taxes/budget,exact,3,7,12,0.5833
+rrf,Taxes/budget,exact,5,7,12,0.5833
+rrf,Taxes/budget,exact,10,8,12,0.6667
+rrf,Taxes/budget,exact,20,8,12,0.6667
+rrf,Taxes/budget,soft,1,8,12,0.6667
+rrf,Taxes/budget,soft,3,8,12,0.6667
+rrf,Taxes/budget,soft,5,8,12,0.6667
+rrf,Taxes/budget,soft,10,9,12,0.75
+rrf,Taxes/budget,soft,20,9,12,0.75
 rrf,Restaurants/food,exact,1,0,11,0.0
 rrf,Restaurants/food,exact,3,0,11,0.0
 rrf,Restaurants/food,exact,5,0,11,0.0
@@ -259,36 +259,36 @@ rrf,Restaurants/food,soft,3,0,11,0.0
 rrf,Restaurants/food,soft,5,0,11,0.0
 rrf,Restaurants/food,soft,10,0,11,0.0
 rrf,Restaurants/food,soft,20,0,11,0.0
-rrf,Specific answers (in 1-10 chunks),exact,1,38,56,0.6786
-rrf,Specific answers (in 1-10 chunks),exact,3,46,56,0.8214
-rrf,Specific answers (in 1-10 chunks),exact,5,48,56,0.8571
-rrf,Specific answers (in 1-10 chunks),exact,10,50,56,0.8929
-rrf,Specific answers (in 1-10 chunks),exact,20,50,56,0.8929
-rrf,Specific answers (in 1-10 chunks),soft,1,39,56,0.6964
-rrf,Specific answers (in 1-10 chunks),soft,3,47,56,0.8393
-rrf,Specific answers (in 1-10 chunks),soft,5,49,56,0.875
-rrf,Specific answers (in 1-10 chunks),soft,10,51,56,0.9107
-rrf,Specific answers (in 1-10 chunks),soft,20,51,56,0.9107
-weighted_a0.25,All,exact,1,64,157,0.4076
-weighted_a0.25,All,exact,3,73,157,0.465
-weighted_a0.25,All,exact,5,82,157,0.5223
-weighted_a0.25,All,exact,10,85,157,0.5414
-weighted_a0.25,All,exact,20,93,157,0.5924
-weighted_a0.25,All,soft,1,72,157,0.4586
-weighted_a0.25,All,soft,3,86,157,0.5478
-weighted_a0.25,All,soft,5,96,157,0.6115
-weighted_a0.25,All,soft,10,99,157,0.6306
-weighted_a0.25,All,soft,20,107,157,0.6815
+rrf,Specific answers (in 1-10 chunks),exact,1,44,60,0.7333
+rrf,Specific answers (in 1-10 chunks),exact,3,52,60,0.8667
+rrf,Specific answers (in 1-10 chunks),exact,5,54,60,0.9
+rrf,Specific answers (in 1-10 chunks),exact,10,56,60,0.9333
+rrf,Specific answers (in 1-10 chunks),exact,20,57,60,0.95
+rrf,Specific answers (in 1-10 chunks),soft,1,45,60,0.75
+rrf,Specific answers (in 1-10 chunks),soft,3,52,60,0.8667
+rrf,Specific answers (in 1-10 chunks),soft,5,54,60,0.9
+rrf,Specific answers (in 1-10 chunks),soft,10,56,60,0.9333
+rrf,Specific answers (in 1-10 chunks),soft,20,57,60,0.95
+weighted_a0.25,All,exact,1,74,157,0.4713
+weighted_a0.25,All,exact,3,83,157,0.5287
+weighted_a0.25,All,exact,5,91,157,0.5796
+weighted_a0.25,All,exact,10,96,157,0.6115
+weighted_a0.25,All,exact,20,100,157,0.6369
+weighted_a0.25,All,soft,1,83,157,0.5287
+weighted_a0.25,All,soft,3,97,157,0.6178
+weighted_a0.25,All,soft,5,106,157,0.6752
+weighted_a0.25,All,soft,10,110,157,0.7006
+weighted_a0.25,All,soft,20,115,157,0.7325
 weighted_a0.25,Carnegie Museum of Art,exact,1,46,59,0.7797
 weighted_a0.25,Carnegie Museum of Art,exact,3,46,59,0.7797
 weighted_a0.25,Carnegie Museum of Art,exact,5,46,59,0.7797
-weighted_a0.25,Carnegie Museum of Art,exact,10,47,59,0.7966
-weighted_a0.25,Carnegie Museum of Art,exact,20,48,59,0.8136
+weighted_a0.25,Carnegie Museum of Art,exact,10,48,59,0.8136
+weighted_a0.25,Carnegie Museum of Art,exact,20,49,59,0.8305
 weighted_a0.25,Carnegie Museum of Art,soft,1,46,59,0.7797
 weighted_a0.25,Carnegie Museum of Art,soft,3,47,59,0.7966
 weighted_a0.25,Carnegie Museum of Art,soft,5,47,59,0.7966
-weighted_a0.25,Carnegie Museum of Art,soft,10,48,59,0.8136
-weighted_a0.25,Carnegie Museum of Art,soft,20,49,59,0.8305
+weighted_a0.25,Carnegie Museum of Art,soft,10,49,59,0.8305
+weighted_a0.25,Carnegie Museum of Art,soft,20,50,59,0.8475
 weighted_a0.25,CMU,exact,1,0,8,0.0
 weighted_a0.25,CMU,exact,3,0,8,0.0
 weighted_a0.25,CMU,exact,5,0,8,0.0
@@ -299,46 +299,46 @@ weighted_a0.25,CMU,soft,3,2,8,0.25
 weighted_a0.25,CMU,soft,5,2,8,0.25
 weighted_a0.25,CMU,soft,10,2,8,0.25
 weighted_a0.25,CMU,soft,20,2,8,0.25
-weighted_a0.25,Pittsburgh local/history,exact,1,0,14,0.0
-weighted_a0.25,Pittsburgh local/history,exact,3,2,14,0.1429
-weighted_a0.25,Pittsburgh local/history,exact,5,3,14,0.2143
-weighted_a0.25,Pittsburgh local/history,exact,10,3,14,0.2143
+weighted_a0.25,Pittsburgh local/history,exact,1,1,14,0.0714
+weighted_a0.25,Pittsburgh local/history,exact,3,3,14,0.2143
+weighted_a0.25,Pittsburgh local/history,exact,5,5,14,0.3571
+weighted_a0.25,Pittsburgh local/history,exact,10,5,14,0.3571
 weighted_a0.25,Pittsburgh local/history,exact,20,5,14,0.3571
-weighted_a0.25,Pittsburgh local/history,soft,1,1,14,0.0714
-weighted_a0.25,Pittsburgh local/history,soft,3,5,14,0.3571
-weighted_a0.25,Pittsburgh local/history,soft,5,6,14,0.4286
-weighted_a0.25,Pittsburgh local/history,soft,10,6,14,0.4286
-weighted_a0.25,Pittsburgh local/history,soft,20,8,14,0.5714
-weighted_a0.25,Events/music/comedy,exact,1,4,20,0.2
-weighted_a0.25,Events/music/comedy,exact,3,4,20,0.2
-weighted_a0.25,Events/music/comedy,exact,5,6,20,0.3
-weighted_a0.25,Events/music/comedy,exact,10,7,20,0.35
-weighted_a0.25,Events/music/comedy,exact,20,8,20,0.4
-weighted_a0.25,Events/music/comedy,soft,1,6,20,0.3
-weighted_a0.25,Events/music/comedy,soft,3,7,20,0.35
-weighted_a0.25,Events/music/comedy,soft,5,10,20,0.5
-weighted_a0.25,Events/music/comedy,soft,10,10,20,0.5
-weighted_a0.25,Events/music/comedy,soft,20,12,20,0.6
-weighted_a0.25,Sports,exact,1,12,33,0.3636
-weighted_a0.25,Sports,exact,3,18,33,0.5455
-weighted_a0.25,Sports,exact,5,23,33,0.697
-weighted_a0.25,Sports,exact,10,24,33,0.7273
-weighted_a0.25,Sports,exact,20,27,33,0.8182
-weighted_a0.25,Sports,soft,1,13,33,0.3939
-weighted_a0.25,Sports,soft,3,20,33,0.6061
-weighted_a0.25,Sports,soft,5,25,33,0.7576
-weighted_a0.25,Sports,soft,10,26,33,0.7879
-weighted_a0.25,Sports,soft,20,28,33,0.8485
-weighted_a0.25,Taxes/budget,exact,1,2,12,0.1667
-weighted_a0.25,Taxes/budget,exact,3,3,12,0.25
-weighted_a0.25,Taxes/budget,exact,5,4,12,0.3333
-weighted_a0.25,Taxes/budget,exact,10,4,12,0.3333
-weighted_a0.25,Taxes/budget,exact,20,5,12,0.4167
-weighted_a0.25,Taxes/budget,soft,1,4,12,0.3333
-weighted_a0.25,Taxes/budget,soft,3,5,12,0.4167
-weighted_a0.25,Taxes/budget,soft,5,6,12,0.5
-weighted_a0.25,Taxes/budget,soft,10,7,12,0.5833
-weighted_a0.25,Taxes/budget,soft,20,8,12,0.6667
+weighted_a0.25,Pittsburgh local/history,soft,1,2,14,0.1429
+weighted_a0.25,Pittsburgh local/history,soft,3,7,14,0.5
+weighted_a0.25,Pittsburgh local/history,soft,5,9,14,0.6429
+weighted_a0.25,Pittsburgh local/history,soft,10,9,14,0.6429
+weighted_a0.25,Pittsburgh local/history,soft,20,9,14,0.6429
+weighted_a0.25,Events/music/comedy,exact,1,5,20,0.25
+weighted_a0.25,Events/music/comedy,exact,3,5,20,0.25
+weighted_a0.25,Events/music/comedy,exact,5,7,20,0.35
+weighted_a0.25,Events/music/comedy,exact,10,8,20,0.4
+weighted_a0.25,Events/music/comedy,exact,20,9,20,0.45
+weighted_a0.25,Events/music/comedy,soft,1,8,20,0.4
+weighted_a0.25,Events/music/comedy,soft,3,9,20,0.45
+weighted_a0.25,Events/music/comedy,soft,5,12,20,0.6
+weighted_a0.25,Events/music/comedy,soft,10,12,20,0.6
+weighted_a0.25,Events/music/comedy,soft,20,14,20,0.7
+weighted_a0.25,Sports,exact,1,16,33,0.4848
+weighted_a0.25,Sports,exact,3,21,33,0.6364
+weighted_a0.25,Sports,exact,5,25,33,0.7576
+weighted_a0.25,Sports,exact,10,27,33,0.8182
+weighted_a0.25,Sports,exact,20,29,33,0.8788
+weighted_a0.25,Sports,soft,1,17,33,0.5152
+weighted_a0.25,Sports,soft,3,23,33,0.697
+weighted_a0.25,Sports,soft,5,27,33,0.8182
+weighted_a0.25,Sports,soft,10,29,33,0.8788
+weighted_a0.25,Sports,soft,20,30,33,0.9091
+weighted_a0.25,Taxes/budget,exact,1,6,12,0.5
+weighted_a0.25,Taxes/budget,exact,3,8,12,0.6667
+weighted_a0.25,Taxes/budget,exact,5,8,12,0.6667
+weighted_a0.25,Taxes/budget,exact,10,8,12,0.6667
+weighted_a0.25,Taxes/budget,exact,20,8,12,0.6667
+weighted_a0.25,Taxes/budget,soft,1,8,12,0.6667
+weighted_a0.25,Taxes/budget,soft,3,9,12,0.75
+weighted_a0.25,Taxes/budget,soft,5,9,12,0.75
+weighted_a0.25,Taxes/budget,soft,10,9,12,0.75
+weighted_a0.25,Taxes/budget,soft,20,10,12,0.8333
 weighted_a0.25,Restaurants/food,exact,1,0,11,0.0
 weighted_a0.25,Restaurants/food,exact,3,0,11,0.0
 weighted_a0.25,Restaurants/food,exact,5,0,11,0.0
@@ -349,26 +349,26 @@ weighted_a0.25,Restaurants/food,soft,3,0,11,0.0
 weighted_a0.25,Restaurants/food,soft,5,0,11,0.0
 weighted_a0.25,Restaurants/food,soft,10,0,11,0.0
 weighted_a0.25,Restaurants/food,soft,20,0,11,0.0
-weighted_a0.25,Specific answers (in 1-10 chunks),exact,1,38,56,0.6786
-weighted_a0.25,Specific answers (in 1-10 chunks),exact,3,43,56,0.7679
-weighted_a0.25,Specific answers (in 1-10 chunks),exact,5,47,56,0.8393
-weighted_a0.25,Specific answers (in 1-10 chunks),exact,10,48,56,0.8571
-weighted_a0.25,Specific answers (in 1-10 chunks),exact,20,50,56,0.8929
-weighted_a0.25,Specific answers (in 1-10 chunks),soft,1,40,56,0.7143
-weighted_a0.25,Specific answers (in 1-10 chunks),soft,3,44,56,0.7857
-weighted_a0.25,Specific answers (in 1-10 chunks),soft,5,48,56,0.8571
-weighted_a0.25,Specific answers (in 1-10 chunks),soft,10,49,56,0.875
-weighted_a0.25,Specific answers (in 1-10 chunks),soft,20,51,56,0.9107
-weighted_a0.5,All,exact,1,67,157,0.4268
-weighted_a0.5,All,exact,3,78,157,0.4968
-weighted_a0.5,All,exact,5,84,157,0.535
-weighted_a0.5,All,exact,10,88,157,0.5605
-weighted_a0.5,All,exact,20,93,157,0.5924
-weighted_a0.5,All,soft,1,75,157,0.4777
-weighted_a0.5,All,soft,3,91,157,0.5796
-weighted_a0.5,All,soft,5,97,157,0.6178
-weighted_a0.5,All,soft,10,101,157,0.6433
-weighted_a0.5,All,soft,20,108,157,0.6879
+weighted_a0.25,Specific answers (in 1-10 chunks),exact,1,44,60,0.7333
+weighted_a0.25,Specific answers (in 1-10 chunks),exact,3,49,60,0.8167
+weighted_a0.25,Specific answers (in 1-10 chunks),exact,5,53,60,0.8833
+weighted_a0.25,Specific answers (in 1-10 chunks),exact,10,54,60,0.9
+weighted_a0.25,Specific answers (in 1-10 chunks),exact,20,57,60,0.95
+weighted_a0.25,Specific answers (in 1-10 chunks),soft,1,45,60,0.75
+weighted_a0.25,Specific answers (in 1-10 chunks),soft,3,49,60,0.8167
+weighted_a0.25,Specific answers (in 1-10 chunks),soft,5,53,60,0.8833
+weighted_a0.25,Specific answers (in 1-10 chunks),soft,10,54,60,0.9
+weighted_a0.25,Specific answers (in 1-10 chunks),soft,20,57,60,0.95
+weighted_a0.5,All,exact,1,77,157,0.4904
+weighted_a0.5,All,exact,3,90,157,0.5732
+weighted_a0.5,All,exact,5,93,157,0.5924
+weighted_a0.5,All,exact,10,97,157,0.6178
+weighted_a0.5,All,exact,20,101,157,0.6433
+weighted_a0.5,All,soft,1,87,157,0.5541
+weighted_a0.5,All,soft,3,104,157,0.6624
+weighted_a0.5,All,soft,5,107,157,0.6815
+weighted_a0.5,All,soft,10,112,157,0.7134
+weighted_a0.5,All,soft,20,117,157,0.7452
 weighted_a0.5,Carnegie Museum of Art,exact,1,46,59,0.7797
 weighted_a0.5,Carnegie Museum of Art,exact,3,46,59,0.7797
 weighted_a0.5,Carnegie Museum of Art,exact,5,46,59,0.7797
@@ -389,46 +389,46 @@ weighted_a0.5,CMU,soft,3,2,8,0.25
 weighted_a0.5,CMU,soft,5,2,8,0.25
 weighted_a0.5,CMU,soft,10,2,8,0.25
 weighted_a0.5,CMU,soft,20,2,8,0.25
-weighted_a0.5,Pittsburgh local/history,exact,1,0,14,0.0
-weighted_a0.5,Pittsburgh local/history,exact,3,2,14,0.1429
-weighted_a0.5,Pittsburgh local/history,exact,5,3,14,0.2143
-weighted_a0.5,Pittsburgh local/history,exact,10,3,14,0.2143
-weighted_a0.5,Pittsburgh local/history,exact,20,5,14,0.3571
-weighted_a0.5,Pittsburgh local/history,soft,1,1,14,0.0714
-weighted_a0.5,Pittsburgh local/history,soft,3,5,14,0.3571
-weighted_a0.5,Pittsburgh local/history,soft,5,6,14,0.4286
-weighted_a0.5,Pittsburgh local/history,soft,10,6,14,0.4286
-weighted_a0.5,Pittsburgh local/history,soft,20,8,14,0.5714
-weighted_a0.5,Events/music/comedy,exact,1,4,20,0.2
-weighted_a0.5,Events/music/comedy,exact,3,4,20,0.2
-weighted_a0.5,Events/music/comedy,exact,5,7,20,0.35
-weighted_a0.5,Events/music/comedy,exact,10,7,20,0.35
-weighted_a0.5,Events/music/comedy,exact,20,7,20,0.35
-weighted_a0.5,Events/music/comedy,soft,1,6,20,0.3
-weighted_a0.5,Events/music/comedy,soft,3,7,20,0.35
-weighted_a0.5,Events/music/comedy,soft,5,10,20,0.5
-weighted_a0.5,Events/music/comedy,soft,10,10,20,0.5
-weighted_a0.5,Events/music/comedy,soft,20,11,20,0.55
-weighted_a0.5,Sports,exact,1,15,33,0.4545
-weighted_a0.5,Sports,exact,3,23,33,0.697
-weighted_a0.5,Sports,exact,5,24,33,0.7273
-weighted_a0.5,Sports,exact,10,25,33,0.7576
-weighted_a0.5,Sports,exact,20,27,33,0.8182
-weighted_a0.5,Sports,soft,1,16,33,0.4848
-weighted_a0.5,Sports,soft,3,25,33,0.7576
-weighted_a0.5,Sports,soft,5,26,33,0.7879
-weighted_a0.5,Sports,soft,10,27,33,0.8182
-weighted_a0.5,Sports,soft,20,29,33,0.8788
-weighted_a0.5,Taxes/budget,exact,1,2,12,0.1667
-weighted_a0.5,Taxes/budget,exact,3,3,12,0.25
-weighted_a0.5,Taxes/budget,exact,5,4,12,0.3333
-weighted_a0.5,Taxes/budget,exact,10,5,12,0.4167
-weighted_a0.5,Taxes/budget,exact,20,5,12,0.4167
-weighted_a0.5,Taxes/budget,soft,1,4,12,0.3333
-weighted_a0.5,Taxes/budget,soft,3,5,12,0.4167
-weighted_a0.5,Taxes/budget,soft,5,6,12,0.5
-weighted_a0.5,Taxes/budget,soft,10,7,12,0.5833
-weighted_a0.5,Taxes/budget,soft,20,8,12,0.6667
+weighted_a0.5,Pittsburgh local/history,exact,1,1,14,0.0714
+weighted_a0.5,Pittsburgh local/history,exact,3,4,14,0.2857
+weighted_a0.5,Pittsburgh local/history,exact,5,5,14,0.3571
+weighted_a0.5,Pittsburgh local/history,exact,10,5,14,0.3571
+weighted_a0.5,Pittsburgh local/history,exact,20,6,14,0.4286
+weighted_a0.5,Pittsburgh local/history,soft,1,2,14,0.1429
+weighted_a0.5,Pittsburgh local/history,soft,3,8,14,0.5714
+weighted_a0.5,Pittsburgh local/history,soft,5,9,14,0.6429
+weighted_a0.5,Pittsburgh local/history,soft,10,9,14,0.6429
+weighted_a0.5,Pittsburgh local/history,soft,20,10,14,0.7143
+weighted_a0.5,Events/music/comedy,exact,1,5,20,0.25
+weighted_a0.5,Events/music/comedy,exact,3,6,20,0.3
+weighted_a0.5,Events/music/comedy,exact,5,8,20,0.4
+weighted_a0.5,Events/music/comedy,exact,10,8,20,0.4
+weighted_a0.5,Events/music/comedy,exact,20,9,20,0.45
+weighted_a0.5,Events/music/comedy,soft,1,8,20,0.4
+weighted_a0.5,Events/music/comedy,soft,3,10,20,0.5
+weighted_a0.5,Events/music/comedy,soft,5,12,20,0.6
+weighted_a0.5,Events/music/comedy,soft,10,13,20,0.65
+weighted_a0.5,Events/music/comedy,soft,20,14,20,0.7
+weighted_a0.5,Sports,exact,1,19,33,0.5758
+weighted_a0.5,Sports,exact,3,26,33,0.7879
+weighted_a0.5,Sports,exact,5,26,33,0.7879
+weighted_a0.5,Sports,exact,10,28,33,0.8485
+weighted_a0.5,Sports,exact,20,29,33,0.8788
+weighted_a0.5,Sports,soft,1,20,33,0.6061
+weighted_a0.5,Sports,soft,3,28,33,0.8485
+weighted_a0.5,Sports,soft,5,28,33,0.8485
+weighted_a0.5,Sports,soft,10,30,33,0.9091
+weighted_a0.5,Sports,soft,20,31,33,0.9394
+weighted_a0.5,Taxes/budget,exact,1,6,12,0.5
+weighted_a0.5,Taxes/budget,exact,3,8,12,0.6667
+weighted_a0.5,Taxes/budget,exact,5,8,12,0.6667
+weighted_a0.5,Taxes/budget,exact,10,8,12,0.6667
+weighted_a0.5,Taxes/budget,exact,20,8,12,0.6667
+weighted_a0.5,Taxes/budget,soft,1,9,12,0.75
+weighted_a0.5,Taxes/budget,soft,3,9,12,0.75
+weighted_a0.5,Taxes/budget,soft,5,9,12,0.75
+weighted_a0.5,Taxes/budget,soft,10,9,12,0.75
+weighted_a0.5,Taxes/budget,soft,20,10,12,0.8333
 weighted_a0.5,Restaurants/food,exact,1,0,11,0.0
 weighted_a0.5,Restaurants/food,exact,3,0,11,0.0
 weighted_a0.5,Restaurants/food,exact,5,0,11,0.0
@@ -439,35 +439,35 @@ weighted_a0.5,Restaurants/food,soft,3,0,11,0.0
 weighted_a0.5,Restaurants/food,soft,5,0,11,0.0
 weighted_a0.5,Restaurants/food,soft,10,0,11,0.0
 weighted_a0.5,Restaurants/food,soft,20,0,11,0.0
-weighted_a0.5,Specific answers (in 1-10 chunks),exact,1,40,56,0.7143
-weighted_a0.5,Specific answers (in 1-10 chunks),exact,3,48,56,0.8571
-weighted_a0.5,Specific answers (in 1-10 chunks),exact,5,48,56,0.8571
-weighted_a0.5,Specific answers (in 1-10 chunks),exact,10,49,56,0.875
-weighted_a0.5,Specific answers (in 1-10 chunks),exact,20,50,56,0.8929
-weighted_a0.5,Specific answers (in 1-10 chunks),soft,1,42,56,0.75
-weighted_a0.5,Specific answers (in 1-10 chunks),soft,3,49,56,0.875
-weighted_a0.5,Specific answers (in 1-10 chunks),soft,5,49,56,0.875
-weighted_a0.5,Specific answers (in 1-10 chunks),soft,10,50,56,0.8929
-weighted_a0.5,Specific answers (in 1-10 chunks),soft,20,51,56,0.9107
-weighted_a0.75,All,exact,1,72,157,0.4586
-weighted_a0.75,All,exact,3,84,157,0.535
-weighted_a0.75,All,exact,5,88,157,0.5605
-weighted_a0.75,All,exact,10,91,157,0.5796
-weighted_a0.75,All,exact,20,92,157,0.586
-weighted_a0.75,All,soft,1,79,157,0.5032
-weighted_a0.75,All,soft,3,94,157,0.5987
-weighted_a0.75,All,soft,5,99,157,0.6306
-weighted_a0.75,All,soft,10,103,157,0.6561
-weighted_a0.75,All,soft,20,105,157,0.6688
+weighted_a0.5,Specific answers (in 1-10 chunks),exact,1,46,60,0.7667
+weighted_a0.5,Specific answers (in 1-10 chunks),exact,3,54,60,0.9
+weighted_a0.5,Specific answers (in 1-10 chunks),exact,5,54,60,0.9
+weighted_a0.5,Specific answers (in 1-10 chunks),exact,10,54,60,0.9
+weighted_a0.5,Specific answers (in 1-10 chunks),exact,20,57,60,0.95
+weighted_a0.5,Specific answers (in 1-10 chunks),soft,1,47,60,0.7833
+weighted_a0.5,Specific answers (in 1-10 chunks),soft,3,54,60,0.9
+weighted_a0.5,Specific answers (in 1-10 chunks),soft,5,54,60,0.9
+weighted_a0.5,Specific answers (in 1-10 chunks),soft,10,54,60,0.9
+weighted_a0.5,Specific answers (in 1-10 chunks),soft,20,57,60,0.95
+weighted_a0.75,All,exact,1,79,157,0.5032
+weighted_a0.75,All,exact,3,92,157,0.586
+weighted_a0.75,All,exact,5,96,157,0.6115
+weighted_a0.75,All,exact,10,99,157,0.6306
+weighted_a0.75,All,exact,20,102,157,0.6497
+weighted_a0.75,All,soft,1,88,157,0.5605
+weighted_a0.75,All,soft,3,104,157,0.6624
+weighted_a0.75,All,soft,5,108,157,0.6879
+weighted_a0.75,All,soft,10,112,157,0.7134
+weighted_a0.75,All,soft,20,116,157,0.7389
 weighted_a0.75,Carnegie Museum of Art,exact,1,46,59,0.7797
-weighted_a0.75,Carnegie Museum of Art,exact,3,47,59,0.7966
+weighted_a0.75,Carnegie Museum of Art,exact,3,46,59,0.7797
 weighted_a0.75,Carnegie Museum of Art,exact,5,47,59,0.7966
-weighted_a0.75,Carnegie Museum of Art,exact,10,49,59,0.8305
+weighted_a0.75,Carnegie Museum of Art,exact,10,48,59,0.8136
 weighted_a0.75,Carnegie Museum of Art,exact,20,49,59,0.8305
 weighted_a0.75,Carnegie Museum of Art,soft,1,46,59,0.7797
-weighted_a0.75,Carnegie Museum of Art,soft,3,48,59,0.8136
+weighted_a0.75,Carnegie Museum of Art,soft,3,47,59,0.7966
 weighted_a0.75,Carnegie Museum of Art,soft,5,48,59,0.8136
-weighted_a0.75,Carnegie Museum of Art,soft,10,50,59,0.8475
+weighted_a0.75,Carnegie Museum of Art,soft,10,49,59,0.8305
 weighted_a0.75,Carnegie Museum of Art,soft,20,50,59,0.8475
 weighted_a0.75,CMU,exact,1,0,8,0.0
 weighted_a0.75,CMU,exact,3,0,8,0.0
@@ -480,45 +480,45 @@ weighted_a0.75,CMU,soft,5,2,8,0.25
 weighted_a0.75,CMU,soft,10,2,8,0.25
 weighted_a0.75,CMU,soft,20,2,8,0.25
 weighted_a0.75,Pittsburgh local/history,exact,1,1,14,0.0714
-weighted_a0.75,Pittsburgh local/history,exact,3,3,14,0.2143
-weighted_a0.75,Pittsburgh local/history,exact,5,3,14,0.2143
-weighted_a0.75,Pittsburgh local/history,exact,10,3,14,0.2143
-weighted_a0.75,Pittsburgh local/history,exact,20,4,14,0.2857
+weighted_a0.75,Pittsburgh local/history,exact,3,4,14,0.2857
+weighted_a0.75,Pittsburgh local/history,exact,5,4,14,0.2857
+weighted_a0.75,Pittsburgh local/history,exact,10,5,14,0.3571
+weighted_a0.75,Pittsburgh local/history,exact,20,6,14,0.4286
 weighted_a0.75,Pittsburgh local/history,soft,1,2,14,0.1429
-weighted_a0.75,Pittsburgh local/history,soft,3,6,14,0.4286
-weighted_a0.75,Pittsburgh local/history,soft,5,6,14,0.4286
-weighted_a0.75,Pittsburgh local/history,soft,10,6,14,0.4286
-weighted_a0.75,Pittsburgh local/history,soft,20,7,14,0.5
-weighted_a0.75,Events/music/comedy,exact,1,3,20,0.15
-weighted_a0.75,Events/music/comedy,exact,3,6,20,0.3
-weighted_a0.75,Events/music/comedy,exact,5,7,20,0.35
-weighted_a0.75,Events/music/comedy,exact,10,7,20,0.35
-weighted_a0.75,Events/music/comedy,exact,20,7,20,0.35
-weighted_a0.75,Events/music/comedy,soft,1,5,20,0.25
-weighted_a0.75,Events/music/comedy,soft,3,8,20,0.4
-weighted_a0.75,Events/music/comedy,soft,5,9,20,0.45
-weighted_a0.75,Events/music/comedy,soft,10,10,20,0.5
-weighted_a0.75,Events/music/comedy,soft,20,11,20,0.55
-weighted_a0.75,Sports,exact,1,20,33,0.6061
-weighted_a0.75,Sports,exact,3,24,33,0.7273
-weighted_a0.75,Sports,exact,5,26,33,0.7879
-weighted_a0.75,Sports,exact,10,27,33,0.8182
-weighted_a0.75,Sports,exact,20,27,33,0.8182
-weighted_a0.75,Sports,soft,1,21,33,0.6364
-weighted_a0.75,Sports,soft,3,25,33,0.7576
-weighted_a0.75,Sports,soft,5,27,33,0.8182
-weighted_a0.75,Sports,soft,10,28,33,0.8485
-weighted_a0.75,Sports,soft,20,28,33,0.8485
-weighted_a0.75,Taxes/budget,exact,1,2,12,0.1667
-weighted_a0.75,Taxes/budget,exact,3,4,12,0.3333
-weighted_a0.75,Taxes/budget,exact,5,5,12,0.4167
-weighted_a0.75,Taxes/budget,exact,10,5,12,0.4167
-weighted_a0.75,Taxes/budget,exact,20,5,12,0.4167
-weighted_a0.75,Taxes/budget,soft,1,3,12,0.25
-weighted_a0.75,Taxes/budget,soft,3,5,12,0.4167
-weighted_a0.75,Taxes/budget,soft,5,7,12,0.5833
-weighted_a0.75,Taxes/budget,soft,10,7,12,0.5833
-weighted_a0.75,Taxes/budget,soft,20,7,12,0.5833
+weighted_a0.75,Pittsburgh local/history,soft,3,8,14,0.5714
+weighted_a0.75,Pittsburgh local/history,soft,5,8,14,0.5714
+weighted_a0.75,Pittsburgh local/history,soft,10,9,14,0.6429
+weighted_a0.75,Pittsburgh local/history,soft,20,10,14,0.7143
+weighted_a0.75,Events/music/comedy,exact,1,4,20,0.2
+weighted_a0.75,Events/music/comedy,exact,3,7,20,0.35
+weighted_a0.75,Events/music/comedy,exact,5,8,20,0.4
+weighted_a0.75,Events/music/comedy,exact,10,8,20,0.4
+weighted_a0.75,Events/music/comedy,exact,20,9,20,0.45
+weighted_a0.75,Events/music/comedy,soft,1,7,20,0.35
+weighted_a0.75,Events/music/comedy,soft,3,10,20,0.5
+weighted_a0.75,Events/music/comedy,soft,5,11,20,0.55
+weighted_a0.75,Events/music/comedy,soft,10,12,20,0.6
+weighted_a0.75,Events/music/comedy,soft,20,14,20,0.7
+weighted_a0.75,Sports,exact,1,22,33,0.6667
+weighted_a0.75,Sports,exact,3,28,33,0.8485
+weighted_a0.75,Sports,exact,5,29,33,0.8788
+weighted_a0.75,Sports,exact,10,30,33,0.9091
+weighted_a0.75,Sports,exact,20,30,33,0.9091
+weighted_a0.75,Sports,soft,1,23,33,0.697
+weighted_a0.75,Sports,soft,3,29,33,0.8788
+weighted_a0.75,Sports,soft,5,30,33,0.9091
+weighted_a0.75,Sports,soft,10,31,33,0.9394
+weighted_a0.75,Sports,soft,20,31,33,0.9394
+weighted_a0.75,Taxes/budget,exact,1,6,12,0.5
+weighted_a0.75,Taxes/budget,exact,3,7,12,0.5833
+weighted_a0.75,Taxes/budget,exact,5,8,12,0.6667
+weighted_a0.75,Taxes/budget,exact,10,8,12,0.6667
+weighted_a0.75,Taxes/budget,exact,20,8,12,0.6667
+weighted_a0.75,Taxes/budget,soft,1,8,12,0.6667
+weighted_a0.75,Taxes/budget,soft,3,8,12,0.6667
+weighted_a0.75,Taxes/budget,soft,5,9,12,0.75
+weighted_a0.75,Taxes/budget,soft,10,9,12,0.75
+weighted_a0.75,Taxes/budget,soft,20,9,12,0.75
 weighted_a0.75,Restaurants/food,exact,1,0,11,0.0
 weighted_a0.75,Restaurants/food,exact,3,0,11,0.0
 weighted_a0.75,Restaurants/food,exact,5,0,11,0.0
@@ -529,13 +529,13 @@ weighted_a0.75,Restaurants/food,soft,3,0,11,0.0
 weighted_a0.75,Restaurants/food,soft,5,0,11,0.0
 weighted_a0.75,Restaurants/food,soft,10,0,11,0.0
 weighted_a0.75,Restaurants/food,soft,20,0,11,0.0
-weighted_a0.75,Specific answers (in 1-10 chunks),exact,1,42,56,0.75
-weighted_a0.75,Specific answers (in 1-10 chunks),exact,3,49,56,0.875
-weighted_a0.75,Specific answers (in 1-10 chunks),exact,5,50,56,0.8929
-weighted_a0.75,Specific answers (in 1-10 chunks),exact,10,50,56,0.8929
-weighted_a0.75,Specific answers (in 1-10 chunks),exact,20,50,56,0.8929
-weighted_a0.75,Specific answers (in 1-10 chunks),soft,1,43,56,0.7679
-weighted_a0.75,Specific answers (in 1-10 chunks),soft,3,50,56,0.8929
-weighted_a0.75,Specific answers (in 1-10 chunks),soft,5,51,56,0.9107
-weighted_a0.75,Specific answers (in 1-10 chunks),soft,10,51,56,0.9107
-weighted_a0.75,Specific answers (in 1-10 chunks),soft,20,51,56,0.9107
+weighted_a0.75,Specific answers (in 1-10 chunks),exact,1,48,60,0.8
+weighted_a0.75,Specific answers (in 1-10 chunks),exact,3,55,60,0.9167
+weighted_a0.75,Specific answers (in 1-10 chunks),exact,5,56,60,0.9333
+weighted_a0.75,Specific answers (in 1-10 chunks),exact,10,56,60,0.9333
+weighted_a0.75,Specific answers (in 1-10 chunks),exact,20,57,60,0.95
+weighted_a0.75,Specific answers (in 1-10 chunks),soft,1,49,60,0.8167
+weighted_a0.75,Specific answers (in 1-10 chunks),soft,3,55,60,0.9167
+weighted_a0.75,Specific answers (in 1-10 chunks),soft,5,56,60,0.9333
+weighted_a0.75,Specific answers (in 1-10 chunks),soft,10,56,60,0.9333
+weighted_a0.75,Specific answers (in 1-10 chunks),soft,20,57,60,0.95
