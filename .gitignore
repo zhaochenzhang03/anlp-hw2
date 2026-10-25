@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+data/raw/
+outputs/
+models/
+*.pt
+*.bin
+*.safetensors
+*.faiss
