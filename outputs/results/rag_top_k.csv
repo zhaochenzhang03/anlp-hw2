@@ -1,0 +1,3 @@
+system,run,n,exact_match,f1,recall,rouge_l,reader_minutes,mean_prompt_tokens,abstained,f1_p_vs_first,em_p_vs_first
+"Weighted a=0.75, top-5",weighted0.75_k5__Qwen3-4B-Instruct-2507,157,0.4204,0.5334,0.542,0.5302,44.0,2301,34,,
+"Weighted a=0.75, top-10",weighted0.75_k10__Qwen3-4B-Instruct-2507,157,0.4204,0.535,0.5432,0.5312,160.4,4250,32,0.8988,1.0

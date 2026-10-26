@@ -1,0 +1,61 @@
+{
+  "sessions": [
+    {
+      "finished_at": "2026-10-25T15:30:37.585087+00:00",
+      "start": 0,
+      "end": null,
+      "ids": null,
+      "questions_run": 157,
+      "seconds": 190.8
+    }
+  ],
+  "run_name": "closed_book_guess__Qwen3-4B-Instruct-2507",
+  "questions_file": "data/eval/public_evaluation_data.json",
+  "settings": {
+    "method": "closed_book_guess",
+    "alpha": null,
+    "top_k": 0,
+    "model_name": "Qwen/Qwen3-4B-Instruct-2507",
+    "prompt_version": "v1",
+    "max_new_tokens": 32,
+    "chunks_sha1": null
+  },
+  "generation_config": {
+    "model_name": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "known_revisions": {
+      "Qwen/Qwen3-4B-Instruct-2507": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "Qwen/Qwen2.5-1.5B-Instruct": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "device": "auto",
+    "dtype": "auto",
+    "max_context_tokens": 8192,
+    "max_new_tokens": 32,
+    "temperature": 0.0,
+    "decoding": "greedy (do_sample=False)",
+    "prompt_template": "generation/prompts.py (PROMPT_VERSION recorded in every prediction)",
+    "retrieval": {
+      "method": "weighted",
+      "alpha": 0.75,
+      "top_k": 5
+    },
+    "notes": {
+      "model_choice": "Qwen3-4B-Instruct-2507: open weights on Hugging Face, released 2025-08 (before 2026-01-01), 4.0B parameters (<= 32B), non-thinking instruct model; ~8 GB in bfloat16, so it runs on a Colab T4 or a 16 GB Apple-silicon Mac.",
+      "alternative_model": "Qwen/Qwen2.5-1.5B-Instruct (released 2024-09, 1.5B) for the reader-size ablation.",
+      "device_dtype": "auto: cuda (bfloat16 if supported, else float16) > mps (bfloat16) > cpu (float32).",
+      "max_context_tokens": "Prompt budget; if exceeded, the lowest-ranked chunks are dropped first."
+    },
+    "closed_book_always_answer": true
+  },
+  "retrieval_config": null,
+  "reader": {
+    "model_name": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "device": "mps",
+    "dtype": "bfloat16",
+    "prompt_version": "v1",
+    "max_new_tokens": 32,
+    "temperature": 0.0,
+    "max_context_tokens": 8192
+  }
+}

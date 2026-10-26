@@ -1,0 +1,7 @@
+system,run,n,exact_match,f1,recall,rouge_l,reader_minutes,mean_prompt_tokens,abstained,f1_p_vs_first,em_p_vs_first
+Closed-book (may abstain),closed_book__Qwen3-4B-Instruct-2507,157,0.0127,0.0377,0.0339,0.0365,3.1,160,110,,
+Closed-book (always answers),closed_book_guess__Qwen3-4B-Instruct-2507,157,0.0191,0.0768,0.0753,0.0747,3.2,156,0,0.0102,1.0
+BM25 RAG,bm25_k5__Qwen3-4B-Instruct-2507,157,0.4076,0.5118,0.5263,0.5088,42.7,2340,37,0.0,0.0
+Dense RAG,dense_k5__Qwen3-4B-Instruct-2507,157,0.4076,0.5129,0.5219,0.5091,74.6,2396,41,0.0,0.0
+RRF hybrid RAG,rrf_k5__Qwen3-4B-Instruct-2507,157,0.414,0.5098,0.519,0.5069,41.6,2291,38,0.0,0.0
+Weighted a=0.75 hybrid RAG (dev-tuned),weighted0.75_k5__Qwen3-4B-Instruct-2507,157,0.4204,0.5334,0.542,0.5302,44.0,2301,34,0.0,0.0

@@ -1,0 +1,8 @@
+failure type,all failures,manually inspected
+corpus,30,11
+retrieval,8,3
+context_noise,6,0
+generation,8,5
+format_mismatch,15,8
+ambiguity_stale,6,6
+total,73,33

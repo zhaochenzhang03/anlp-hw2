@@ -1,0 +1,524 @@
+{
+  "retrieval": [
+    {
+      "corpus": "before patch",
+      "method": "BM25",
+      "n_chunks": 2529,
+      "exact_hit@1": 0.3949,
+      "exact_hit@3": 0.4713,
+      "exact_hit@5": 0.5096,
+      "exact_hit@10": 0.5287,
+      "exact_hit@20": 0.5796,
+      "soft_hit@1": 0.4459,
+      "soft_hit@3": 0.5478,
+      "soft_hit@5": 0.5987,
+      "soft_hit@10": 0.6242,
+      "soft_hit@20": 0.6624
+    },
+    {
+      "corpus": "before patch",
+      "method": "Dense",
+      "n_chunks": 2529,
+      "exact_hit@1": 0.3885,
+      "exact_hit@3": 0.5096,
+      "exact_hit@5": 0.535,
+      "exact_hit@10": 0.5669,
+      "exact_hit@20": 0.5796,
+      "soft_hit@1": 0.4459,
+      "soft_hit@3": 0.5669,
+      "soft_hit@5": 0.5987,
+      "soft_hit@10": 0.6306,
+      "soft_hit@20": 0.6497
+    },
+    {
+      "corpus": "before patch",
+      "method": "RRF (k=60)",
+      "n_chunks": 2529,
+      "exact_hit@1": 0.4204,
+      "exact_hit@3": 0.5159,
+      "exact_hit@5": 0.5541,
+      "exact_hit@10": 0.5732,
+      "exact_hit@20": 0.5924,
+      "soft_hit@1": 0.465,
+      "soft_hit@3": 0.5796,
+      "soft_hit@5": 0.6115,
+      "soft_hit@10": 0.6497,
+      "soft_hit@20": 0.6752
+    },
+    {
+      "corpus": "before patch",
+      "method": "Weighted a=0.75 (dev-tuned)",
+      "n_chunks": 2529,
+      "exact_hit@1": 0.4586,
+      "exact_hit@3": 0.535,
+      "exact_hit@5": 0.5605,
+      "exact_hit@10": 0.5796,
+      "exact_hit@20": 0.586,
+      "soft_hit@1": 0.5032,
+      "soft_hit@3": 0.5987,
+      "soft_hit@5": 0.6306,
+      "soft_hit@10": 0.6561,
+      "soft_hit@20": 0.6688
+    },
+    {
+      "corpus": "after patch",
+      "method": "BM25",
+      "n_chunks": 2902,
+      "exact_hit@1": 0.4522,
+      "exact_hit@3": 0.5414,
+      "exact_hit@5": 0.5669,
+      "exact_hit@10": 0.6115,
+      "exact_hit@20": 0.6306,
+      "soft_hit@1": 0.5159,
+      "soft_hit@3": 0.6306,
+      "soft_hit@5": 0.6624,
+      "soft_hit@10": 0.7134,
+      "soft_hit@20": 0.7325
+    },
+    {
+      "corpus": "after patch",
+      "method": "Dense",
+      "n_chunks": 2902,
+      "exact_hit@1": 0.4459,
+      "exact_hit@3": 0.5669,
+      "exact_hit@5": 0.586,
+      "exact_hit@10": 0.6178,
+      "exact_hit@20": 0.6369,
+      "soft_hit@1": 0.5096,
+      "soft_hit@3": 0.6306,
+      "soft_hit@5": 0.6561,
+      "soft_hit@10": 0.6879,
+      "soft_hit@20": 0.707
+    },
+    {
+      "corpus": "after patch",
+      "method": "RRF (k=60)",
+      "n_chunks": 2902,
+      "exact_hit@1": 0.4777,
+      "exact_hit@3": 0.5541,
+      "exact_hit@5": 0.5987,
+      "exact_hit@10": 0.6306,
+      "exact_hit@20": 0.6369,
+      "soft_hit@1": 0.535,
+      "soft_hit@3": 0.6306,
+      "soft_hit@5": 0.6688,
+      "soft_hit@10": 0.7134,
+      "soft_hit@20": 0.7197
+    },
+    {
+      "corpus": "after patch",
+      "method": "Weighted a=0.75 (dev-tuned)",
+      "n_chunks": 2902,
+      "exact_hit@1": 0.5032,
+      "exact_hit@3": 0.586,
+      "exact_hit@5": 0.6115,
+      "exact_hit@10": 0.6306,
+      "exact_hit@20": 0.6497,
+      "soft_hit@1": 0.5605,
+      "soft_hit@3": 0.6624,
+      "soft_hit@5": 0.6879,
+      "soft_hit@10": 0.7134,
+      "soft_hit@20": 0.7389
+    }
+  ],
+  "retrieval_by_topic": [
+    {
+      "topic": "All",
+      "n": 157,
+      "in_corpus_before": 100,
+      "in_corpus_after": 105,
+      "BM25 hit@5 after": 0.5669,
+      "Dense hit@5 after": 0.586,
+      "RRF (k=60) hit@5 after": 0.5987,
+      "Weighted a=0.75 (dev-tuned) hit@5 after": 0.6115
+    },
+    {
+      "topic": "Carnegie Museum of Art",
+      "n": 59,
+      "in_corpus_before": 50,
+      "in_corpus_after": 50,
+      "BM25 hit@5 after": 0.7797,
+      "Dense hit@5 after": 0.7797,
+      "RRF (k=60) hit@5 after": 0.7797,
+      "Weighted a=0.75 (dev-tuned) hit@5 after": 0.7966
+    },
+    {
+      "topic": "CMU",
+      "n": 8,
+      "in_corpus_before": 0,
+      "in_corpus_after": 0,
+      "BM25 hit@5 after": 0.0,
+      "Dense hit@5 after": 0.0,
+      "RRF (k=60) hit@5 after": 0.0,
+      "Weighted a=0.75 (dev-tuned) hit@5 after": 0.0
+    },
+    {
+      "topic": "Pittsburgh local/history",
+      "n": 14,
+      "in_corpus_before": 6,
+      "in_corpus_after": 6,
+      "BM25 hit@5 after": 0.3571,
+      "Dense hit@5 after": 0.3571,
+      "RRF (k=60) hit@5 after": 0.2857,
+      "Weighted a=0.75 (dev-tuned) hit@5 after": 0.2857
+    },
+    {
+      "topic": "Events/music/comedy",
+      "n": 20,
+      "in_corpus_before": 8,
+      "in_corpus_after": 10,
+      "BM25 hit@5 after": 0.4,
+      "Dense hit@5 after": 0.25,
+      "RRF (k=60) hit@5 after": 0.4,
+      "Weighted a=0.75 (dev-tuned) hit@5 after": 0.4
+    },
+    {
+      "topic": "Sports",
+      "n": 33,
+      "in_corpus_before": 30,
+      "in_corpus_after": 31,
+      "BM25 hit@5 after": 0.6667,
+      "Dense hit@5 after": 0.8485,
+      "RRF (k=60) hit@5 after": 0.8788,
+      "Weighted a=0.75 (dev-tuned) hit@5 after": 0.8788
+    },
+    {
+      "topic": "Taxes/budget",
+      "n": 12,
+      "in_corpus_before": 6,
+      "in_corpus_after": 8,
+      "BM25 hit@5 after": 0.6667,
+      "Dense hit@5 after": 0.6667,
+      "RRF (k=60) hit@5 after": 0.5833,
+      "Weighted a=0.75 (dev-tuned) hit@5 after": 0.6667
+    },
+    {
+      "topic": "Restaurants/food",
+      "n": 11,
+      "in_corpus_before": 0,
+      "in_corpus_after": 0,
+      "BM25 hit@5 after": 0.0,
+      "Dense hit@5 after": 0.0,
+      "RRF (k=60) hit@5 after": 0.0,
+      "Weighted a=0.75 (dev-tuned) hit@5 after": 0.0
+    }
+  ],
+  "rag_end_to_end": [
+    {
+      "system": "Closed-book (may abstain)",
+      "run": "closed_book__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.0127,
+      "f1": 0.0377,
+      "recall": 0.0339,
+      "rouge_l": 0.0365,
+      "reader_minutes": 3.1,
+      "mean_prompt_tokens": 160,
+      "abstained": 110,
+      "f1_p_vs_first": "",
+      "em_p_vs_first": ""
+    },
+    {
+      "system": "Closed-book (always answers)",
+      "run": "closed_book_guess__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.0191,
+      "f1": 0.0768,
+      "recall": 0.0753,
+      "rouge_l": 0.0747,
+      "reader_minutes": 3.2,
+      "mean_prompt_tokens": 156,
+      "abstained": 0,
+      "f1_p_vs_first": 0.0102,
+      "em_p_vs_first": 1.0
+    },
+    {
+      "system": "BM25 RAG",
+      "run": "bm25_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.4076,
+      "f1": 0.5118,
+      "recall": 0.5263,
+      "rouge_l": 0.5088,
+      "reader_minutes": 42.7,
+      "mean_prompt_tokens": 2340,
+      "abstained": 37,
+      "f1_p_vs_first": 0.0,
+      "em_p_vs_first": 0.0
+    },
+    {
+      "system": "Dense RAG",
+      "run": "dense_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.4076,
+      "f1": 0.5129,
+      "recall": 0.5219,
+      "rouge_l": 0.5091,
+      "reader_minutes": 74.6,
+      "mean_prompt_tokens": 2396,
+      "abstained": 41,
+      "f1_p_vs_first": 0.0,
+      "em_p_vs_first": 0.0
+    },
+    {
+      "system": "RRF hybrid RAG",
+      "run": "rrf_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.414,
+      "f1": 0.5098,
+      "recall": 0.519,
+      "rouge_l": 0.5069,
+      "reader_minutes": 41.6,
+      "mean_prompt_tokens": 2291,
+      "abstained": 38,
+      "f1_p_vs_first": 0.0,
+      "em_p_vs_first": 0.0
+    },
+    {
+      "system": "Weighted a=0.75 hybrid RAG (dev-tuned)",
+      "run": "weighted0.75_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.4204,
+      "f1": 0.5334,
+      "recall": 0.542,
+      "rouge_l": 0.5302,
+      "reader_minutes": 44.0,
+      "mean_prompt_tokens": 2301,
+      "abstained": 34,
+      "f1_p_vs_first": 0.0,
+      "em_p_vs_first": 0.0
+    }
+  ],
+  "rag_retrieval_ablation": [
+    {
+      "system": "Weighted a=0.75 hybrid (dev-tuned)",
+      "run": "weighted0.75_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.4204,
+      "f1": 0.5334,
+      "recall": 0.542,
+      "rouge_l": 0.5302,
+      "reader_minutes": 44.0,
+      "mean_prompt_tokens": 2301,
+      "abstained": 34,
+      "f1_p_vs_first": "",
+      "em_p_vs_first": ""
+    },
+    {
+      "system": "RRF hybrid (k=60)",
+      "run": "rrf_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.414,
+      "f1": 0.5098,
+      "recall": 0.519,
+      "rouge_l": 0.5069,
+      "reader_minutes": 41.6,
+      "mean_prompt_tokens": 2291,
+      "abstained": 38,
+      "f1_p_vs_first": 0.2089,
+      "em_p_vs_first": 1.0
+    },
+    {
+      "system": "Dense only",
+      "run": "dense_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.4076,
+      "f1": 0.5129,
+      "recall": 0.5219,
+      "rouge_l": 0.5091,
+      "reader_minutes": 74.6,
+      "mean_prompt_tokens": 2396,
+      "abstained": 41,
+      "f1_p_vs_first": 0.2723,
+      "em_p_vs_first": 0.7266
+    },
+    {
+      "system": "BM25 only",
+      "run": "bm25_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.4076,
+      "f1": 0.5118,
+      "recall": 0.5263,
+      "rouge_l": 0.5088,
+      "reader_minutes": 42.7,
+      "mean_prompt_tokens": 2340,
+      "abstained": 37,
+      "f1_p_vs_first": 0.3674,
+      "em_p_vs_first": 0.7744
+    }
+  ],
+  "rag_top_k": [
+    {
+      "system": "Weighted a=0.75, top-5",
+      "run": "weighted0.75_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.4204,
+      "f1": 0.5334,
+      "recall": 0.542,
+      "rouge_l": 0.5302,
+      "reader_minutes": 44.0,
+      "mean_prompt_tokens": 2301,
+      "abstained": 34,
+      "f1_p_vs_first": "",
+      "em_p_vs_first": ""
+    },
+    {
+      "system": "Weighted a=0.75, top-10",
+      "run": "weighted0.75_k10__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.4204,
+      "f1": 0.535,
+      "recall": 0.5432,
+      "rouge_l": 0.5312,
+      "reader_minutes": 160.4,
+      "mean_prompt_tokens": 4250,
+      "abstained": 32,
+      "f1_p_vs_first": 0.8988,
+      "em_p_vs_first": 1.0
+    }
+  ],
+  "rag_reader": [
+    {
+      "system": "Qwen3-4B-Instruct-2507",
+      "run": "weighted0.75_k5__Qwen3-4B-Instruct-2507",
+      "n": 157,
+      "exact_match": 0.4204,
+      "f1": 0.5334,
+      "recall": 0.542,
+      "rouge_l": 0.5302,
+      "reader_minutes": 44.0,
+      "mean_prompt_tokens": 2301,
+      "abstained": 34,
+      "f1_p_vs_first": "",
+      "em_p_vs_first": ""
+    },
+    {
+      "system": "Qwen2.5-1.5B-Instruct",
+      "run": "weighted0.75_k5__Qwen2.5-1.5B-Instruct",
+      "n": 157,
+      "exact_match": 0.3567,
+      "f1": 0.4656,
+      "recall": 0.4673,
+      "rouge_l": 0.4646,
+      "reader_minutes": 27.9,
+      "mean_prompt_tokens": 2301,
+      "abstained": 9,
+      "f1_p_vs_first": 0.0182,
+      "em_p_vs_first": 0.0414
+    }
+  ],
+  "rag_by_topic_f1": [
+    {
+      "topic": "Carnegie Museum of Art",
+      "n": 59,
+      "Closed-book (may abstain)": 0.0,
+      "Closed-book (always answers)": 0.0254,
+      "BM25 RAG": 0.7546,
+      "Dense RAG": 0.7461,
+      "RRF hybrid RAG": 0.7377,
+      "Weighted a=0.75 hybrid RAG (dev-tuned)": 0.7829
+    },
+    {
+      "topic": "CMU",
+      "n": 8,
+      "Closed-book (may abstain)": 0.112,
+      "Closed-book (always answers)": 0.2208,
+      "BM25 RAG": 0.3411,
+      "Dense RAG": 0.3336,
+      "RRF hybrid RAG": 0.3254,
+      "Weighted a=0.75 hybrid RAG (dev-tuned)": 0.3477
+    },
+    {
+      "topic": "Pittsburgh local/history",
+      "n": 14,
+      "Closed-book (may abstain)": 0.2097,
+      "Closed-book (always answers)": 0.2144,
+      "BM25 RAG": 0.2523,
+      "Dense RAG": 0.243,
+      "RRF hybrid RAG": 0.2381,
+      "Weighted a=0.75 hybrid RAG (dev-tuned)": 0.2678
+    },
+    {
+      "topic": "Events/music/comedy",
+      "n": 20,
+      "Closed-book (may abstain)": 0.0642,
+      "Closed-book (always answers)": 0.1695,
+      "BM25 RAG": 0.4092,
+      "Dense RAG": 0.3092,
+      "RRF hybrid RAG": 0.3592,
+      "Weighted a=0.75 hybrid RAG (dev-tuned)": 0.3087
+    },
+    {
+      "topic": "Sports",
+      "n": 33,
+      "Closed-book (may abstain)": 0.0,
+      "Closed-book (always answers)": 0.0234,
+      "BM25 RAG": 0.4448,
+      "Dense RAG": 0.5667,
+      "RRF hybrid RAG": 0.5434,
+      "Weighted a=0.75 hybrid RAG (dev-tuned)": 0.5394
+    },
+    {
+      "topic": "Taxes/budget",
+      "n": 12,
+      "Closed-book (may abstain)": 0.0417,
+      "Closed-book (always answers)": 0.1019,
+      "BM25 RAG": 0.375,
+      "Dense RAG": 0.2917,
+      "RRF hybrid RAG": 0.2917,
+      "Weighted a=0.75 hybrid RAG (dev-tuned)": 0.4028
+    },
+    {
+      "topic": "Restaurants/food",
+      "n": 11,
+      "Closed-book (may abstain)": 0.0272,
+      "Closed-book (always answers)": 0.0363,
+      "BM25 RAG": 0.2013,
+      "Dense RAG": 0.1855,
+      "RRF hybrid RAG": 0.179,
+      "Weighted a=0.75 hybrid RAG (dev-tuned)": 0.2009
+    }
+  ],
+  "error_types": {
+    "run": "weighted0.75_k5__Qwen3-4B-Instruct-2507",
+    "threshold": "F1 < 0.5",
+    "rows": [
+      {
+        "failure type": "corpus",
+        "all failures": 30,
+        "manually inspected": 11
+      },
+      {
+        "failure type": "retrieval",
+        "all failures": 8,
+        "manually inspected": 3
+      },
+      {
+        "failure type": "context_noise",
+        "all failures": 6,
+        "manually inspected": 0
+      },
+      {
+        "failure type": "generation",
+        "all failures": 8,
+        "manually inspected": 5
+      },
+      {
+        "failure type": "format_mismatch",
+        "all failures": 15,
+        "manually inspected": 8
+      },
+      {
+        "failure type": "ambiguity_stale",
+        "all failures": 6,
+        "manually inspected": 6
+      },
+      {
+        "failure type": "total",
+        "all failures": 73,
+        "manually inspected": 33
+      }
+    ]
+  },
+  "missing": []
+}

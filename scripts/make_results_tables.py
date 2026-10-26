@@ -42,6 +42,12 @@ RAG_TABLES = {
         ("RRF hybrid RAG", "rrf_k5__Qwen3-4B-Instruct-2507"),
         ("Weighted a=0.75 hybrid RAG (dev-tuned)", PRIMARY),
     ],
+    "retrieval_ablation": [
+        ("Weighted a=0.75 hybrid (dev-tuned)", PRIMARY),
+        ("RRF hybrid (k=60)", "rrf_k5__Qwen3-4B-Instruct-2507"),
+        ("Dense only", "dense_k5__Qwen3-4B-Instruct-2507"),
+        ("BM25 only", "bm25_k5__Qwen3-4B-Instruct-2507"),
+    ],
     "top_k": [
         ("Weighted a=0.75, top-5", PRIMARY),
         ("Weighted a=0.75, top-10", "weighted0.75_k10__Qwen3-4B-Instruct-2507"),
@@ -130,11 +136,12 @@ def paired_tests(base: dict, other: dict) -> dict:
 def rag_tables(md: list[str], results: dict, missing: list[str]) -> None:
     titles = {
         "end_to_end": "## 2. End-to-end RAG (public dev, 157 questions; reader Qwen3-4B-Instruct-2507, top-5)",
+        "retrieval_ablation": "## 2b. Retrieval-method ablation (top-5; p-values vs weighted hybrid)",
         "top_k": "## 3. Top-k ablation",
         "reader": "## 4. Reader ablation",
     }
     for table, runs in RAG_TABLES.items():
-        header = ["system", "run", "n"] + list(METRIC_NAMES) + ["minutes", "mean_prompt_tokens", "abstained", "f1_p_vs_first", "em_p_vs_first"]
+        header = ["system", "run", "n"] + list(METRIC_NAMES) + ["reader_minutes", "mean_prompt_tokens", "abstained", "f1_p_vs_first", "em_p_vs_first"]
         rows = []
         base = per_question(runs[0][1])
         for label, run in runs:
@@ -143,10 +150,11 @@ def rag_tables(md: list[str], results: dict, missing: list[str]) -> None:
             if rows_q is None:
                 missing.append(run)
                 continue
-            info = load_json(RAG_DIR / run / "run_config.json") or {"sessions": []}
-            minutes = round(sum(s["seconds"] for s in info["sessions"]) / 60, 1)
             with (RAG_DIR / run / "predictions.jsonl").open() as f:
                 preds = [json.loads(line) for line in f]
+            # Summed per-question generation time: run_config.json sessions miss
+            # runs that were interrupted before writing it.
+            minutes = round(sum(p["generation_seconds"] for p in preds) / 60, 1)
             tokens = round(sum(p["prompt_tokens"] for p in preds) / len(preds))
             abstained = sum(p["answer"].lower().startswith("i don't know") for p in preds)
             tests = paired_tests(base, rows_q) if base and run != runs[0][1] else {"f1_paired_t_p": "", "em_mcnemar_p": ""}

@@ -1,0 +1,135 @@
+{
+  "sessions": [
+    {
+      "finished_at": "2026-10-26T02:00:59.368313+00:00",
+      "start": 0,
+      "end": null,
+      "ids": null,
+      "questions_run": 157,
+      "seconds": 1679.7
+    }
+  ],
+  "run_name": "weighted0.75_k5__Qwen2.5-1.5B-Instruct",
+  "questions_file": "data/eval/public_evaluation_data.json",
+  "settings": {
+    "method": "weighted",
+    "alpha": 0.75,
+    "top_k": 5,
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "prompt_version": "v1",
+    "max_new_tokens": 32,
+    "chunks_sha1": "fdbdca503a459762246f97513436ba22bc52f259"
+  },
+  "generation_config": {
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "known_revisions": {
+      "Qwen/Qwen3-4B-Instruct-2507": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "Qwen/Qwen2.5-1.5B-Instruct": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+    },
+    "device": "auto",
+    "dtype": "auto",
+    "max_context_tokens": 8192,
+    "max_new_tokens": 32,
+    "temperature": 0.0,
+    "decoding": "greedy (do_sample=False)",
+    "prompt_template": "generation/prompts.py (PROMPT_VERSION recorded in every prediction)",
+    "retrieval": {
+      "method": "weighted",
+      "alpha": 0.75,
+      "top_k": 5
+    },
+    "notes": {
+      "model_choice": "Qwen3-4B-Instruct-2507: open weights on Hugging Face, released 2025-08 (before 2026-01-01), 4.0B parameters (<= 32B), non-thinking instruct model; ~8 GB in bfloat16, so it runs on a Colab T4 or a 16 GB Apple-silicon Mac.",
+      "alternative_model": "Qwen/Qwen2.5-1.5B-Instruct (released 2024-09, 1.5B) for the reader-size ablation.",
+      "device_dtype": "auto: cuda (bfloat16 if supported, else float16) > mps (bfloat16) > cpu (float32).",
+      "max_context_tokens": "Prompt budget; if exceeded, the lowest-ranked chunks are dropped first."
+    },
+    "closed_book_always_answer": false
+  },
+  "retrieval_config": {
+    "chunks_path": "data/processed/chunks.jsonl",
+    "top_k": 5,
+    "text_normalization": {
+      "unicode": "NFKD, accents stripped",
+      "lowercase": true,
+      "token_pattern": "[a-z0-9]+"
+    },
+    "bm25": {
+      "implementation": "rank_bm25.BM25Okapi",
+      "k1": 1.5,
+      "b": 0.75,
+      "epsilon": 0.25,
+      "remove_stopwords": true,
+      "stopwords": "sklearn ENGLISH_STOP_WORDS",
+      "short_months": true
+    },
+    "dense": {
+      "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+      "max_seq_length": 256,
+      "batch_size": 64,
+      "device": "cpu",
+      "normalize_embeddings": true,
+      "similarity": "inner product of L2-normalized embeddings (cosine)",
+      "index_type": "faiss.IndexFlatIP",
+      "index_dir": "data/index/dense"
+    },
+    "hybrid": {
+      "rrf_k": 60,
+      "rrf_window": 100,
+      "alphas": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "default_alpha": 0.5,
+      "score_normalization": "min-max over all chunks, per query and per retriever",
+      "weighted_formula": "alpha * dense + (1 - alpha) * sparse"
+    },
+    "evaluation": {
+      "eval_path": "data/eval/public_evaluation_data.json",
+      "output_dir": "outputs/retrieval_eval",
+      "k_values": [
+        1,
+        3,
+        5,
+        10,
+        20
+      ],
+      "primary_metric": "exact: normalized reference answer is a whole-token substring of a retrieved chunk",
+      "answer_normalization": "NFKD, accents stripped, lowercase, non-alphanumerics to spaces, whitespace collapsed",
+      "soft_metric": "token recall: share of the answer's non-stopword tokens found in one retrieved chunk",
+      "soft_threshold": 0.8,
+      "significance_test": "exact McNemar test on per-question hit@5 (exact)"
+    },
+    "frozen": {
+      "status": "Frozen after the final (targeted) corpus patch on 2026-10-25; no further retrieval tuning on the public dev set.",
+      "primary": {
+        "method": "weighted",
+        "alpha": 0.75,
+        "label": "dev-tuned: alpha chosen among 0.25/0.5/0.75 on public_evaluation_data.json, so its dev numbers are optimistic"
+      },
+      "untuned_alternative": {
+        "method": "rrf",
+        "rrf_k": 60,
+        "label": "untuned standard RRF constant"
+      },
+      "ablation_baselines": [
+        "bm25",
+        "dense"
+      ],
+      "generation_top_k": 5,
+      "generation_top_k_rationale": "Top-5 is the default: top-10 adds ~0.03 retrieval hit rate but doubles the prompt (~2.6k -> ~5k tokens) and the number of distractors; it stays top-5 unless the end-to-end top-10 run shows a real gain (see outputs/results/rag_top_k.csv)."
+    }
+  },
+  "reader": {
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "device": "mps",
+    "dtype": "bfloat16",
+    "prompt_version": "v1",
+    "max_new_tokens": 32,
+    "temperature": 0.0,
+    "max_context_tokens": 8192
+  }
+}

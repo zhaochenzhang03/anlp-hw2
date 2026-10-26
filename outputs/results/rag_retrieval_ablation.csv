@@ -1,0 +1,5 @@
+system,run,n,exact_match,f1,recall,rouge_l,reader_minutes,mean_prompt_tokens,abstained,f1_p_vs_first,em_p_vs_first
+Weighted a=0.75 hybrid (dev-tuned),weighted0.75_k5__Qwen3-4B-Instruct-2507,157,0.4204,0.5334,0.542,0.5302,44.0,2301,34,,
+RRF hybrid (k=60),rrf_k5__Qwen3-4B-Instruct-2507,157,0.414,0.5098,0.519,0.5069,41.6,2291,38,0.2089,1.0
+Dense only,dense_k5__Qwen3-4B-Instruct-2507,157,0.4076,0.5129,0.5219,0.5091,74.6,2396,41,0.2723,0.7266
+BM25 only,bm25_k5__Qwen3-4B-Instruct-2507,157,0.4076,0.5118,0.5263,0.5088,42.7,2340,37,0.3674,0.7744

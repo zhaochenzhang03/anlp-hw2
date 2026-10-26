@@ -1,0 +1,9 @@
+topic,n,in_corpus_before,in_corpus_after,BM25 hit@5 after,Dense hit@5 after,RRF (k=60) hit@5 after,Weighted a=0.75 (dev-tuned) hit@5 after
+All,157,100,105,0.5669,0.586,0.5987,0.6115
+Carnegie Museum of Art,59,50,50,0.7797,0.7797,0.7797,0.7966
+CMU,8,0,0,0.0,0.0,0.0,0.0
+Pittsburgh local/history,14,6,6,0.3571,0.3571,0.2857,0.2857
+Events/music/comedy,20,8,10,0.4,0.25,0.4,0.4
+Sports,33,30,31,0.6667,0.8485,0.8788,0.8788
+Taxes/budget,12,6,8,0.6667,0.6667,0.5833,0.6667
+Restaurants/food,11,0,0,0.0,0.0,0.0,0.0

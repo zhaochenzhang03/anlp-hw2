@@ -1,0 +1,1909 @@
+{
+  "run": "weighted0.75_k5__Qwen3-4B-Instruct-2507",
+  "n_questions": 157,
+  "n_failures": 73,
+  "failure_threshold": "F1 < 0.5",
+  "n_manually_inspected": 33,
+  "type_definitions": {
+    "corpus": "corpus failure: the correct fact is absent from the corpus",
+    "retrieval": "retrieval failure: the fact is in the corpus but not retrieved into the context",
+    "context_noise": "context-selection/noise failure: the right chunk is in the context but buried among distractors",
+    "generation": "generation failure: the evidence is in the context but the model answers incorrectly",
+    "format_mismatch": "formatting/evaluation mismatch: substantively correct, penalized for format or paraphrase",
+    "ambiguity_stale": "ambiguity/stale source: conflicting or outdated values in the sources"
+  },
+  "counts": {
+    "corpus": 30,
+    "retrieval": 8,
+    "context_noise": 6,
+    "generation": 8,
+    "format_mismatch": 15,
+    "ambiguity_stale": 6
+  },
+  "counts_manually_inspected": {
+    "corpus": 11,
+    "retrieval": 3,
+    "generation": 5,
+    "format_mismatch": 8,
+    "ambiguity_stale": 6
+  },
+  "failures": [
+    {
+      "id": "1",
+      "topic": "Events/music/comedy",
+      "question": "What open mic event occurs weekly on Mondays from 8:00-10:00 PM?",
+      "answer": "I don't know",
+      "references": [
+        "Monday Night Open Mic Comedy!"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "No 'Monday Night Open Mic' event in the corpus; the heuristic's in-context hit is a spurious soft match.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "arcade_comedy_events/your-act-with-nonsense-19#0",
+        "arcade_comedy_events/your-act-with-nonsense-18#0",
+        "events_awaacc_rental_guide#0",
+        "visitpittsburgh_events/21-night#0",
+        "pittsburgh_improv_calendar#1"
+      ]
+    },
+    {
+      "id": "4",
+      "topic": "Events/music/comedy",
+      "question": "What comedy show runs at Pittsburgh Improv starting October 22, 2026?",
+      "answer": "I don't know",
+      "references": [
+        "Steph Tolev runs at Pittsburgh Improv from October 22–24, 2026.",
+        "Steph Tolev"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "retrieval",
+      "manually_inspected": true,
+      "note": "events_improv_steph_tolev#0/#1 are in the corpus but not retrieved; Arcade Comedy 'improv' event pages win on lexical overlap with 'Improv'.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "arcade_comedy_events/under-the-radar-independent-pittsburgh-improv-20#0",
+        "arcade_comedy_events/under-the-radar-independent-pittsburgh-improv-19#0",
+        "pittsburgh_improv_calendar#0",
+        "arcade_comedy_home#0",
+        "arcade_comedy_events/the-arcade-list-25#0"
+      ]
+    },
+    {
+      "id": "6",
+      "topic": "Restaurants/food",
+      "question": "What type of cuisine does täkō in Pittsburgh serve?",
+      "answer": "Japanese fusion with Mexican influences",
+      "references": [
+        "täkō offers a fusion of Mexican and Asian-inspired tacos, blending unique flavors in a vibrant setting."
+      ],
+      "f1": 0.211,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_tako#0",
+        "food_visitpittsburgh_restaurants#0",
+        "food_pittsburgh_restaurant_week#10",
+        "food_visitpittsburgh_restaurants#1",
+        "food_pittsburgh_restaurant_week#9"
+      ]
+    },
+    {
+      "id": "8",
+      "topic": "Sports",
+      "question": "When is the Pittsburgh Penguins game against the Florida Panthers scheduled in December?",
+      "answer": "I don't know",
+      "references": [
+        "December 10, 2026",
+        "December 10"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "retrieval",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/florida-state-seminoles-at-pittsburgh-panthers-football#0",
+        "visitpittsburgh_events/pittsburgh-penguins-vs-carolina-hurricanes#0",
+        "visitpittsburgh_events/pittsburgh-penguins-vs-tampa-bay-lightning#0",
+        "pitt_mbb_schedule_2026_27#1",
+        "visitpittsburgh_events/pittsburgh-penguins-vs-chicago-blackhawks-2#0"
+      ]
+    },
+    {
+      "id": "11",
+      "topic": "Pittsburgh local/history",
+      "question": "What is the Syracuse Orange's strength of schedule ranking for 2026?",
+      "answer": "I don't know",
+      "references": [
+        "The Syracuse Orange rank 16th in the 2026 college-football strength-of-schedule ranking.",
+        "16th",
+        "16"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "context_noise",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        3,
+        4
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pitt_mbb_schedule_2026_27#2",
+        "rmu_mbb_schedule_2026_27#0",
+        "rmu_mens_soccer_schedule_2026#0",
+        "pitt_volleyball_schedule_2026#1",
+        "rmu_mens_soccer_schedule_2026#2"
+      ]
+    },
+    {
+      "id": "12",
+      "topic": "Carnegie Museum of Art",
+      "question": "What credit line does the Carnegie Museum of Art record for “Ce l'anniversaire de grand père. A cette occasion Lidie récite une poésie. (It's grandpa's birthday. On this occasion Lidie recites a poem.)”?",
+      "answer": "I don't know",
+      "references": [
+        "Bequest of Jane C. Arkus"
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmoa/84.29#0",
+        "cmoa/78.26.1#0",
+        "cmoa/79.41.1#0",
+        "cmoa/78.12#0",
+        "cmoa/2013.12#0"
+      ]
+    },
+    {
+      "id": "14",
+      "topic": "Carnegie Museum of Art",
+      "question": "How to find the Carnegie Museum of Art on instagram (username)?",
+      "answer": "I don't know",
+      "references": [
+        "The Carnegie Museum of Art’s Instagram username is @carnegiemuseumofart.",
+        "@carnegiemuseumofart",
+        "carnegiemuseumofart"
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmoa/2013.12#0",
+        "cmoa/92.4.1.A-.C#0",
+        "cmoa/86.47#0",
+        "cmoa/92.4.2.A-.C#0",
+        "cmoa/92.4.3.A-.C#0"
+      ]
+    },
+    {
+      "id": "15",
+      "topic": "Events/music/comedy",
+      "question": "Who is the conductor leading the Pittsburgh Symphony Orchestra concert \"Fiddlesticks: Once Upon a Melody\" at Heinz Hall on November 14, 2026?",
+      "answer": "I don't know",
+      "references": [
+        "Andrés Franco"
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "pso_calendar#0",
+        "pso_fiddlesticks#1",
+        "pso_fiddlesticks#0",
+        "visitpittsburgh_events/pittsburgh-symphony-orchestra-leslie-odom-jr#0",
+        "visitpittsburgh_events/pittsburgh-symphony-orchestra-its-a-wonderful-life-in-concert#0"
+      ]
+    },
+    {
+      "id": "18",
+      "topic": "Sports",
+      "question": "In what year was Pittsburgh Pirates player Brandon Eisert born?",
+      "answer": "2000",
+      "references": [
+        "1998"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "generation",
+      "manually_inspected": true,
+      "note": "Rank-1 chunk states 'Born: 1998-01-19 (birth year 1998)'; reader output 2000.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pirates_roster/brandon-eisert-685126#0",
+        "pirates_roster/brandon-lowe-664040#0",
+        "pirates_wikipedia#18",
+        "pirates_wikipedia#23",
+        "pirates_roster/tyler-callihan-682997#0"
+      ]
+    },
+    {
+      "id": "19",
+      "topic": "Pittsburgh local/history",
+      "question": "What is Mattress Factory’s Instagram handle?",
+      "answer": "I don't know",
+      "references": [
+        "@mattressfactory",
+        "mattressfactory"
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/member-preview-greer-lankton-could-it-be-love#1",
+        "cmoa/1998.1#0",
+        "cmoa/2008.74.2#0",
+        "cmoa/77.89.19.A-.B#0",
+        "cmoa/81.14#0"
+      ]
+    },
+    {
+      "id": "20",
+      "topic": "Restaurants/food",
+      "question": "Where can visitors find an authentic Brazilian steakhouse experience in Pittsburgh?",
+      "answer": "Fogo de Chão",
+      "references": [
+        "Fogo de Chão, located downtown, offers a traditional Brazilian churrasco experience with an all-you-can-eat selection of fire-roasted meats."
+      ],
+      "f1": 0.316,
+      "suggested_type": "corpus",
+      "type": "format_mismatch",
+      "manually_inspected": true,
+      "note": "'Fogo de Chão' is correct; the reference is a full descriptive sentence, so token F1 is only 0.32.",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_fogo_de_chao_pittsburgh#0",
+        "food_fogo_de_chao_pittsburgh#1",
+        "food_visitpittsburgh_restaurants#0",
+        "visitpittsburgh_home#1",
+        "food_pittsburgh_restaurant_week#10"
+      ]
+    },
+    {
+      "id": "22",
+      "topic": "Taxes/budget",
+      "question": "What is Allegheny County's 2026 operating budget?",
+      "answer": "I don't know",
+      "references": [
+        "Allegheny County's 2026 adopted operating budget total expenditures are $1,193,518,154.",
+        "$1,193,518,154",
+        "1,193,518,154",
+        "1193518154"
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "pgh_operating_budget_2025#87",
+        "pgh_operating_budget_2025#138",
+        "pgh_operating_budget_2025#86",
+        "pgh_operating_budget_2025#136",
+        "pgh_operating_budget_2025#108"
+      ]
+    },
+    {
+      "id": "23",
+      "topic": "Sports",
+      "question": "In what year was Pittsburgh Penguins player Nick Robertson born?",
+      "answer": "I don't know",
+      "references": [
+        "2001"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "Corpus roster tables give Nick Robertson's age (25), not his birth year; the year is only approximately derivable.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        2
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pirates_roster/nick-yorke-694377#0",
+        "penguins_wikipedia#33",
+        "penguins_wikipedia#22",
+        "pirates_roster/nick-gonzales-693304#0",
+        "penguins_season_2026_27_wikipedia#0"
+      ]
+    },
+    {
+      "id": "24",
+      "topic": "Sports",
+      "question": "Which college does the Steelers roster list for Cameron Johnston?",
+      "answer": "Pittsburgh Steelers roster lists Cameron Johnston as a placekicker (K), and his college is not listed in the provided context. Therefore, based on the",
+      "references": [
+        "Ohio State"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "retrieval",
+      "manually_inspected": true,
+      "note": "steelers_roster#1 ('Cameron Johnston | 19 | P | ... | Ohio State') not retrieved; the Wikipedia roster chunk in context has no colleges. Reader also produced a rambling non-answer instead of abstaining.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        2
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "steelers_wikipedia#21",
+        "steelers_roster#0",
+        "steelers_wikipedia#22",
+        "steelers_wikipedia#9",
+        "steelers_wikipedia#29"
+      ]
+    },
+    {
+      "id": "27",
+      "topic": "Pittsburgh local/history",
+      "question": "What is the significance of the year 1964 for Pittsburgh's sports history?",
+      "answer": "1964 marks the year the Pittsburgh Steelers moved to Pitt Stadium at the University of Pittsburgh to play full-time, ending their shared tenure with the Pirates at",
+      "references": [
+        "In 1964, the Pittsburgh Steelers hired head coach Chuck Noll, leading to a period of significant success for the team."
+      ],
+      "f1": 0.25,
+      "suggested_type": "corpus",
+      "type": "ambiguity_stale",
+      "manually_inspected": true,
+      "note": "Reference says the Steelers hired Chuck Noll in 1964; Noll was hired in 1969. Reference itself is questionable; model gave a different 1964 fact.",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "pirates_wikipedia#24",
+        "visitpittsburgh_events/steelers-alumni-weekend-dinner#0",
+        "pittsburgh_wikipedia#33",
+        "steelers_wikipedia#20",
+        "pittsburgh_wikipedia#32"
+      ]
+    },
+    {
+      "id": "28",
+      "topic": "Restaurants/food",
+      "question": "What is Pittsburgh Restaurant Week?",
+      "answer": "A program that highlights Pittsburgh's dining options and offers discounted meals to attract visitors from surrounding areas.",
+      "references": [
+        "Pittsburgh Restaurant Week is a biannual event where participating restaurants across the city offer special prix fixe menus and discounts, celebrating the city's diverse culinary scene."
+      ],
+      "f1": 0.051,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_pittsburgh_restaurant_week_about#0",
+        "food_pittsburgh_restaurant_week#9",
+        "food_pittsburgh_restaurant_week#10",
+        "food_pittsburgh_restaurant_week#8",
+        "food_pittsburgh_restaurant_week#7"
+      ]
+    },
+    {
+      "id": "31",
+      "topic": "Sports",
+      "question": "How many games are the Chatham Cougars men’s basketball scheduled to play in December 2026?",
+      "answer": "I don't know",
+      "references": [
+        "5 games",
+        "5"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "No Chatham men's basketball schedule in the corpus; heuristic hit is the token '5' in other teams' schedules.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        2,
+        5
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "duquesne_mbb_schedule_2026_27#0",
+        "visitpittsburgh_events/pitt-mens-basketball#0",
+        "rmu_mbb_schedule_2026_27#0",
+        "duquesne_wbb_schedule_2026_27#0",
+        "pitt_mbb_schedule_2026_27#0"
+      ]
+    },
+    {
+      "id": "34",
+      "topic": "Restaurants/food",
+      "question": "What is unique about Iron Born Pizza in Pittsburgh's Strip District?",
+      "answer": "Detroit-inspired pizza and American classics served in the Steel City, Pittsburgh PA. Iron Born Pizza resides inside of Smallman Galley and in Millvale.",
+      "references": [
+        "Iron Born Pizza offers authentic Detroit-style pizza, characterized by a thick, light crust with a crispy edge. Their classic pizza topped with cherry tomatoes, mozzarella, and fresh basil is highly recommended."
+      ],
+      "f1": 0.196,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_iron_born_pizza#1",
+        "food_iron_born_pizza#0",
+        "food_iron_born_pizza#3",
+        "food_iron_born_pizza#2",
+        "pittsburgh_wikipedia#9"
+      ]
+    },
+    {
+      "id": "38",
+      "topic": "Sports",
+      "question": "When is the game between Robert Morris men's soccer and Northern Illinois scheduled?",
+      "answer": "I don't know",
+      "references": [
+        "Robert Morris men's soccer and Northern Illinois are scheduled to play on November 3, 2026.",
+        "November 3, 2026",
+        "Nov. 3, 2026",
+        "November 3"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "generation",
+      "manually_inspected": true,
+      "note": "Rank-1 chunk has 'Nov 3 (Tue) | 2:00 PM | ... | vs | Northern Illinois University'; reader abstained (over-conservative).",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        3
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "rmu_mens_soccer_schedule_2026#3",
+        "rmu_mbb_schedule_2026_27#0",
+        "visitpittsburgh_events/rmu-mens-hockey#0",
+        "visitpittsburgh_events/st-lawrence-saints-at-robert-morris-colonials-mens-hockey#0",
+        "rmu_mbb_schedule_2026_27#3"
+      ]
+    },
+    {
+      "id": "42",
+      "topic": "Restaurants/food",
+      "question": "What is the specialty of Fet Fisk in Pittsburgh?",
+      "answer": "nordic seafood restaurant and oyster bar with a devotion to appalachian agriculture",
+      "references": [
+        "Fet Fisk is a Scandinavian-inspired fine dining restaurant known for innovative dishes like grilled cabbage Caesar salad and unique desserts. The ambiance combines coziness with nautical touches, reflecting the chef's passion for Nordic cuisine."
+      ],
+      "f1": 0.19,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_fet_fisk#0",
+        "pgh_operating_budget_2025#153",
+        "pgh_operating_budget_2025#39",
+        "pgh_operating_budget_2025#107",
+        "pgh_operating_budget_2025#137"
+      ]
+    },
+    {
+      "id": "43",
+      "topic": "Pittsburgh local/history",
+      "question": "On how many days of the week is the Mt. Lebanon Public Library open?",
+      "answer": "I don't know",
+      "references": [
+        "7 days per week",
+        "7"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "context_noise",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        2,
+        4
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "mtlebanon_tax#0",
+        "mtlebanon_tax#5",
+        "mtlebanon_tax#1",
+        "mtlebanon_tax#4",
+        "mtlebanon_tax#2"
+      ]
+    },
+    {
+      "id": "47",
+      "topic": "Pittsburgh local/history",
+      "question": "Which Pittsburgh bridge is the longest?",
+      "answer": "I don't know",
+      "references": [
+        "The Fort Pitt Bridge, spanning the Monongahela River, is the longest bridge in Pittsburgh, connecting downtown with the Parkway West."
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "generation",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pittsburgh_wikipedia#46",
+        "cmoa/58.11#0",
+        "pittsburgh_history_wikipedia#9",
+        "cmoa/54.16.2#0",
+        "cmoa/65.24.2#0"
+      ]
+    },
+    {
+      "id": "53",
+      "topic": "Sports",
+      "question": "Who will Pitt women's volleyball play on November 24, 2026?",
+      "answer": "I don't know",
+      "references": [
+        "Stanford"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "retrieval",
+      "manually_inspected": true,
+      "note": "pitt_volleyball_schedule_2026#2 has the Nov 24 Stanford game but is not retrieved; single-event Visit Pittsburgh volleyball pages fill the top 5. Heuristic hit ('Stanford' in the women's basketball schedule) is spurious.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        3
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/louisville-cardinals-at-pittsburgh-panthers-womens-volleyball#0",
+        "visitpittsburgh_events/duke-blue-devils-at-pittsburgh-panthers-womens-volleyball#0",
+        "pitt_wbb_schedule_2026_27#1",
+        "visitpittsburgh_events/pittsburgh-panthers-womens-volleyball-vs-north-carolina-tar-heels-pittsburgh3#0",
+        "visitpittsburgh_events/pittsburgh-panthers-womens-volleyball-vs-north-carolina-tar-heels-pittsburgh2#0"
+      ]
+    },
+    {
+      "id": "54",
+      "topic": "Pittsburgh local/history",
+      "question": "How much does it cost to attend the Heinz History Center with a student ID?",
+      "answer": "I don't know",
+      "references": [
+        "$11.00.",
+        "$11",
+        "$11.00"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "context_noise",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        3
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "cmu_wikipedia#10",
+        "cmu_wikipedia#4",
+        "pittsburgh_wikipedia#26",
+        "museums_heinz_detre_library#0",
+        "cmu_wikipedia#24"
+      ]
+    },
+    {
+      "id": "61",
+      "topic": "Sports",
+      "question": "Which 2026 Pitt men's basketball opponent plays at Canastra Hammer Arena?",
+      "answer": "I don't know",
+      "references": [
+        "Rider",
+        "Rider Broncs"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "'Canastra Hammer Arena' does not occur in the corpus; context lists 'Pitt vs Rider' without the arena.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pitt_mbb_schedule_2026_27#0",
+        "visitpittsburgh_events/pitt-mens-basketball#0",
+        "visitpittsburgh_events/hope-backyard-basketball-classic-west-virginia-vs-pittsburgh-robert-morris-vs-duquesne#0",
+        "pitt_mbb_schedule_2026_27#1",
+        "pitt_mbb_schedule_2026_27#2"
+      ]
+    },
+    {
+      "id": "62",
+      "topic": "Taxes/budget",
+      "question": "How many uniformed police officers are budgeted in Pittsburgh?",
+      "answer": "850",
+      "references": [
+        "The FY2026 Bureau of Police Position Summary budgets 800 Total Uniformed Police Officers.",
+        "800",
+        "800 total uniformed police officers"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "ambiguity_stale",
+      "manually_inspected": true,
+      "note": "Corpus has the FY2025 budget with two columns (850 prior year, 800 budget year); reference cites FY2026 (800). Reader took the first column.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        3
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pgh_operating_budget_2025#104",
+        "pgh_operating_budget_2025#105",
+        "pgh_operating_budget_2025#106",
+        "pittsburgh_wikipedia#39",
+        "pgh_operating_budget_2025#148"
+      ]
+    },
+    {
+      "id": "64",
+      "topic": "Events/music/comedy",
+      "question": "Which Pittsburgh-area arts event is scheduled at Arcade Comedy Theater at 6:00 PM on December 5, 2026?",
+      "answer": "I don't know",
+      "references": [
+        "Sketch Comedy Lab"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "retrieval",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/the-arcade-list#0",
+        "visitpittsburgh_events/level-up-stand-up-2#0",
+        "arcade_comedy_events/the-arcade-list-25#0",
+        "arcade_comedy_events/the-arcade-list-24#0",
+        "arcade_comedy_events/the-arcade-list-23#0"
+      ]
+    },
+    {
+      "id": "66",
+      "topic": "Carnegie Museum of Art",
+      "question": "How did the Carnegie Museum of Art acquire “An African”, according to its catalog?",
+      "answer": "Sold at French & Company, New York, NY, 2004; purchased by Carnegie Museum of Art, December 2004.",
+      "references": [
+        "Purchase"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "format_mismatch",
+      "manually_inspected": true,
+      "note": "Reader copied the provenance sentence ('purchased by Carnegie Museum of Art'); reference is 'Purchase'. Substantively right, but no stemming, so F1 = 0.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmoa/2004.53#0",
+        "cmoa/1997.30.15#0",
+        "cmoa/80.78#0",
+        "cmoa/2013.12#0",
+        "cmoa/93.155#0"
+      ]
+    },
+    {
+      "id": "67",
+      "topic": "Carnegie Museum of Art",
+      "question": "How did the Carnegie Museum of Art acquire “Untitled (Lead Checks/Lead Chevron #3)”, according to its catalog?",
+      "answer": "I don't know",
+      "references": [
+        "Gift"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "Work not in the CMoA 2015 collection release used for the corpus.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmoa/86.48.1#0",
+        "cmoa/88.23.3.A-B#0",
+        "cmoa/88.23.2.A-B#0",
+        "cmoa/88.23.4.A-B#0",
+        "cmoa/88.23.1.A-B#0"
+      ]
+    },
+    {
+      "id": "69",
+      "topic": "Sports",
+      "question": "Which opponent does Pitt women’s basketball play on December 17, 2026?",
+      "answer": "Duquesne",
+      "references": [
+        "Mercyhurst"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "Document processing: the flattened schedule table puts each date after its opponent ('Mercyhurst ... TV: ACCNX Dec 17'), so the reader paired Dec 17 with the next row (Duquesne).",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pitt_wbb_schedule_2026_27#0",
+        "visitpittsburgh_events/pitt-mens-basketball#0",
+        "pitt_wbb_schedule_2026_27#1",
+        "pitt_mbb_schedule_2026_27#0",
+        "pitt_mbb_schedule_2026_27#2"
+      ]
+    },
+    {
+      "id": "70",
+      "topic": "Restaurants/food",
+      "question": "Which Pittsburgh bakery is known for its macarons?",
+      "answer": "Gaby et Jules",
+      "references": [
+        "Gaby et Jules is renowned for its authentic French macarons, offering a variety of flavors in an elegant patisserie setting."
+      ],
+      "f1": 0.286,
+      "suggested_type": "corpus",
+      "type": "format_mismatch",
+      "manually_inspected": true,
+      "note": "'Gaby et Jules' is correct; long descriptive reference.",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_gaby_et_jules#0",
+        "food_visitpittsburgh_restaurants#1",
+        "food_visitpittsburgh_restaurants#0",
+        "pittsburgh_wikipedia#9",
+        "food_pittsburgh_restaurant_week#10"
+      ]
+    },
+    {
+      "id": "72",
+      "topic": "Restaurants/food",
+      "question": "What is the specialty of Pusadee's Garden in Pittsburgh?",
+      "answer": "I don't know",
+      "references": [
+        "Pusadee's Garden specializes in Northern Thai cuisine, offering dishes like khao soi and sai ua in a serene garden setting."
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_pusadees_garden#0",
+        "food_pusadees_garden#1",
+        "cmoa/60.25#0",
+        "cmoa/74.18#0",
+        "pgh_operating_budget_2025#40"
+      ]
+    },
+    {
+      "id": "73",
+      "topic": "CMU",
+      "question": "What is the 'Scotty Saturday' tradition at Carnegie Mellon?",
+      "answer": "A daylong celebration of Carnegie Mellon spirit featuring CMU-themed activities, student talent showcases, free snacks and giveaways.",
+      "references": [
+        "'Scotty Saturday' is a tradition during Homecoming Weekend featuring various events and activities for students and alumni."
+      ],
+      "f1": 0.188,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmu_traditions#0",
+        "cmu_wikipedia#24",
+        "cmu_wikipedia#26",
+        "cmu_traditions#1",
+        "cmu_wikipedia#6"
+      ]
+    },
+    {
+      "id": "76",
+      "topic": "Events/music/comedy",
+      "question": "What distinction does the Farmers' Market Cooperative of East Liberty claim in western Pennsylvania?",
+      "answer": "Pittsburgh’s oldest continually-operating farmers’ market",
+      "references": [
+        "It is the oldest continuously operating market in western Pennsylvania."
+      ],
+      "f1": 0.286,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_east_liberty_farmers_market#0",
+        "pgh_tax_reg_isp#10",
+        "visitpittsburgh_events/freedom-farms-fall-fest#0",
+        "pittsburgh_history_wikipedia#8",
+        "cmoa/80.66.4#0"
+      ]
+    },
+    {
+      "id": "77",
+      "topic": "Restaurants/food",
+      "question": "Which Pittsburgh restaurant offers a rooftop dining experience with city views?",
+      "answer": "Sienna Mercato",
+      "references": [
+        "Il Tetto, located atop Sienna Mercato, provides a rooftop beer garden experience with panoramic views of Pittsburgh."
+      ],
+      "f1": 0.222,
+      "suggested_type": "corpus",
+      "type": "format_mismatch",
+      "manually_inspected": true,
+      "note": "Answer 'Sienna Mercato' names the building; reference names its rooftop bar Il Tetto atop Sienna Mercato. Partially correct.",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_sienna_mercato_il_tetto#0",
+        "food_pittsburgh_restaurant_week_about#0",
+        "food_visitpittsburgh_restaurants#0",
+        "food_tako#0",
+        "food_pittsburgh_restaurant_week#10"
+      ]
+    },
+    {
+      "id": "78",
+      "topic": "Carnegie Museum of Art",
+      "question": "How was “The Cowboy's Ranch” acquired according to the Carnegie Museum of Art record?",
+      "answer": "Bequest of Charles J. Rosenbloom",
+      "references": [
+        "Bequest"
+      ],
+      "f1": 0.333,
+      "suggested_type": "format_mismatch",
+      "type": "format_mismatch",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        2,
+        4
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "cmoa/74.7.17#0",
+        "cmoa/72.14.10#0",
+        "cmoa/78.10.41#0",
+        "cmoa/72.14.9#0",
+        "cmoa/57.21#0"
+      ]
+    },
+    {
+      "id": "79",
+      "topic": "Events/music/comedy",
+      "question": "On how many days of the week is the Andrew Carnegie Free Library & Music Hall open?",
+      "answer": "I don't know",
+      "references": [
+        "6 days per week",
+        "6"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "context_noise",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        2
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/expressions#0",
+        "visitpittsburgh_events/small-business-saturday#0",
+        "visitpittsburgh_events/special-holiday-open-days#0",
+        "visitpittsburgh_events/ten-evenings-michael-lewis#1",
+        "cmu_traditions#1"
+      ]
+    },
+    {
+      "id": "82",
+      "topic": "Taxes/budget",
+      "question": "What Earned Income Tax rate does a non-Pennsylvania resident who works within Pittsburgh pay?",
+      "answer": "1.0%",
+      "references": [
+        "1%"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "format_mismatch",
+      "manually_inspected": true,
+      "note": "'1.0%' vs '1%': same value, but SQuAD normalization treats '10' and '1' as different tokens.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "jordantax_faq_employers#6",
+        "jordantax_faq_individuals#2",
+        "pgh_tax_reg_isp#16",
+        "jordantax_faq_employers#7",
+        "jordantax_faq_individuals#3"
+      ]
+    },
+    {
+      "id": "87",
+      "topic": "Carnegie Museum of Art",
+      "question": "Where does the Carnegie Museum of Art currently list the painting “Luxe, Calme et Volupte” as displayed?",
+      "answer": "Not on View",
+      "references": [
+        "Scaife Gallery 13"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "ambiguity_stale",
+      "manually_inspected": true,
+      "note": "Corpus record (CMoA 2015 data release) says 'Not on View'; reference gives the current location 'Scaife Gallery 13'. Reader is faithful to the corpus.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmoa/70.52.1#0",
+        "cmoa/58.52#0",
+        "cmoa/58.83#0",
+        "cmoa/2013.12#0",
+        "cmoa/2008.21#0"
+      ]
+    },
+    {
+      "id": "88",
+      "topic": "Pittsburgh local/history",
+      "question": "Which major company was founded in Pittsburgh in 1869?",
+      "answer": "H.J. Heinz Company",
+      "references": [
+        "The H.J. Heinz Company, known for its food products, was founded in Pittsburgh in 1869."
+      ],
+      "f1": 0.353,
+      "suggested_type": "context_noise",
+      "type": "context_noise",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        2
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pittsburgh_history_wikipedia#11",
+        "pittsburgh_history_wikipedia#14",
+        "pittsburgh_history_wikipedia#10",
+        "pittsburgh_history_wikipedia#22",
+        "pittsburgh_history_wikipedia#15"
+      ]
+    },
+    {
+      "id": "90",
+      "topic": "Sports",
+      "question": "Which opponent does Chatham women’s hockey play on November 24, 2026?",
+      "answer": "I don't know",
+      "references": [
+        "Stevenson"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "retrieval",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/rmu-womens-hockey#0",
+        "visitpittsburgh_events/duke-blue-devils-at-pittsburgh-panthers-womens-volleyball#0",
+        "visitpittsburgh_events/north-carolina-tar-heels-at-pittsburgh-panthers-womens-volleyball#0",
+        "pitt_wbb_schedule_2026_27#0",
+        "pitt_wbb_schedule_2026_27#1"
+      ]
+    },
+    {
+      "id": "92",
+      "topic": "CMU",
+      "question": "What is the significance of 'The Cut' on CMU's campus?",
+      "answer": "\"The Cut\" is a large grassy area that forms the backbone of Carnegie Mellon University's campus. It was formed by filling in a ravine with soil from",
+      "references": [
+        "'The Cut' is a central grassy area on campus that was originally a ravine filled in to create open space for gatherings and events."
+      ],
+      "f1": 0.409,
+      "suggested_type": "format_mismatch",
+      "type": "format_mismatch",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmu_traditions#0",
+        "cmu_wikipedia#5",
+        "cmu_wikipedia#26",
+        "cmu_traditions#1",
+        "cmu_about#0"
+      ]
+    },
+    {
+      "id": "93",
+      "topic": "Taxes/budget",
+      "question": "When is first quarter Payroll Tax due in Pittsburgh?",
+      "answer": "February 28",
+      "references": [
+        "The first-quarter Payroll Expense Tax report and payment are due May 31.",
+        "May 31",
+        "May 31st"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "generation",
+      "manually_inspected": true,
+      "note": "Rank-1 chunk has 'ET-1 Payroll Expense Tax 03 – (Jan-Feb-Mar) May 31'; reader answered the Q4 date (February 28). Table-reading error.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        3,
+        4
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pgh_tax_due_date_calendar_2022#0",
+        "pgh_operating_budget_2025#26",
+        "pgh_tax_reg_isp#16",
+        "pgh_tax_due_date_calendar_2022#1",
+        "pgh_operating_budget_2025#23"
+      ]
+    },
+    {
+      "id": "94",
+      "topic": "Carnegie Museum of Art",
+      "question": "Which artist is credited for the Carnegie Museum of Art painting “Red Bird on Yellow”?",
+      "answer": "I don't know",
+      "references": [
+        "Beverly Semmes"
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmoa/69.1#0",
+        "cmoa/58.74#0",
+        "cmoa/78.5#0",
+        "cmoa/2002.32.6#0",
+        "cmoa/69.24#0"
+      ]
+    },
+    {
+      "id": "97",
+      "topic": "Carnegie Museum of Art",
+      "question": "Where does the Carnegie Museum of Art currently list the painting “Incredible Energy” as displayed?",
+      "answer": "Not on View",
+      "references": [
+        "Scaife Gallery 13"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "ambiguity_stale",
+      "manually_inspected": true,
+      "note": "Same as 87: 2015 data release 'Not on View' vs current 'Scaife Gallery 13'.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmoa/58.52#0",
+        "cmoa/61.35#0",
+        "cmoa/61.39#0",
+        "cmoa/58.80#0",
+        "cmoa/65.3.1#0"
+      ]
+    },
+    {
+      "id": "98",
+      "topic": "Carnegie Museum of Art",
+      "question": "Which artist or school is credited for “Where the Pavement Ends (Au Dela Des Chemins)” in the Carnegie Museum of Art catalog?",
+      "answer": "Corneille",
+      "references": [
+        "Corneille (Cornelius Guillaume Van Beverloo)"
+      ],
+      "f1": 0.333,
+      "suggested_type": "generation",
+      "type": "generation",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "cmoa/55.24.1#0",
+        "cmoa/66.24.2#0",
+        "cmoa/92.4.2.A-.C#0",
+        "cmoa/69.2#0",
+        "cmoa/2013.12#0"
+      ]
+    },
+    {
+      "id": "100",
+      "topic": "Restaurants/food",
+      "question": "Which Pittsburgh chocolate shop is known for handmade confections?",
+      "answer": "Sarris Candies",
+      "references": [
+        "Sarris Candies, based in nearby Canonsburg, is famous for its handmade chocolates and elaborate holiday-themed confections."
+      ],
+      "f1": 0.222,
+      "suggested_type": "corpus",
+      "type": "format_mismatch",
+      "manually_inspected": true,
+      "note": "'Sarris Candies' is correct; long descriptive reference.",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_sarris_candies_wikipedia#0",
+        "visitpittsburgh_events/2026-holiday-market#0",
+        "visitpittsburgh_events/holiday-makers-market#0",
+        "food_visitpittsburgh_restaurants#0",
+        "visitpittsburgh_events/autumn-art-and-maker-mart#0"
+      ]
+    },
+    {
+      "id": "101",
+      "topic": "Taxes/budget",
+      "question": "Is passive income received by a self-employed person or partner subject to Pittsburgh Payroll Expense Tax?",
+      "answer": "I don't know",
+      "references": [
+        "No; passive income is not subject to the tax"
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "pgh_tax_reg_isp#15",
+        "pgh_tax_reg_isp#7",
+        "pgh_tax_reg_isp#16",
+        "pgh_tax_reg_isp#11",
+        "pgh_tax_reg_isp#10"
+      ]
+    },
+    {
+      "id": "105",
+      "topic": "Carnegie Museum of Art",
+      "question": "Which artist is credited for the Carnegie Museum of Art painting “Do I Have To Draw You A Picture?”?",
+      "answer": "I don't know",
+      "references": [
+        "Mel Bochner"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "Mel Bochner work not in the CMoA 2015 release.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmoa/13.2.1#0",
+        "cmoa/58.80#0",
+        "cmoa/58.50#0",
+        "cmoa/58.84#0",
+        "cmoa/65.3.1#0"
+      ]
+    },
+    {
+      "id": "108",
+      "topic": "Pittsburgh local/history",
+      "question": "What is the first step for renting the AWAACC?",
+      "answer": "Submit a rental inquiry on our website, which must be submitted 45 days before your event date.",
+      "references": [
+        "Submit a rental inquiry through the AWAACC website"
+      ],
+      "f1": 0.364,
+      "suggested_type": "format_mismatch",
+      "type": "format_mismatch",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        2,
+        3,
+        4
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "events_awaacc_rental_guide#1",
+        "events_awaacc_rental_guide#0",
+        "events_awaacc_rental#0",
+        "events_awaacc_rental#1",
+        "events_awaacc_rental#3"
+      ]
+    },
+    {
+      "id": "111",
+      "topic": "Events/music/comedy",
+      "question": "Which Pittsburgh food festival focuses on Greek cuisine?",
+      "answer": "Holy Trinity Greek Food Festival, St. Nicholas Greek Food Festival, All Saints Greek Food Festival, Holy Cross Greek Food Festival, Annual Aliquippa Greek Food",
+      "references": [
+        "The Pittsburgh Greek Food Festival, hosted by local Greek Orthodox churches, celebrates Greek culture with traditional dishes like gyros, baklava, and spanakopita."
+      ],
+      "f1": 0.222,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_visitpittsburgh_greek_festivals#2",
+        "food_visitpittsburgh_greek_festivals#0",
+        "food_visitpittsburgh_greek_festivals#1",
+        "food_visitpittsburgh_restaurants#0",
+        "events_pittsburgh_renaissance_festival#0"
+      ]
+    },
+    {
+      "id": "112",
+      "topic": "Pittsburgh local/history",
+      "question": "What percentage of gross receipts is treated as the established amusement price for a social club with no separate entertainment charge?",
+      "answer": "I don't know",
+      "references": [
+        "50%"
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "retrieval",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "pgh_tax_reg_isp#17",
+        "pgh_tax_reg_isp#8",
+        "pgh_tax_reg_isp#7",
+        "pgh_tax_reg_isp#15",
+        "arcade_comedy_events/co-workers-7#0"
+      ]
+    },
+    {
+      "id": "114",
+      "topic": "Restaurants/food",
+      "question": "Which Pittsburgh restaurant is known for its extensive whiskey selection?",
+      "answer": "Butcher and the Rye",
+      "references": [
+        "Butcher and the Rye is celebrated for its extensive whiskey collection, complementing its modern American cuisine."
+      ],
+      "f1": 0.333,
+      "suggested_type": "corpus",
+      "type": "format_mismatch",
+      "manually_inspected": true,
+      "note": "'Butcher and the Rye' is correct; long descriptive reference.",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_butcher_and_the_rye#1",
+        "food_tako#0",
+        "food_pittsburgh_restaurant_week#10",
+        "food_pittsburgh_restaurant_week#9",
+        "visitpittsburgh_events/the-whiskey-smash#0"
+      ]
+    },
+    {
+      "id": "116",
+      "topic": "CMU",
+      "question": "Which CMU alumnus is known for his work in computer networking and the development of the ARPANET?",
+      "answer": "I don't know",
+      "references": [
+        "David D. Clark, a CMU alumnus, played a significant role in developing the ARPANET, the precursor to the modern internet."
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmu_wikipedia#2",
+        "cmu_wikipedia#11",
+        "cmu_about#0",
+        "cmu_history#2",
+        "cmu_wikipedia#15"
+      ]
+    },
+    {
+      "id": "119",
+      "topic": "Events/music/comedy",
+      "question": "When does THAT LIKE THIS perform in Pittsburgh in 2026?",
+      "answer": "I don't know",
+      "references": [
+        "THAT LIKE THIS performs in Pittsburgh on December 5, 2026.",
+        "THAT LIKE THIS performs in Pittsburgh on Dec. 5, 2026."
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "No 'THAT LIKE THIS' event in the corpus.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "visitpittsburgh_home#0",
+        "trustarts_calendar#1",
+        "visitpittsburgh_events/emo-nite-pittsburgh-pa-2026-tour#0",
+        "visitpittsburgh_events/brit-floyd-pittsburgh-pa-animals-50-world-tour#0",
+        "visitpittsburgh_events/monster-jam-2027-pittsburgh-pa#0"
+      ]
+    },
+    {
+      "id": "120",
+      "topic": "Carnegie Museum of Art",
+      "question": "How did the Carnegie Museum of Art acquire “Blah, Blah, Blah”, according to its catalog?",
+      "answer": "Gift of the artist in honor of Richard Armstrong",
+      "references": [
+        "Gift"
+      ],
+      "f1": 0.222,
+      "suggested_type": "format_mismatch",
+      "type": "format_mismatch",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        4
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "cmoa/2008.91#0",
+        "cmoa/92.4.2.A-.C#0",
+        "cmoa/2013.12#0",
+        "cmoa/80.78#0",
+        "cmoa/92.4.1.A-.C#0"
+      ]
+    },
+    {
+      "id": "122",
+      "topic": "Events/music/comedy",
+      "question": "Are photos allowed during Carnegie Library Music Hall of Homestead performances?",
+      "answer": "I don't know",
+      "references": [
+        "Only with prior permission from the venue or promoter; policies vary by artist and show, and unauthorized performance photography is prohibited.",
+        "Only with prior venue/promoter permission; artist policies vary by show.",
+        "Prior permission is required for performance photography."
+      ],
+      "f1": 0.0,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/beatles-vs-stones-a-musical-showdown#0",
+        "library_music_hall_home#0",
+        "cmoa/83.14#0",
+        "pittsburgh_wikipedia#26",
+        "cmoa/56.54.2#0"
+      ]
+    },
+    {
+      "id": "123",
+      "topic": "Events/music/comedy",
+      "question": "What is the last day of the A Musical Christmas Carol show?",
+      "answer": "Saturday, January 2",
+      "references": [
+        "The last day of A Musical Christmas Carol is December 23, 2026.",
+        "December 23, 2026",
+        "Dec. 23, 2026"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "ambiguity_stale",
+      "manually_inspected": true,
+      "note": "Event page lists overlapping ranges ('Tuesday, December 22 to Saturday, January 2', 'Wednesday, December 23 to Sunday, January 3'); the true closing date is not stated unambiguously.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/a-musical-christmas-carol#0",
+        "visitpittsburgh_events/how-the-grinch-stole-christmas-the-musical#0",
+        "visitpittsburgh_events/how-the-grinch-stole-christmas-the-musical-asl-interpretation-available#0",
+        "visitpittsburgh_events/christmas-sounds-of-christmas-a-festive-christmas-experience-coming-to-the-oaks-theater-sunday-december-7th-at-3pm#0",
+        "visitpittsburgh_events/sounds-of-christmas#0"
+      ]
+    },
+    {
+      "id": "124",
+      "topic": "Carnegie Museum of Art",
+      "question": "How did the Carnegie Museum of Art acquire “The Right Honorable William Pitt, the younger”, according to its catalog?",
+      "answer": "Bequest of Jebba Dixon Wiggin in memory of Harold Hansard Robertson",
+      "references": [
+        "Bequest"
+      ],
+      "f1": 0.167,
+      "suggested_type": "format_mismatch",
+      "type": "format_mismatch",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        3
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "cmoa/79.10#0",
+        "cmoa/09.1#0",
+        "cmoa/27.8.3#0",
+        "cmoa/80.78#0",
+        "cmoa/62.7#0"
+      ]
+    },
+    {
+      "id": "125",
+      "topic": "Carnegie Museum of Art",
+      "question": "Where does the Carnegie Museum of Art currently list the painting “William Nimick Frew” as displayed?",
+      "answer": "Not on View",
+      "references": [
+        "Carnegie Music Hall Foyer"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "ambiguity_stale",
+      "manually_inspected": true,
+      "note": "cmoa/15.1 (2015 data release) says 'Not on View'; reference gives the current 'Carnegie Music Hall Foyer'. Reader is faithful to the corpus.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        3
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "cmoa/85.50.1#0",
+        "cmoa/15.1#0",
+        "cmoa/83.83#0",
+        "cmoa/61.52#0",
+        "cmoa/58.84#0"
+      ]
+    },
+    {
+      "id": "126",
+      "topic": "Pittsburgh local/history",
+      "question": "What role did Pittsburgh play during the American Civil War?",
+      "answer": "Pittsburgh played a key role during the American Civil War by becoming a major center for iron and armament production. The city's economy was boosted by increased",
+      "references": [
+        "During the Civil War, Pittsburgh was a key supplier of weapons and materials for the Union Army, thanks to its robust manufacturing sector."
+      ],
+      "f1": 0.372,
+      "suggested_type": "format_mismatch",
+      "type": "format_mismatch",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "pittsburgh_history_wikipedia#10",
+        "pittsburgh_wikipedia#5",
+        "pittsburgh_history_wikipedia#0",
+        "pittsburgh_wikipedia#37",
+        "pittsburgh_history_wikipedia#7"
+      ]
+    },
+    {
+      "id": "127",
+      "topic": "Restaurants/food",
+      "question": "Which Pittsburgh coffee shop is known for its in-house roasted beans and latte art?",
+      "answer": "Commonplace Coffee",
+      "references": [
+        "Commonplace Coffee is renowned for its meticulously roasted beans and expertly crafted espresso drinks, often adorned with intricate latte art."
+      ],
+      "f1": 0.182,
+      "suggested_type": "corpus",
+      "type": "format_mismatch",
+      "manually_inspected": true,
+      "note": "'Commonplace Coffee' is correct; long descriptive reference.",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/open-manage-grow-a-coffeehouse-workshop#0",
+        "food_commonplace_coffee#0",
+        "food_visitpittsburgh_restaurants#0",
+        "cmoa/83.29#0",
+        "visitpittsburgh_events/autumn-art-and-maker-mart#0"
+      ]
+    },
+    {
+      "id": "129",
+      "topic": "Sports",
+      "question": "What team will the Duquesne University Dukes Ice Hockey team play against on November 6, 2026?",
+      "answer": "I don't know",
+      "references": [
+        "University at Buffalo"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "Duquesne club ice hockey schedule not in the corpus.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        5
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/mercyhurst-lakers-at-duquesne-dukes-football#0",
+        "visitpittsburgh_events/duquesne-mens-basketball#0",
+        "visitpittsburgh_events/robert-morris-colonials-at-duquesne-dukes-football#0",
+        "visitpittsburgh_events/wagner-college-seahawks-at-duquesne-dukes-football#0",
+        "duquesne_wbb_schedule_2026_27#0"
+      ]
+    },
+    {
+      "id": "132",
+      "topic": "Pittsburgh local/history",
+      "question": "What is the significance of the year 1901 for Pittsburgh's steel industry?",
+      "answer": "1901",
+      "references": [
+        "In 1901, the U.S. Steel Corporation was formed in Pittsburgh, becoming the world's first billion-dollar company."
+      ],
+      "f1": 0.133,
+      "suggested_type": "context_noise",
+      "type": "context_noise",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        3
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pittsburgh_history_wikipedia#10",
+        "pittsburgh_history_wikipedia#23",
+        "pittsburgh_history_wikipedia#15",
+        "pittsburgh_history_wikipedia#0",
+        "pittsburgh_wikipedia#6"
+      ]
+    },
+    {
+      "id": "137",
+      "topic": "CMU",
+      "question": "What is the 'Kiltie Band' at Carnegie Mellon?",
+      "answer": "The Kiltie Band is a group that rocks kilts and brings their infectious, irreverent energy to CMU sporting events.",
+      "references": [
+        "The 'Kiltie Band' is a marching band at Carnegie Mellon where members traditionally wear kilts during performances."
+      ],
+      "f1": 0.25,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "cmu_traditions#0",
+        "cmu_wikipedia#24",
+        "cmu_traditions#1",
+        "cmu_wikipedia#26",
+        "cmu_wikipedia#0"
+      ]
+    },
+    {
+      "id": "138",
+      "topic": "Sports",
+      "question": "How many NL Wild Card games have the Pittsburgh Pirates won?",
+      "answer": "0",
+      "references": [
+        "One",
+        "1"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "generation",
+      "manually_inspected": true,
+      "note": "Context says the Pirates defeated the Reds in the 2013 Wild Card game; reader answered 0 (counting/aggregation).",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        2,
+        5
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pirates_wikipedia#0",
+        "pirates_wikipedia#13",
+        "pirates_wikipedia#1",
+        "pirates_wikipedia#5",
+        "pirates_wikipedia#20"
+      ]
+    },
+    {
+      "id": "139",
+      "topic": "CMU",
+      "question": "Which building on Carnegie Mellon's campus houses the College of Fine Arts?",
+      "answer": "The College of Fine Arts is housed in a federation of five distinct schools: The School of Architecture, The School of Music, The School of Design, The School",
+      "references": [
+        "The College of Fine Arts Building houses the College of Fine Arts at Carnegie Mellon."
+      ],
+      "f1": 0.286,
+      "suggested_type": "format_mismatch",
+      "type": "format_mismatch",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "cmu_wikipedia#5",
+        "cmu_wikipedia#7",
+        "cmu_wikipedia#8",
+        "cmu_wikipedia#6",
+        "cmu_wikipedia#24"
+      ]
+    },
+    {
+      "id": "143",
+      "topic": "Pittsburgh local/history",
+      "question": "What is the significance of the Smithfield Street Bridge?",
+      "answer": "The Smithfield Street Bridge was the world's first lenticular truss bridge. It also opened in 1818, marking the first step in",
+      "references": [
+        "The Smithfield Street Bridge is Pittsburgh’s oldest steel bridge, built in 1883, and is a National Historic Civil Engineering Landmark."
+      ],
+      "f1": 0.278,
+      "suggested_type": "corpus",
+      "type": "corpus",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": false,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "pittsburgh_wikipedia#46",
+        "pittsburgh_history_wikipedia#9",
+        "cmoa/58.11#0",
+        "cmoa/25.13#0",
+        "cmoa/68.1.1#0"
+      ]
+    },
+    {
+      "id": "146",
+      "topic": "Taxes/budget",
+      "question": "When is fourth quarter Payroll Tax due in Pittsburgh?",
+      "answer": "May 31",
+      "references": [
+        "The fourth-quarter Payroll Expense Tax report and payment are due February 28 of the following year.",
+        "February 28 of the following year",
+        "February 28"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "generation",
+      "manually_inspected": true,
+      "note": "Rank-1 chunk has 'ET-1 Payroll Expense Tax 12 – 4th Qtr (Oct-Nov-Dec) February 28'; reader answered May 31 (Q1 date). Swapped with question 93.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pgh_tax_due_date_calendar_2022#0",
+        "pgh_operating_budget_2025#26",
+        "pgh_tax_reg_isp#16",
+        "pgh_tax_due_date_calendar_2022#1",
+        "pgh_operating_budget_2025#23"
+      ]
+    },
+    {
+      "id": "149",
+      "topic": "Events/music/comedy",
+      "question": "What time does the Teaching with Makers' Tools event at Hillman Library start on November 13, 2026?",
+      "answer": "I don't know",
+      "references": [
+        "12:00 PM",
+        "12 PM"
+      ],
+      "f1": 0.0,
+      "suggested_type": "context_noise",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "No 'Teaching with Makers' Tools' event in the corpus; '12 PM' hit is in an unrelated event.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        2
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/full-day-youth-art-workshop-sculpture#0",
+        "visitpittsburgh_events/youth-art-workshop-printmaking#0",
+        "visitpittsburgh_events/holiday-makers-market#0",
+        "visitpittsburgh_events/small-business-saturday#0",
+        "visitpittsburgh_events/2026-holiday-market#0"
+      ]
+    },
+    {
+      "id": "150",
+      "topic": "Events/music/comedy",
+      "question": "When does Fruit Bats perform in Pittsburgh in 2026?",
+      "answer": "I don't know",
+      "references": [
+        "November 12, 2026.",
+        "November 12, 2026",
+        "2026-11-12"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "generation",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1,
+        3
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "visitpittsburgh_events/fruit-bats-18-event#0",
+        "trustarts_calendar#1",
+        "thunderbird_home#1",
+        "visitpittsburgh_events/brit-floyd-pittsburgh-pa-animals-50-world-tour#0",
+        "visitpittsburgh_events/emo-nite-pittsburgh-pa-2026-tour#0"
+      ]
+    },
+    {
+      "id": "153",
+      "topic": "Sports",
+      "question": "When will Pitt women's basketball visit Georgia Tech in December 2026?",
+      "answer": "I don't know",
+      "references": [
+        "December 13, 2026",
+        "December 13",
+        "Dec. 13, 2026",
+        "2026-12-13"
+      ],
+      "f1": 0.0,
+      "suggested_type": "generation",
+      "type": "corpus",
+      "manually_inspected": true,
+      "note": "Same table-flattening artifact as 69 in pitt_wbb_schedule_2026_27#0 ('Georgia Tech Atlanta, Ga. TV: ACCNX Dec 13'); reader abstained.",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [
+        1
+      ],
+      "answer_in_retrieved": true,
+      "context_chunk_ids": [
+        "pitt_wbb_schedule_2026_27#0",
+        "pitt_mbb_schedule_2026_27#2",
+        "pitt_wbb_schedule_2026_27#1",
+        "visitpittsburgh_events/pitt-mens-basketball#0",
+        "visitpittsburgh_events/georgia-tech-yellow-jackets-at-pittsburgh-panthers-football#0"
+      ]
+    },
+    {
+      "id": "155",
+      "topic": "Events/music/comedy",
+      "question": "When did the Farmers' Market Cooperative of East Liberty first operate?",
+      "answer": "I don't know",
+      "references": [
+        "July 5, 1941."
+      ],
+      "f1": 0.0,
+      "suggested_type": "retrieval",
+      "type": "retrieval",
+      "manually_inspected": false,
+      "note": "",
+      "answer_in_corpus": true,
+      "answer_ranks_in_context": [],
+      "answer_in_retrieved": false,
+      "context_chunk_ids": [
+        "food_east_liberty_farmers_market#0",
+        "cmoa/80.66.4#0",
+        "strip_district#1",
+        "visitpittsburgh_events/freedom-farms-fall-fest#0",
+        "pittsburgh_history_wikipedia#21"
+      ]
+    }
+  ]
+}

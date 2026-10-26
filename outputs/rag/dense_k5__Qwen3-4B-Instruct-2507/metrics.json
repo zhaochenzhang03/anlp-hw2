@@ -1,0 +1,1949 @@
+{
+  "predictions": "outputs/rag/dense_k5__Qwen3-4B-Instruct-2507/predictions.jsonl",
+  "n_questions": 157,
+  "n_predicted": 157,
+  "overall": {
+    "n": 157,
+    "exact_match": 0.4076,
+    "f1": 0.5129,
+    "recall": 0.5219,
+    "rouge_l": 0.5091
+  },
+  "by_topic": {
+    "Carnegie Museum of Art": {
+      "n": 59,
+      "exact_match": 0.6949,
+      "f1": 0.7461,
+      "recall": 0.7633,
+      "rouge_l": 0.7461
+    },
+    "CMU": {
+      "n": 8,
+      "exact_match": 0.0,
+      "f1": 0.3336,
+      "recall": 0.3224,
+      "rouge_l": 0.311
+    },
+    "Pittsburgh local/history": {
+      "n": 14,
+      "exact_match": 0.1429,
+      "f1": 0.243,
+      "recall": 0.247,
+      "rouge_l": 0.223
+    },
+    "Events/music/comedy": {
+      "n": 20,
+      "exact_match": 0.2,
+      "f1": 0.3092,
+      "recall": 0.2933,
+      "rouge_l": 0.3092
+    },
+    "Sports": {
+      "n": 33,
+      "exact_match": 0.4242,
+      "f1": 0.5667,
+      "recall": 0.6128,
+      "rouge_l": 0.5667
+    },
+    "Taxes/budget": {
+      "n": 12,
+      "exact_match": 0.25,
+      "f1": 0.2917,
+      "recall": 0.2778,
+      "rouge_l": 0.2917
+    },
+    "Restaurants/food": {
+      "n": 11,
+      "exact_match": 0.0,
+      "f1": 0.1855,
+      "recall": 0.1315,
+      "rouge_l": 0.1739
+    }
+  },
+  "per_question": [
+    {
+      "id": "1",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "2",
+      "topic": "Carnegie Museum of Art",
+      "answer": "62.19.2",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "3",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Manuel Rivera",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "4",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "5",
+      "topic": "CMU",
+      "answer": "The NavLab project at CMU is significant because it pioneered research in autonomous and semi-autonomous vehicles, contributing to advancements in artificial intelligence, sensor fusion, and",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.5333333333333333,
+        "recall": 0.5714285714285714,
+        "rouge_l": 0.4888888888888889
+      }
+    },
+    {
+      "id": "6",
+      "topic": "Restaurants/food",
+      "answer": "Japanese fusion with Mexican influences",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.21052631578947364,
+        "recall": 0.14285714285714285,
+        "rouge_l": 0.21052631578947364
+      }
+    },
+    {
+      "id": "7",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Corneille (Cornelius Guillaume Van Beverloo)",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "8",
+      "topic": "Sports",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "9",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Fine Arts",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "10",
+      "topic": "Sports",
+      "answer": "1982, 1983, 1989, 1990, 1992, 20",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.6666666666666667,
+        "recall": 0.5555555555555556,
+        "rouge_l": 0.6666666666666667
+      }
+    },
+    {
+      "id": "11",
+      "topic": "Pittsburgh local/history",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "12",
+      "topic": "Carnegie Museum of Art",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "13",
+      "topic": "Taxes/budget",
+      "answer": "Chapter 247",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "14",
+      "topic": "Carnegie Museum of Art",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "15",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "16",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Paul Jenkins",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.8,
+        "recall": 0.6666666666666666,
+        "rouge_l": 0.8
+      }
+    },
+    {
+      "id": "17",
+      "topic": "Sports",
+      "answer": "Washington",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "18",
+      "topic": "Sports",
+      "answer": "1998",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "19",
+      "topic": "Pittsburgh local/history",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "20",
+      "topic": "Restaurants/food",
+      "answer": "Fogo de Chão",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.3157894736842105,
+        "recall": 0.1875,
+        "rouge_l": 0.3157894736842105
+      }
+    },
+    {
+      "id": "21",
+      "topic": "Taxes/budget",
+      "answer": "Superintendent of the Bureau of Building Inspection",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "22",
+      "topic": "Taxes/budget",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "23",
+      "topic": "Sports",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "24",
+      "topic": "Sports",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "25",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Second Century Acquisition Fund",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "26",
+      "topic": "Carnegie Museum of Art",
+      "answer": "1996.44",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "27",
+      "topic": "Pittsburgh local/history",
+      "answer": "1964 marks the year the Pittsburgh Steelers moved to Pitt Stadium at the University of Pittsburgh to play full-time, after sharing Forbes Field with the Pittsburgh Pirates",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.25,
+        "recall": 0.29411764705882354,
+        "rouge_l": 0.25
+      }
+    },
+    {
+      "id": "28",
+      "topic": "Restaurants/food",
+      "answer": "Pittsburgh Restaurant Week is an event that highlights the wide-ranging dining options in Pittsburgh and brings individuals from surrounding areas to the city to enjoy meals at special discounted",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.32653061224489793,
+        "recall": 0.34782608695652173,
+        "rouge_l": 0.28571428571428575
+      }
+    },
+    {
+      "id": "29",
+      "topic": "Carnegie Museum of Art",
+      "answer": "02.1",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "30",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Alfred S. Wall",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "31",
+      "topic": "Sports",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "32",
+      "topic": "Taxes/budget",
+      "answer": "1.25",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "33",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "34",
+      "topic": "Restaurants/food",
+      "answer": "Detroit-inspired pizza and American classics served in the Steel City, Pittsburgh PA. Iron Born Pizza resides inside of Smallman Galley and in Millvale.",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.19607843137254902,
+        "recall": 0.1724137931034483,
+        "rouge_l": 0.1568627450980392
+      }
+    },
+    {
+      "id": "35",
+      "topic": "Events/music/comedy",
+      "answer": "7 pm",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.5,
+        "recall": 0.5,
+        "rouge_l": 0.5
+      }
+    },
+    {
+      "id": "36",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Horace Pippin",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "37",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Alfred Sisley",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "38",
+      "topic": "Sports",
+      "answer": "Nov 3 (Tue) | 2:00 PM | Moon Township, Pa. | North Athletic Complex",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.28571428571428575,
+        "recall": 0.6666666666666666,
+        "rouge_l": 0.28571428571428575
+      }
+    },
+    {
+      "id": "39",
+      "topic": "Taxes/budget",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "40",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Maurice Utrillo",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "41",
+      "topic": "Sports",
+      "answer": "7:00 PM",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "42",
+      "topic": "Restaurants/food",
+      "answer": "nordic seafood restaurant and oyster bar with a devotion to appalachian agriculture",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.19047619047619047,
+        "recall": 0.12903225806451613,
+        "rouge_l": 0.14285714285714285
+      }
+    },
+    {
+      "id": "43",
+      "topic": "Pittsburgh local/history",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "44",
+      "topic": "Sports",
+      "answer": "Omar Khan",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "45",
+      "topic": "Sports",
+      "answer": "Boston",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.6666666666666666,
+        "recall": 0.5,
+        "rouge_l": 0.6666666666666666
+      }
+    },
+    {
+      "id": "46",
+      "topic": "Sports",
+      "answer": "Lawrenceville, GA, USA",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.5,
+        "recall": 1.0,
+        "rouge_l": 0.5
+      }
+    },
+    {
+      "id": "47",
+      "topic": "Pittsburgh local/history",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "48",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Michaël Borremans",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "49",
+      "topic": "Pittsburgh local/history",
+      "answer": "3,500",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "50",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Alfred S. Wall",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "51",
+      "topic": "Carnegie Museum of Art",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "52",
+      "topic": "Carnegie Museum of Art",
+      "answer": "1936",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "53",
+      "topic": "Sports",
+      "answer": "Niagara",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "54",
+      "topic": "Pittsburgh local/history",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "55",
+      "topic": "Carnegie Museum of Art",
+      "answer": "2005-02-03",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "56",
+      "topic": "Sports",
+      "answer": "96",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "57",
+      "topic": "CMU",
+      "answer": "Tepper School of Business",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.5714285714285715,
+        "recall": 0.4,
+        "rouge_l": 0.5714285714285715
+      }
+    },
+    {
+      "id": "58",
+      "topic": "Carnegie Museum of Art",
+      "answer": "92.56",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "59",
+      "topic": "Events/music/comedy",
+      "answer": "Kristen Martin",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "60",
+      "topic": "Carnegie Museum of Art",
+      "answer": "1992",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "61",
+      "topic": "Sports",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "62",
+      "topic": "Taxes/budget",
+      "answer": "850",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "63",
+      "topic": "Events/music/comedy",
+      "answer": "Melia P. Tourangeau",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "rouge_l": 0.6666666666666666
+      }
+    },
+    {
+      "id": "64",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "65",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Pascal Adolphe Jean Dagnan-Bouveret",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "66",
+      "topic": "Carnegie Museum of Art",
+      "answer": "purchased by Carnegie Museum of Art, December 2004",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "67",
+      "topic": "Carnegie Museum of Art",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "68",
+      "topic": "Carnegie Museum of Art",
+      "answer": "1993-10-07",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "69",
+      "topic": "Sports",
+      "answer": "Duquesne",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "70",
+      "topic": "Restaurants/food",
+      "answer": "Gaby et Jules",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.2857142857142857,
+        "recall": 0.16666666666666666,
+        "rouge_l": 0.2857142857142857
+      }
+    },
+    {
+      "id": "71",
+      "topic": "Carnegie Museum of Art",
+      "answer": "01.1",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "72",
+      "topic": "Restaurants/food",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "73",
+      "topic": "CMU",
+      "answer": "A daylong celebration of Carnegie Mellon spirit featuring CMU-themed activities, student talent showcases, free snacks and giveaways.",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.1875,
+        "recall": 0.1875,
+        "rouge_l": 0.1875
+      }
+    },
+    {
+      "id": "74",
+      "topic": "Sports",
+      "answer": "7:00 PM",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.5,
+        "recall": 0.5,
+        "rouge_l": 0.5
+      }
+    },
+    {
+      "id": "75",
+      "topic": "Sports",
+      "answer": "Jerry Schmitt",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "76",
+      "topic": "Events/music/comedy",
+      "answer": "Pittsburgh's oldest continually-operating farmers' market",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.2857142857142857,
+        "recall": 0.2222222222222222,
+        "rouge_l": 0.2857142857142857
+      }
+    },
+    {
+      "id": "77",
+      "topic": "Restaurants/food",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "78",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Bequest of Charles J. Rosenbloom",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.33333333333333337,
+        "recall": 1.0,
+        "rouge_l": 0.33333333333333337
+      }
+    },
+    {
+      "id": "79",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "80",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Aaron Shikler",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "81",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Morris Louis",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "82",
+      "topic": "Taxes/budget",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "83",
+      "topic": "Carnegie Museum of Art",
+      "answer": "77.55",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "84",
+      "topic": "Events/music/comedy",
+      "answer": "November 1, 2026",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.5,
+        "recall": 0.3333333333333333,
+        "rouge_l": 0.5
+      }
+    },
+    {
+      "id": "85",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Anonymous Gift",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "86",
+      "topic": "Sports",
+      "answer": "New Britain, Conn.",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "87",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Not on View",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "88",
+      "topic": "Pittsburgh local/history",
+      "answer": "H.J. Heinz Company",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.35294117647058826,
+        "recall": 0.21428571428571427,
+        "rouge_l": 0.35294117647058826
+      }
+    },
+    {
+      "id": "89",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Fine Arts",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "90",
+      "topic": "Sports",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "91",
+      "topic": "Carnegie Museum of Art",
+      "answer": "84.8",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "92",
+      "topic": "CMU",
+      "answer": "\"The Cut\" is a large grassy area that forms the backbone of Carnegie Mellon University's campus. It was formed by filling in a ravine with soil from",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.4090909090909091,
+        "recall": 0.42857142857142855,
+        "rouge_l": 0.31818181818181823
+      }
+    },
+    {
+      "id": "93",
+      "topic": "Taxes/budget",
+      "answer": "May 31",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "94",
+      "topic": "Carnegie Museum of Art",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "95",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Edward Hopper",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "96",
+      "topic": "Taxes/budget",
+      "answer": "$12,000",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.5,
+        "recall": 0.3333333333333333,
+        "rouge_l": 0.5
+      }
+    },
+    {
+      "id": "97",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Not on View",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "98",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Corneille",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.33333333333333337,
+        "recall": 0.2,
+        "rouge_l": 0.33333333333333337
+      }
+    },
+    {
+      "id": "99",
+      "topic": "Events/music/comedy",
+      "answer": "112 Renaissance Lane, West Newton, PA 15089",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "100",
+      "topic": "Restaurants/food",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "101",
+      "topic": "Taxes/budget",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "102",
+      "topic": "Events/music/comedy",
+      "answer": "6:00 PM",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "103",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Enrico Baj",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "104",
+      "topic": "Sports",
+      "answer": "44 Chris Truby (infield)",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.6666666666666666,
+        "recall": 1.0,
+        "rouge_l": 0.6666666666666666
+      }
+    },
+    {
+      "id": "105",
+      "topic": "Carnegie Museum of Art",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "106",
+      "topic": "Carnegie Museum of Art",
+      "answer": "1997.58",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "107",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Sir William Orpen",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "108",
+      "topic": "Pittsburgh local/history",
+      "answer": "Schedule a visit to see our facility Monday through Thursday from 10:00 am to 4:00 pm, and we ask that you schedule",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.07407407407407407,
+        "recall": 0.16666666666666666,
+        "rouge_l": 0.07407407407407407
+      }
+    },
+    {
+      "id": "109",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Contemporary Art",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.6666666666666666,
+        "recall": 0.5,
+        "rouge_l": 0.6666666666666666
+      }
+    },
+    {
+      "id": "110",
+      "topic": "CMU",
+      "answer": "Deep Thought was a chess computer developed at Carnegie Mellon University. CMU was involved in its initial development.",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.5,
+        "recall": 0.4074074074074074,
+        "rouge_l": 0.45454545454545453
+      }
+    },
+    {
+      "id": "111",
+      "topic": "Events/music/comedy",
+      "answer": "Holy Trinity Greek Food Festival",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.23076923076923073,
+        "recall": 0.14285714285714285,
+        "rouge_l": 0.23076923076923073
+      }
+    },
+    {
+      "id": "112",
+      "topic": "Pittsburgh local/history",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "113",
+      "topic": "Carnegie Museum of Art",
+      "answer": "2001.45.1",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "114",
+      "topic": "Restaurants/food",
+      "answer": "Butcher and the Rye",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.33333333333333337,
+        "recall": 0.2,
+        "rouge_l": 0.33333333333333337
+      }
+    },
+    {
+      "id": "115",
+      "topic": "Pittsburgh local/history",
+      "answer": "No",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "116",
+      "topic": "CMU",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "117",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Francesco Solimena",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "118",
+      "topic": "Sports",
+      "answer": "7:00 PM – 8:30 PM",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.5,
+        "recall": 0.6666666666666666,
+        "rouge_l": 0.5
+      }
+    },
+    {
+      "id": "119",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "120",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Gift of the artist in honor of Richard Armstrong",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.2222222222222222,
+        "recall": 1.0,
+        "rouge_l": 0.2222222222222222
+      }
+    },
+    {
+      "id": "121",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Jean-Léon Gérôme",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "122",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "123",
+      "topic": "Events/music/comedy",
+      "answer": "Saturday, January 2",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "124",
+      "topic": "Carnegie Museum of Art",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "125",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Not on View",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "126",
+      "topic": "Pittsburgh local/history",
+      "answer": "Pittsburgh played a key role during the American Civil War by boosting its economy with increased demand for iron and armaments. The city became a major producer of",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.4090909090909091,
+        "recall": 0.45,
+        "rouge_l": 0.1818181818181818
+      }
+    },
+    {
+      "id": "127",
+      "topic": "Restaurants/food",
+      "answer": "Commonplace Coffee",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.18181818181818182,
+        "recall": 0.1,
+        "rouge_l": 0.18181818181818182
+      }
+    },
+    {
+      "id": "128",
+      "topic": "Carnegie Museum of Art",
+      "answer": "1964-05-26",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "129",
+      "topic": "Sports",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "130",
+      "topic": "Sports",
+      "answer": "Ohio State",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "131",
+      "topic": "Carnegie Museum of Art",
+      "answer": "William Merritt Chase",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "132",
+      "topic": "Pittsburgh local/history",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "133",
+      "topic": "Sports",
+      "answer": "17",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "134",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Claude Monet",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "135",
+      "topic": "Sports",
+      "answer": "Eastern Michigan",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "136",
+      "topic": "Sports",
+      "answer": "Penn State",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "137",
+      "topic": "CMU",
+      "answer": "The Kiltie Band rocks kilts — what else? — while bringing their infectious, irreverent energy to CMU sporting events.",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.1818181818181818,
+        "recall": 0.2,
+        "rouge_l": 0.1818181818181818
+      }
+    },
+    {
+      "id": "138",
+      "topic": "Sports",
+      "answer": "0",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "139",
+      "topic": "CMU",
+      "answer": "The College of Fine Arts is housed in a federation of five distinct schools: The School of Architecture, The School of Music, The School of Design, The School",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.2857142857142857,
+        "recall": 0.38461538461538464,
+        "rouge_l": 0.2857142857142857
+      }
+    },
+    {
+      "id": "140",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Joseph R. Woodwell",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "141",
+      "topic": "Sports",
+      "answer": "71",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "142",
+      "topic": "Carnegie Museum of Art",
+      "answer": "John F. Peto",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "143",
+      "topic": "Pittsburgh local/history",
+      "answer": "The Smithfield Street Bridge was the world's first lenticular truss bridge and was the first river bridge in the region, marking the beginning of Pittsburgh's",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.3157894736842105,
+        "recall": 0.3333333333333333,
+        "rouge_l": 0.2631578947368421
+      }
+    },
+    {
+      "id": "144",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Julius I. Jacik",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "rouge_l": 0.6666666666666666
+      }
+    },
+    {
+      "id": "145",
+      "topic": "Carnegie Museum of Art",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "146",
+      "topic": "Taxes/budget",
+      "answer": "May 31",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "147",
+      "topic": "Carnegie Museum of Art",
+      "answer": "1958-11-21",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "148",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Fine Arts",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "149",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "150",
+      "topic": "Events/music/comedy",
+      "answer": "November 12, 2026",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "151",
+      "topic": "Sports",
+      "answer": "2016-08-13",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "152",
+      "topic": "Taxes/budget",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "153",
+      "topic": "Sports",
+      "answer": "Dec 6 (Sun) 2 PM",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.25,
+        "recall": 0.3333333333333333,
+        "rouge_l": 0.25
+      }
+    },
+    {
+      "id": "154",
+      "topic": "Sports",
+      "answer": "Wisconsin",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    },
+    {
+      "id": "155",
+      "topic": "Events/music/comedy",
+      "answer": "I don't know",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "recall": 0.0,
+        "rouge_l": 0.0
+      }
+    },
+    {
+      "id": "156",
+      "topic": "Sports",
+      "answer": "Sundbyberg, Sweden",
+      "missing": false,
+      "scores": {
+        "exact_match": 0.0,
+        "f1": 0.6666666666666666,
+        "recall": 1.0,
+        "rouge_l": 0.6666666666666666
+      }
+    },
+    {
+      "id": "157",
+      "topic": "Carnegie Museum of Art",
+      "answer": "Gift of Mr. and Mrs. James H. Beal",
+      "missing": false,
+      "scores": {
+        "exact_match": 1.0,
+        "f1": 1.0,
+        "recall": 1.0,
+        "rouge_l": 1.0
+      }
+    }
+  ]
+}

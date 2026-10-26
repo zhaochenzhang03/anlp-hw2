@@ -156,8 +156,15 @@ reproduced locally.
 
 ### Running on Colab (GPU)
 
+All committed public-dev runs were produced on an Apple-silicon Mac (MPS,
+bfloat16, `--batch-size 1`, ~15-60 s per question). Colab is only needed to
+go faster. Batched decoding pads prompts, so outputs with `--batch-size 8`
+on a GPU can differ slightly from the batch-1 runs; keep `--batch-size 1`
+when a new run must be compared with the committed ones.
+
 ```bash
-!git clone https://github.com/zhaochenzhang03/anlp-hw2.git
+# Private repo: use a GitHub personal access token (read-only is enough)
+!git clone https://<TOKEN>@github.com/zhaochenzhang03/anlp-hw2.git
 %cd anlp-hw2
 !pip install -q rank-bm25==0.2.2 faiss-cpu "sentence-transformers>=3" "transformers>=4.51" accelerate pypdf
 # Persist outputs on Drive so a disconnect loses nothing:

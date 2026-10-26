@@ -1,0 +1,134 @@
+{
+  "1": {
+    "type": "corpus",
+    "note": "No 'Monday Night Open Mic' event in the corpus; the heuristic's in-context hit is a spurious soft match."
+  },
+  "4": {
+    "type": "retrieval",
+    "note": "events_improv_steph_tolev#0/#1 are in the corpus but not retrieved; Arcade Comedy 'improv' event pages win on lexical overlap with 'Improv'."
+  },
+  "18": {
+    "type": "generation",
+    "note": "Rank-1 chunk states 'Born: 1998-01-19 (birth year 1998)'; reader output 2000."
+  },
+  "20": {
+    "type": "format_mismatch",
+    "note": "'Fogo de Chão' is correct; the reference is a full descriptive sentence, so token F1 is only 0.32."
+  },
+  "23": {
+    "type": "corpus",
+    "note": "Corpus roster tables give Nick Robertson's age (25), not his birth year; the year is only approximately derivable."
+  },
+  "24": {
+    "type": "retrieval",
+    "note": "steelers_roster#1 ('Cameron Johnston | 19 | P | ... | Ohio State') not retrieved; the Wikipedia roster chunk in context has no colleges. Reader also produced a rambling non-answer instead of abstaining."
+  },
+  "27": {
+    "type": "ambiguity_stale",
+    "note": "Reference says the Steelers hired Chuck Noll in 1964; Noll was hired in 1969. Reference itself is questionable; model gave a different 1964 fact."
+  },
+  "31": {
+    "type": "corpus",
+    "note": "No Chatham men's basketball schedule in the corpus; heuristic hit is the token '5' in other teams' schedules."
+  },
+  "38": {
+    "type": "generation",
+    "note": "Rank-1 chunk has 'Nov 3 (Tue) | 2:00 PM | ... | vs | Northern Illinois University'; reader abstained (over-conservative)."
+  },
+  "53": {
+    "type": "retrieval",
+    "note": "pitt_volleyball_schedule_2026#2 has the Nov 24 Stanford game but is not retrieved; single-event Visit Pittsburgh volleyball pages fill the top 5. Heuristic hit ('Stanford' in the women's basketball schedule) is spurious."
+  },
+  "61": {
+    "type": "corpus",
+    "note": "'Canastra Hammer Arena' does not occur in the corpus; context lists 'Pitt vs Rider' without the arena."
+  },
+  "62": {
+    "type": "ambiguity_stale",
+    "note": "Corpus has the FY2025 budget with two columns (850 prior year, 800 budget year); reference cites FY2026 (800). Reader took the first column."
+  },
+  "66": {
+    "type": "format_mismatch",
+    "note": "Reader copied the provenance sentence ('purchased by Carnegie Museum of Art'); reference is 'Purchase'. Substantively right, but no stemming, so F1 = 0."
+  },
+  "67": {
+    "type": "corpus",
+    "note": "Work not in the CMoA 2015 collection release used for the corpus."
+  },
+  "69": {
+    "type": "corpus",
+    "note": "Document processing: the flattened schedule table puts each date after its opponent ('Mercyhurst ... TV: ACCNX Dec 17'), so the reader paired Dec 17 with the next row (Duquesne)."
+  },
+  "70": {
+    "type": "format_mismatch",
+    "note": "'Gaby et Jules' is correct; long descriptive reference."
+  },
+  "77": {
+    "type": "format_mismatch",
+    "note": "Answer 'Sienna Mercato' names the building; reference names its rooftop bar Il Tetto atop Sienna Mercato. Partially correct."
+  },
+  "82": {
+    "type": "format_mismatch",
+    "note": "'1.0%' vs '1%': same value, but SQuAD normalization treats '10' and '1' as different tokens."
+  },
+  "87": {
+    "type": "ambiguity_stale",
+    "note": "Corpus record (CMoA 2015 data release) says 'Not on View'; reference gives the current location 'Scaife Gallery 13'. Reader is faithful to the corpus."
+  },
+  "93": {
+    "type": "generation",
+    "note": "Rank-1 chunk has 'ET-1 Payroll Expense Tax 03 – (Jan-Feb-Mar) May 31'; reader answered the Q4 date (February 28). Table-reading error."
+  },
+  "97": {
+    "type": "ambiguity_stale",
+    "note": "Same as 87: 2015 data release 'Not on View' vs current 'Scaife Gallery 13'."
+  },
+  "100": {
+    "type": "format_mismatch",
+    "note": "'Sarris Candies' is correct; long descriptive reference."
+  },
+  "105": {
+    "type": "corpus",
+    "note": "Mel Bochner work not in the CMoA 2015 release."
+  },
+  "114": {
+    "type": "format_mismatch",
+    "note": "'Butcher and the Rye' is correct; long descriptive reference."
+  },
+  "119": {
+    "type": "corpus",
+    "note": "No 'THAT LIKE THIS' event in the corpus."
+  },
+  "123": {
+    "type": "ambiguity_stale",
+    "note": "Event page lists overlapping ranges ('Tuesday, December 22 to Saturday, January 2', 'Wednesday, December 23 to Sunday, January 3'); the true closing date is not stated unambiguously."
+  },
+  "125": {
+    "type": "ambiguity_stale",
+    "note": "cmoa/15.1 (2015 data release) says 'Not on View'; reference gives the current 'Carnegie Music Hall Foyer'. Reader is faithful to the corpus."
+  },
+  "127": {
+    "type": "format_mismatch",
+    "note": "'Commonplace Coffee' is correct; long descriptive reference."
+  },
+  "129": {
+    "type": "corpus",
+    "note": "Duquesne club ice hockey schedule not in the corpus."
+  },
+  "138": {
+    "type": "generation",
+    "note": "Context says the Pirates defeated the Reds in the 2013 Wild Card game; reader answered 0 (counting/aggregation)."
+  },
+  "146": {
+    "type": "generation",
+    "note": "Rank-1 chunk has 'ET-1 Payroll Expense Tax 12 – 4th Qtr (Oct-Nov-Dec) February 28'; reader answered May 31 (Q1 date). Swapped with question 93."
+  },
+  "149": {
+    "type": "corpus",
+    "note": "No 'Teaching with Makers' Tools' event in the corpus; '12 PM' hit is in an unrelated event."
+  },
+  "153": {
+    "type": "corpus",
+    "note": "Same table-flattening artifact as 69 in pitt_wbb_schedule_2026_27#0 ('Georgia Tech Atlanta, Ga. TV: ACCNX Dec 13'); reader abstained."
+  }
+}
